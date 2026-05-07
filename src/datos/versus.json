@@ -1,0 +1,178 @@
+[
+  {
+    "id": "VS-310P-320P",
+    "tarjeta": "/img/tarjetas/t-versus-310p-320p.webp",
+    "plantilla": "A",
+    "maquinas": [
+      {
+        "id": "R310P",
+        "categoria": "RETROEXCAVADORA",
+        "modelo": "310P",
+        "imagen": "/img/modelos/r310p-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ 4,5l" },
+          { "titulo": "Potencia bruta (HP)", "valor": "92 HP" },
+          { "titulo": "Peso operativo (kg)", "valor": "7 357 kg" },
+          { "titulo": "Capacidad cucharón excavadora (m³)", "valor": "0,21 m³" },
+          { "titulo": "Capacidad cucharón cargadora (m³)", "valor": "1,00 m³" },
+          { "titulo": "Sistema de Monitoreo", "valor": "JD Link" },
+          { "titulo": "Transmisión", "valor": "PowerShift™ 4 velocidades" },
+          { "titulo": "Sistema hidráulico", "valor": "Bomba de Engranajes" }
+        ]
+      },
+      {
+        "id": "R320P",
+        "categoria": "RETROEXCAVADORA",
+        "modelo": "320P",
+        "imagen": "/img/modelos/r320p-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ 4,5l" },
+          { "titulo": "Potencia bruta (HP)", "valor": "100 HP" },
+          { "titulo": "Peso operativo (kg)", "valor": "7850 kg" },
+          { "titulo": "Capacidad cucharón excavadora (m³)", "valor": "0,25 m³" },
+          { "titulo": "Capacidad cucharón cargadora (m³)", "valor": "1,00 m³" },
+          { "titulo": "Sistema de Monitoreo", "valor": "JD Link" },
+          { "titulo": "Transmisión", "valor": "PowerShift™ 5 velocidades + AutoShift" },
+          { "titulo": "Sistema hidráulico", "valor": "PCLS — Bomba Pistón Axial" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "VS-350P-250P",
+    "tarjeta": "/img/tarjetas/t-versus-350p-250p.webp",
+    "plantilla": "A",
+    "maquinas": [
+      {
+        "id": "E350P",
+        "categoria": "EXCAVADORA",
+        "modelo": "350P",
+        "imagen": "/img/modelos/e350p-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ Plus 9,0l" },
+          { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "271 HP" },
+          { "titulo": "Peso operativo (kg)", "valor": "37 452 kg" },
+          { "titulo": "Capacidad cucharón estándar (m³)", "valor": "2,51 m³" },
+          { "titulo": "Par de giro", "valor": "120 kN" },
+          { "titulo": "Fuerza excavación brazo ISO", "valor": "222 kN" }
+        ]
+      },
+      {
+        "id": "E250P",
+        "categoria": "EXCAVADORA",
+        "modelo": "250P",
+        "imagen": "/img/modelos/e250p-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ 6,8l" },
+          { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "177 hp" },
+          { "titulo": "Peso operativo (kg)", "valor": "25 900 kg" },
+          { "titulo": "Capacidad cucharón estándar (m³)", "valor": "1,80 m³" },
+          { "titulo": "Par de giro", "valor": "74 kN" },
+          { "titulo": "Fuerza excavación brazo ISO", "valor": "158 kN" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "VS-644G-644P",
+    "tarjeta": "/img/tarjetas/t-versus-644g-644p.webp",
+    "plantilla": "A",
+    "maquinas": [
+      {
+        "id": "CF644G",
+        "categoria": "CARGADOR FRONTAL",
+        "modelo": "644G",
+        "imagen": "/img/modelos/cf644g-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6068H" },
+          { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "248 HP" },
+          { "titulo": "Peso operativo (kg)", "valor": "17 044 kg" },
+          { "titulo": "Capacidad cucharón estándar (m³)", "valor": "3,25 m³" },
+          { "titulo": "Fuerza de dislocación", "valor": "14 462 kg" },
+          { "titulo": "Transmisión", "valor": "PowerShift Contraeje — 4 velocidades" },
+          { "titulo": "Sistema hidráulico — bomba", "valor": "Pistones Axiales y Desplazamiento Variable" },
+          { "titulo": "Flujo hidráulico", "valor": "87 gpm" },
+          { "titulo": "Diferencial delantero", "valor": "Abierto estándar; bloqueo delantero opcional" }
+        ]
+      },
+      {
+        "id": "CF644P",
+        "categoria": "CARGADOR FRONTAL",
+        "modelo": "644P",
+        "imagen": "/img/modelos/cf644p-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6068H" },
+          { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "224 HP" },
+          { "titulo": "Peso operativo (kg)", "valor": "18 283 kg" },
+          { "titulo": "Capacidad cucharón estándar (m³)", "valor": "3,30 m³" },
+          { "titulo": "Fuerza de dislocación", "valor": "15 474 kg" },
+          { "titulo": "Transmisión", "valor": "PowerShift contraeje — 5 velocidades" },
+          { "titulo": "Sistema hidráulico — bomba", "valor": "Pistones Axiales y Desplazamiento Variable" },
+          { "titulo": "Flujo hidráulico", "valor": "83 gpm" },
+          { "titulo": "Diferencial delantero", "valor": "Bloqueo hidráulico delantero estándar; doble bloqueo opcional" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "VS-620G-620P",
+    "tarjeta": "/img/tarjetas/t-versus-620g-620p.webp",
+    "plantilla": "B",
+    "maquinas": [
+      {
+        "id": "M620G",
+        "categoria": "MOTONIVELADORA",
+        "modelo": "620G",
+        "imagen": "/img/modelos/m620g-min.webp"
+      },
+      {
+        "id": "M620P",
+        "categoria": "MOTONIVELADORA",
+        "modelo": "620P",
+        "imagen": "/img/modelos/m620p-min.webp"
+      }
+    ],
+    "carateristicas": [
+      { "titulo": "Motor", "valor": "JD PowerTech™ Plus de 6,8l" },
+      { "titulo": "Par máximo neto", "valor": "915 Nm" },
+      { "titulo": "Transmisión", "valor": "John Deere PowerShift Plus™ de accionamiento directo, cambio modulado, EBS, pedal de avance gradual Idéntico 8 marchas adelante/8 marchas reversa" },
+      { "titulo": "Tipo de tracción", "valor": "4x4" },
+      { "titulo": "Tipo de bomba", "valor": "Pistón de desplazamiento variable, centro cerrado, PCLS (presión compensada y detección de carga)" },
+      { "titulo": "Longitud base estándar", "valor": "3,66m × 610mm × 22mm (12ft × 24in × 7/8in)" },
+      { "titulo": "Peso Operativo", "valor": "17 535 kg" }
+    ]
+  },
+  {
+    "id": "VS-750J-850J",
+    "tarjeta": "/img/tarjetas/t-versus-750j-850j.webp",
+    "plantilla": "A",
+    "maquinas": [
+      {
+        "id": "TT750J",
+        "categoria": "TRACTOR TOPADOR",
+        "modelo": "750J",
+        "imagen": "/img/modelos/tt750j-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ E 6068" },
+          { "titulo": "Potencia nominal neta SAE", "valor": "155 HP" },
+          { "titulo": "Tipo de hoja", "valor": "OSD (Semi-U)" },
+          { "titulo": "Capacidad de hoja", "valor": "4,30 m³" },
+          { "titulo": "Peso operativo (SAE)", "valor": "18,086 kg" }
+        ]
+      },
+      {
+        "id": "TT850J",
+        "categoria": "TRACTOR TOPADOR",
+        "modelo": "850J",
+        "imagen": "/img/modelos/tt850j-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6068 c/EGR" },
+          { "titulo": "Potencia nominal neta SAE", "valor": "205 HP" },
+          { "titulo": "Tipo de hoja", "valor": "OSD (Semi-U)" },
+          { "titulo": "Capacidad de hoja", "valor": "5,57 m³" },
+          { "titulo": "Peso operativo (SAE)", "valor": "20 714 kg" }
+        ]
+      }
+    ]
+  }
+]
