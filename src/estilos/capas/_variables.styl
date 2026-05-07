@@ -1,0 +1,48 @@
+// ============================================
+// Variables CSS del tema Kiosko
+// ============================================
+//
+// Todas las variables usan el namespace --kiosko-* para evitar
+// colisiones y permitir personalizacion sin recompilar Stylus.
+//
+// Ejemplo de override desde CSS del consumidor:
+//   :root {
+//     --kiosko-color-primario: #ff6600;
+//     --kiosko-espaciado-base: 1.5rem;
+//   }
+//
+
+:root
+	// --- Layout --------------------------------------------------------------
+	--kiosko-escala            1
+	--kiosko-ancho             1080
+	--kiosko-alto              1920
+	--kiosko-relacion-aspecto  calc(var(--kiosko-ancho) / var(--kiosko-alto))
+
+	// --- Paleta de color (neutra / sistema operativo) ------------------------
+	--kiosko-color-fondo              #0a0a0a
+	--kiosko-color-superficie         #141414
+	--kiosko-color-borde              #262626
+	--kiosko-color-primario           AccentColor
+	--kiosko-color-texto              #f5f5f5
+	--kiosko-color-texto-secundario   #737373
+
+	// --- Forma y movimiento --------------------------------------------------
+	--kiosko-radio-borde         1rem
+	--kiosko-espaciado-base      1rem
+	--kiosko-duracion-transicion 150ms
+
+	// --- Escala tipografica (relativa al viewport con min/max) ---------------
+	--kiosko-h1-tamano     clamp(1.5rem, 6vh, 8rem)
+	--kiosko-h2-tamano     clamp(1.25rem, 5.5vh, 7rem)
+	--kiosko-h3-tamano     clamp(1.125rem, 5vh, 6rem)
+	--kiosko-h4-tamano     clamp(1rem, 4.5vh, 5rem)
+	--kiosko-h5-tamano     clamp(0.875rem, 4vh, 4rem)
+	--kiosko-h6-tamano     clamp(0.875rem, 3.5vh, 3rem)
+	--kiosko-body-tamano   clamp(0.75rem, 3vh, 2.5rem)
+	--kiosko-small-tamano  clamp(0.625rem, 2.5vh, 2rem)
+	--kiosko-boton-tamano  var(--kiosko-body-tamano)
+
+	// --- Depuracion (outline de kiosko--depurar) -----------------------------
+	--kiosko-debug-outline-thick  thick solid rgba(255, 255, 255, 0.3)
+	--kiosko-debug-outline-thin   thin solid rgba(255, 255, 255, 0.15)

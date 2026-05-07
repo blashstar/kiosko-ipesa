@@ -1,0 +1,212 @@
+// ===========================================
+// Reset base para kioscos táctiles
+// Inspirado en: normalize.css, reseter.css, modern-normalize, sanitize.css
+// ===========================================
+
+@layer reset
+  // Box sizing: border-box en todos los elementos (normalize, reseter, modern-normalize)
+  *,
+  *::before,
+  *::after
+    box-sizing: border-box
+
+  // Fondo no se repite por defecto (sanitize.css)
+  *,
+  *::before,
+  *::after
+    background-repeat: no-repeat
+
+  // Pseudo-elementos heredan text-decoration y vertical-align (sanitize.css)
+  ::before,
+  ::after
+    text-decoration: inherit
+    vertical-align: inherit
+
+  // HTML: cursor por defecto, line-height cómodo, ajuste de texto, tab-size (modern-normalize, sanitize)
+  html
+    cursor: default
+    line-height: 1.5
+    -webkit-text-size-adjust: 100%
+    tab-size: 4
+
+  // Fuente del sistema (modern-normalize)
+  html,
+  body
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'
+
+  // Body: sin márgenes, altura completa (normalize, modern-normalize)
+  html,
+  body
+    width: 100%
+    height: 100%
+    margin: 0
+    overflow: hidden
+
+  // Elementos interactivos: touch-action manipulation (sanitize.css, kiosko)
+  a,
+  area,
+  button,
+  input,
+  label,
+  select,
+  summary,
+  textarea,
+  [tabindex]
+    touch-action: manipulation
+
+  // Enlaces: fondo transparente (normalize)
+  a
+    background-color: transparent
+
+  // Botones: sin bordes, fondo, cursor pointer (normalize, kiosko)
+  button
+    border: none
+    background: none
+    cursor: pointer
+    font-family: inherit
+    font-size: 100%
+    line-height: 1.5
+    margin: 0
+    text-transform: none
+    overflow: visible
+
+  // Formularios: heredan fuente (normalize)
+  button,
+  input,
+  optgroup,
+  select,
+  textarea
+    font-family: inherit
+    font-size: 100%
+    line-height: 1.5
+    margin: 0
+
+  // Input y textarea: overflow visible
+  button,
+  input
+    overflow: visible
+
+  // Textarea: solo redimensiona vertical (sanitize.css)
+  textarea
+    overflow: auto
+    vertical-align: top
+    resize: vertical
+
+  // Pre-formateado: fuente monoespaciada (normalize, modern-normalize)
+  code,
+  kbd,
+  samp,
+  pre
+    font-family: ui-monospace, 'SF Mono Regular', Consolas, 'Liberation Mono', Menlo, monospace
+    font-size: 1em
+
+  // Small: tamaño de fuente reducido
+  small
+    font-size: 80%
+
+  // Sub y Sup: sin afectar line-height (normalize)
+  sub,
+  sup
+    font-size: 75%
+    line-height: 0
+    position: relative
+    vertical-align: baseline
+
+  sub
+    bottom: -0.25em
+
+  sup
+    top: -0.5em
+
+  // Medios: display inline-block, alineación central (normalize, sanitize)
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video
+    display: inline-block
+    vertical-align: middle
+
+  // Imágenes y video: ancho máximo 100%, display block (normalize, kiosko)
+  img,
+  video
+    max-width: 100%
+    display: inline-block
+
+  // SVGs: sin overflow, heredan color (normalize, sanitize)
+  svg:not(:root)
+    overflow: hidden
+
+  svg:not([fill])
+    fill: currentColor
+
+  // Tablas: sin sangría, colapso de bordes (sanitize.css)
+  table
+    text-indent: 0
+    border-collapse: collapse
+    border-color: inherit
+
+  // Listas de navegación: sin estilo, sin padding (sanitize.css)
+  nav ul,
+  nav ol
+    list-style: none
+    padding: 0
+
+  // HR: box-sizing content-box, sin altura (normalize)
+  hr
+    box-sizing: content-box
+    height: 0
+    color: inherit
+    overflow: visible
+
+  // Fieldset: bordes y márgenes (reseter.css)
+  fieldset
+    border: 1px solid currentColor
+    margin: 0 2px
+
+  // Legend: hereda color, display table (normalize)
+  legend
+    color: inherit
+    display: table
+    max-width: 100%
+    white-space: normal
+    padding: 0
+
+  // Progress: alineación vertical (normalize)
+  progress
+    vertical-align: baseline
+
+  // Details y summary: display correcto (normalize)
+  details
+    display: block
+
+  summary
+    display: list-item
+
+  // Elementos ocultos (normalize)
+  [hidden]
+    display: none
+
+  // Template: sin display (normalize)
+  template
+    display: none
+
+  // Palabras rompen para evitar overflow (sanitize.css)
+  html
+    word-break: break-all
+
+  // Main: display block (normalize)
+  main
+    display: block
+
+  figure
+    display: block
+    margin: 0
+    padding: 0
+
+    img
+      display: block
+      width: 100%
+    figcaption
+      text-align: center

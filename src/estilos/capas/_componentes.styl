@@ -1,0 +1,69 @@
+// ============================================
+// Componentes Kiosko (BEM)
+// ============================================
+
+@layer componentes
+  .kiosko
+    &__escena
+      width 100%
+      height 100%
+      display: grid
+      place-content: stretch
+      place-items: stretch
+      position: relative
+
+      &__capa
+        grid-area: 1 / 1
+
+        &--fondo
+          z-index -1
+          display: grid
+          place-content: stretch
+          place-items: stretch
+          position: relative
+
+          img, video
+            width 100vw
+            height 100vh
+            object-fit cover
+            min-width: 100%
+            min-height: 100%
+
+        &--contenido
+          z-index 1
+          display: flex
+          flex-direction: column
+          gap 0
+          overflow-y visible
+
+    button, a
+    &__boton
+      cursor pointer
+      user-select none
+      touch-action manipulation
+      -webkit-tap-highlight-color transparent
+      padding .5em 1.5em
+      border-radius 0.5rem
+      background var(--kiosko-color-superficie)
+      border 2px solid var(--kiosko-color-borde)
+      color var(--kiosko-color-texto)
+      font-size var(--kiosko-boton-tamano)
+      transition background var(--kiosko-duracion-transicion), border-color var(--kiosko-duracion-transicion)
+      text-align center
+      text-decoration: none
+
+      &--presionado
+        background var(--kiosko-color-primario)
+        border-color var(--kiosko-color-primario)
+
+      &--deshabilitado
+        opacity 0.5
+        pointer-events none
+
+    &__titulo
+      user-select none
+      font-size var(--kiosko-h2-tamano)
+
+    &__texto
+      user-select none
+      font-size var(--kiosko-body-tamano)

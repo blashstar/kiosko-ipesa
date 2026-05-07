@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import datos from '../datos/contenidos.json5'
+import datos from '../datos/contenidos.json'
 
 interface IInfografia {
   id: string

@@ -1,6 +1,0 @@
-{
-  productos: [
-    { id: "prod-1", categoria: "iluminacion", modelo: "LED panel 60W", descripcion: "Panel LED de alta potencia", imagen: "/img/modelos/panel-led.jpg" },
-    { id: "prod-2", categoria: "iluminacion", modelo: "LED bombilla 15W", descripcion: "Bombilla LED ahorradora", imagen: "/img/modelos/bombilla-led.jpg" }
-  ]
-}
