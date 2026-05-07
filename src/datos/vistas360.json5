@@ -1,0 +1,194 @@
+[
+	{
+		"id": "R320P",
+		"categoria": "RETROEXCAVADORA",
+		"modelo": "320P",
+		"tarjeta": "/img/tarjetas/t-v360-320p.webp",
+		"escenas": [
+			{
+				"id": "R320P-plano1"
+				"medio": "/img/vistas/vista-320p-plano1.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			,
+			{
+				"id": "R320P-plano2"
+				"medio": "/img/vistas/vista-320p-plano2.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "R320P-plano3"
+				"medio": "/img/vistas/vista-320p-plano3.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "R320P-interior"
+				"medio": "/img/vistas/vista-320p-interior.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			}
+		]
+	},
+	{
+		"id": "E350P",
+		"categoria": "EXCAVADORA",
+		"modelo": "350P",
+		"tarjeta": "/img/tarjetas/t-v360-350p.webp",
+		"escenas": [
+			{
+				"id": "E350P-plano1"
+				"medio": "/img/vistas/vista-350p-plano1.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			,
+			{
+				"id": "E350P-plano2"
+				"medio": "/img/vistas/vista-350p-plano2.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "E350P-plano3"
+				"medio": "/img/vistas/vista-350p-plano3.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "E350P-interior"
+				"medio": "/img/vistas/vista-350p-interior.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			}
+		]
+	},
+	{
+		"id": "M620P",
+		"categoria": "MOTONIVELADORA",
+		"modelo": "620P",
+		"tarjeta": "/img/tarjetas/t-v360-620p.webp",
+		"escenas": [
+			{
+				"id": "M620P-plano1"
+				"medio": "/img/vistas/vista-620p-plano1.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			,
+			{
+				"id": "M620P-plano2"
+				"medio": "/img/vistas/vista-620p-plano2.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "M620P-plano3"
+				"medio": "/img/vistas/vista-620p-plano3.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "M620P-interior"
+				"medio": "/img/vistas/vista-620p-interior.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			}
+		]
+	},
+	{
+		"id": "CF644G",
+		"categoria": "CARGADOR FRONTAL",
+		"modelo": "644G-TIER",
+		"tarjeta": "/img/tarjetas/t-v360-644g.webp",
+		"escenas": [
+			{
+				"id": "C644G-plano1"
+				"medio": "/img/vistas/vista-644g-plano1.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			,
+			{
+				"id": "C644G-plano2"
+				"medio": "/img/vistas/vista-644g-plano2.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "C644G-plano3"
+				"medio": "/img/vistas/vista-644g-plano3.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "C644G-interior"
+				"medio": "/img/vistas/vista-644g-interior.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			}
+		]
+	},
+	{
+		"id": "TT850J",
+		"categoria": "TRACTOR TOPADOR",
+		"modelo": "850J-II",
+		"tarjeta": "/img/tarjetas/t-v360-850j.webp",
+		"escenas": [
+			{
+				"id": "TT850J-plano1"
+				"medio": "/img/vistas/vista-850j-plano1.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			,
+			{
+				"id": "TT850J-plano2"
+				"medio": "/img/vistas/vista-850j-plano2.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "TT850J-plano3"
+				"medio": "/img/vistas/vista-850j-plano3.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "TT850J-interior"
+				"medio": "/img/vistas/vista-850j-interior.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			}
+		]
+	},
+	{
+		"id": "CHHC110",
+		"categoria": "COMPACTADORA",
+		"modelo": "HAMM HC 110",
+		"tarjeta": "/img/tarjetas/t-v360-hc110.webp",
+		"escenas": [
+			{
+				"id": "CHHC110-plano1"
+				"medio": "/img/vistas/vista-hc110-plano1.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			,
+			{
+				"id": "CHHC110-plano2"
+				"medio": "/img/vistas/vista-hc110-plano2.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "CHHC110-plano3"
+				"medio": "/img/vistas/vista-hc110-plano3.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			},
+			{
+				"id": "CHHC110-interior"
+				"medio": "/img/vistas/vista-hc110-interior.webp",
+				"tipoMedio": "imagen",
+				"marcadores": []
+			}
+		]
+	}
+]

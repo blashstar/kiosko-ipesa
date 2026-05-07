@@ -1,0 +1,92 @@
+<template lang="pug">
+.menu-vistas.pantalla-completa
+  .encabezado
+    button.btn-volver(@click="$emit('volver')") ← VOLVER
+    .titulo VISTAS 360°
+  .lista-items
+    .item(
+      v-for="vista in vistas",
+      :key="vista.id",
+      @click="seleccionarVista(vista)"
+    )
+      .imagen-item
+      img(:src="vista.miniatura" :alt="vista.nombre")
+      .nombre-item {{ vista.nombre }}
+</template>
+
+<script setup lang="ts">
+import { storeToRefs } from 'pinia'
+import { useAlmacenVistas360 } from '@/almacenes/vistas360'
+
+const emit = defineEmits<{
+  (e: 'volver'): void
+  (e: 'navegar', seccion: string): void
+}>()
+
+const almacenVistas360 = useAlmacenVistas360()
+const { vistas } = storeToRefs(almacenVistas360)
+
+function seleccionarVista(vista: any) {
+  almacenVistas360.seleccionarVista(vista.id)
+}
+
+function volver() {
+  emit('volver')
+}
+</script>
+
+<style lang="stylus" scoped>
+.menu-vistas
+  display: flex
+  flex-direction: column
+  background: #0a0a0a
+  padding: 2rem
+
+.encabezado
+  display: flex
+  align-items: center
+  gap: 2rem
+  margin-bottom: 2rem
+
+.btn-volver
+  padding: 0.8rem 1.5rem
+  background: transparent
+  border: 1px solid #00ff88
+  color: #00ff88
+  cursor: pointer
+  font-size: 1rem
+
+.titulo
+  font-size: 1.8rem
+  color: #00ff88
+
+.lista-items
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+  gap: 2rem
+  overflow-y: auto
+  flex: 1
+
+.item
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 1rem
+  border: 1px solid #333
+  cursor: pointer
+  transition: all 0.3s ease
+
+  &:hover
+    border-color: #00ff88
+    transform: scale(1.05)
+
+.imagen-item img
+  width: 100%
+  aspect-ratio: 1
+  object-fit: cover
+
+.nombre-item
+  margin-top: 0.5rem
+  font-size: 1rem
+  text-align: center
+</style>
