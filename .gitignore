@@ -1,0 +1,34 @@
+# Dependencias
+node_modules/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Entorno
+.env
+.env.local
+.env.*.local
+
+# Test
+coverage/
+*.tgz
+
+# Misc
+*.bak
+*.tmp
