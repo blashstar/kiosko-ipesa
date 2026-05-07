@@ -8,8 +8,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
+      '@estilos': resolve(__dirname, 'src/estilos'),
+      '@utiles': resolve(__dirname, 'src/utiles'),
     },
   },
+  // css: {
+  //   preprocessorOptions: {
+  //     stylus: {},
+  //   },
+  // },
   base: './',
   build: {
     outDir: 'dist',
