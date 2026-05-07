@@ -1,7 +1,7 @@
 <template lang="pug">
 .menu-vistas.pantalla-completa
   .encabezado
-    button.btn-volver(@click="$emit('volver')") ← VOLVER
+    button.btn-volver(@click="volver") ← VOLVER
     .titulo VISTAS 360°
   .lista-items
     .item(
@@ -10,28 +10,26 @@
       @click="seleccionarVista(vista)"
     )
       .imagen-item
-      img(:src="vista.miniatura" :alt="vista.nombre")
+        img(:src="vista.miniatura" :alt="vista.nombre")
       .nombre-item {{ vista.nombre }}
 </template>
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router'
 import { useAlmacenVistas360 } from '@/almacenes/vistas360'
 
-const emit = defineEmits<{
-  (e: 'volver'): void
-  (e: 'navegar', seccion: string): void
-}>()
-
+const router = useRouter()
 const almacenVistas360 = useAlmacenVistas360()
 const { vistas } = storeToRefs(almacenVistas360)
 
 function seleccionarVista(vista: any) {
   almacenVistas360.seleccionarVista(vista.id)
+  router.push({ name: 'vista-360' })
 }
 
 function volver() {
-  emit('volver')
+  router.push({ name: 'menu' })
 }
 </script>
 

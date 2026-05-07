@@ -1,7 +1,7 @@
 <template lang="pug">
 .vista-360.pantalla-completa
   .encabezado
-    button.btn-volver(@click="$emit('volver')") ← VOLVER
+    button.btn-volver(@click="volver") ← VOLVER
     .titulo {{ vistaActual?.nombre || 'VISTA 360°' }}
   .visor
     Visor360(
@@ -14,15 +14,17 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router'
 import { useAlmacenVistas360 } from '@/almacenes/vistas360'
 import Visor360 from '@/componentes/Visor360.vue'
 
-const emit = defineEmits<{
-  (e: 'volver'): void
-}>()
-
+const router = useRouter()
 const almacenVistas360 = useAlmacenVistas360()
 const { vistaActual } = storeToRefs(almacenVistas360)
+
+function volver() {
+  router.push({ name: 'menu-vistas-360' })
+}
 </script>
 
 <style lang="stylus" scoped>

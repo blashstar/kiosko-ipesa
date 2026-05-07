@@ -14,20 +14,20 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits<{
-  (e: 'navegar', seccion: string): void
-}>()
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 function irAVistas360() {
-  emit('navegar', 'menu-vistas-360')
+  router.push({ name: 'menu-vistas-360' })
 }
 
 function irAInfografias() {
-  emit('navegar', 'menu-infografias')
+  router.push({ name: 'menu-infografias' })
 }
 
 function irAComparativas() {
-  emit('navegar', 'menu-comparativas')
+  router.push({ name: 'menu-comparativas' })
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template lang="pug">
 .menu-infografias.pantalla-completa
   .encabezado
-    button.btn-volver(@click="$emit('volver')") ← VOLVER
+    button.btn-volver(@click="volver") ← VOLVER
     .titulo INFOGRAFÍAS
   .lista-items
     .item(
@@ -16,17 +16,20 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router'
 import { useAlmacenContenidos } from '@/almacenes/contenidos'
 
-const emit = defineEmits<{
-  (e: 'volver'): void
-}>()
-
+const router = useRouter()
 const almacenContenidos = useAlmacenContenidos()
 const { infografias } = storeToRefs(almacenContenidos)
 
 function seleccionarInfografia(infografia: any) {
   almacenContenidos.seleccionarInfografia(infografia.id)
+  router.push({ name: 'infografia' })
+}
+
+function volver() {
+  router.push({ name: 'menu' })
 }
 </script>
 

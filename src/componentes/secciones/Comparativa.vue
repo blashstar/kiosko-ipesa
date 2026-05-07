@@ -1,7 +1,7 @@
 <template lang="pug">
 .comparativa.pantalla-completa
   .encabezado
-    button.btn-volver(@click="$emit('volver')") ← VOLVER
+    button.btn-volver(@click="volver") ← VOLVER
     .titulo {{ comparativaActual?.titulo || 'COMPARATIVA' }}
   .contenido
     .productos(v-if="comparativaActual")
@@ -16,14 +16,16 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router'
 import { useAlmacenComparativas } from '@/almacenes/comparativas'
 
-const emit = defineEmits<{
-  (e: 'volver'): void
-}>()
-
+const router = useRouter()
 const almacenComparativas = useAlmacenComparativas()
 const { comparativaActual } = storeToRefs(almacenComparativas)
+
+function volver() {
+  router.push({ name: 'menu-comparativas' })
+}
 </script>
 
 <style lang="stylus" scoped>

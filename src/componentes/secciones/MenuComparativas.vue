@@ -1,7 +1,7 @@
 <template lang="pug">
 .menu-comparativas.pantalla-completa
   .encabezado
-    button.btn-volver(@click="$emit('volver')") ← VOLVER
+    button.btn-volver(@click="volver") ← VOLVER
     .titulo COMPARATIVAS
   .lista-items
     .item(
@@ -16,17 +16,20 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router'
 import { useAlmacenComparativas } from '@/almacenes/comparativas'
 
-const emit = defineEmits<{
-  (e: 'volver'): void
-}>()
-
+const router = useRouter()
 const almacenComparativas = useAlmacenComparativas()
 const { comparativas } = storeToRefs(almacenComparativas)
 
 function seleccionarComparativa(comp: any) {
   almacenComparativas.seleccionarComparativa(comp.id)
+  router.push({ name: 'comparativa' })
+}
+
+function volver() {
+  router.push({ name: 'menu' })
 }
 </script>
 

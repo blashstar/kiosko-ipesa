@@ -1,24 +1,22 @@
 <template lang="pug">
-.pantalla-inicio.pantalla-completa
-  .contenido
-    .logo
-      img(src="/img/logo.png" alt="IPESA" v-if="logoExiste")
-      .logo-texto(v-else) IPESA
-    .titulo KIOSCO INTERACTIVO
-    .btn-iniciar(@click="irAMenu") TOCA PARA INICIAR
+KioskoEscena
+  .logo
+    img(src="/img/logo.svg" alt="IPESA" v-if="logoExiste")
+    .logo-texto(v-else) IPESA
+  .titulo KIOSCO INTERACTIVO
+  .btn-iniciar(@click="irAMenu") TOCA PARA INICIAR
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import KioskoEscena from '../comun/KioskoEscena.vue'
 
-const emit = defineEmits<{
-  (e: 'navegar', seccion: string): void
-}>()
-
+const router = useRouter()
 const logoExiste = ref(true)
 
 function irAMenu() {
-  emit('navegar', 'menu')
+  router.push({ name: 'menu' })
 }
 
 onMounted(() => {
@@ -29,7 +27,7 @@ onMounted(() => {
   img.onerror = () => {
     logoExiste.value = false
   }
-  img.src = '/img/logo.png'
+   img.src = '/img/logo.svg'
 })
 </script>
 
