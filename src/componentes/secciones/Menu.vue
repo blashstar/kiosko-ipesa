@@ -1,73 +1,84 @@
 <template lang="pug">
-.pantalla-menu.pantalla-completa
+KioskoEscena
   .titulo-menu SELECCIONA UNA OPCIÓN
   .opciones-menu
-    .opcion(@click="irAVistas360")
+    BotonTactil.opcion(
+      @accion="irAVistas360"
+      :estadoPresionado="estilosOpcion"
+    )
       .icono 📷
       .texto VISTAS 360°
-    .opcion(@click="irAInfografias")
+    BotonTactil.opcion(
+      @accion="irAInfografias"
+      :estadoPresionado="estilosOpcion"
+    )
       .icono 📊
       .texto INFOGRAFÍAS
-    .opcion(@click="irAComparativas")
+    BotonTactil.opcion(
+      @accion="irAComparativas"
+      :estadoPresionado="estilosOpcion"
+    )
       .icono ⚖️
       .texto COMPARATIVAS
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
+import KioskoEscena from '../comun/KioskoEscena.vue';
+import BotonTactil from '../comun/BotonTactil.vue';
 
-const router = useRouter()
+const router = useRouter();
+
+const estilosOpcion = {
+  clase: 'opcion--presionada',
+  estilo: {
+    backgroundColor: 'rgba(0, 255, 136, 0.1)',
+    borderColor: '#00ff88',
+    transform: 'scale(0.98)',
+  },
+};
 
 function irAVistas360() {
-  router.push({ name: 'menu-vistas-360' })
+  router.push({ name: 'menu-vistas-360' });
 }
 
 function irAInfografias() {
-  router.push({ name: 'menu-infografias' })
+  router.push({ name: 'menu-infografias' });
 }
 
 function irAComparativas() {
-  router.push({ name: 'menu-comparativas' })
+  router.push({ name: 'menu-comparativas' });
 }
 </script>
 
 <style lang="stylus" scoped>
-.pantalla-menu
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%)
-  padding: 2rem
-
 .titulo-menu
-  font-size: 1.5rem
-  margin-bottom: 3rem
-  color: #00ff88
+  font-size 1.5rem
+  margin-bottom 3rem
+  color #00ff88
 
 .opciones-menu
-  display: flex
-  flex-direction: column
-  gap: 2rem
+  display flex
+  flex-direction column
+  gap 2rem
 
 .opcion
-  display: flex
-  align-items: center
-  gap: 1.5rem
-  padding: 1.5rem 3rem
-  border: 2px solid #333
-  background: rgba(255, 255, 255, 0.05)
-  cursor: pointer
-  transition: all 0.3s ease
-  min-width: 300px
+  display flex
+  align-items center
+  gap 1.5rem
+  padding 1.5rem 3rem
+  border 2px solid #333
+  background rgba(255, 255, 255, 0.05)
+  min-width 300px
 
-  &:hover
-    border-color: #00ff88
-    background: rgba(0, 255, 136, 0.1)
+  &--presionada
+    background rgba(0, 255, 136, 0.1)
+    border-color #00ff88
+    transform scale(0.98)
 
 .icono
-  font-size: 2rem
+  font-size 2rem
 
 .texto
-  font-size: 1.3rem
+  font-size 1.3rem
 </style>
