@@ -12,12 +12,17 @@
 //   }
 //
 
+$kioskoAncho = 1080
+$kioskoAlto = 1920
+$kioskoRatio = $kioskoAncho / $kioskoAlto
+
+
 :root
 	// --- Layout --------------------------------------------------------------
 	--kiosko-escala            1
-	--kiosko-ancho             1080
-	--kiosko-alto              1920
-	--kiosko-relacion-aspecto  calc(var(--kiosko-ancho) / var(--kiosko-alto))
+	--kiosko-ancho             $kioskoAncho
+	--kiosko-alto              $kioskoAlto
+	--kiosko-relacion-aspecto  $kioskoRatio
 
 	// --- Paleta de color (neutra / sistema operativo) ------------------------
 	--kiosko-color-fondo              #0a0a0a
