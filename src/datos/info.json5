@@ -1,13 +1,35 @@
+// ============================================
+// FICHAS TÉCNICAS DE MÁQUINAS
+// ============================================
+// Cada entrada es la página completa de una máquina con:
+//   - Descripción comercial (Markdown: **negrita**, \n saltos de línea)
+//   - Detalles rápidos (peso, potencia)
+//   - Especificaciones con iconos
+//   - Características con marcadores posicionados sobre la imagen
+//
+// Las descripciones se renderizan con un parser de Markdown en Vue.
+// Los marcadores usan coordenadas normalizadas (0-1) sobre la imagen.
+
 [
   {
+    // ID único — coincide con vistas360.json5 y versus.json5
     "id": "E350P",
-  "categoria": "EXCAVADORA",
+    // Categoría de maquinaria (filtro y agrupación)
+    "categoria": "EXCAVADORA",
+    // Modelo comercial
     "modelo": "350P",
+    // Descripción comercial con formato Markdown
+    // Se renderiza con un parser (soporta **negrita**, \n saltos, listas -)
     "descripcion": "La **350 P-Tier** contiene potencia pura de 271 hp diseñada para dominar los entornos más exigentes. Su robustez en el frente de batalla y tecnología hidráulica maximizan la carga de materiales de alta densidad. Un equipo de alta disponibilidad que garantiza productividad continua con costos operativos reducidos.",
+    // Imagen principal de la máquina (sin prefijo de ruta, se resuelve en el componente)
     "imagen": "E350P.webp",
+    // Color de acento de la máquina (puede variar por modelo)
     "color": "#FCB515",
+    // Layout de la ficha — por ahora solo "a"
     "plantilla": "a",
+    // SVG decorativo con la silueta de la máquina (fondo transparente)
     "perfiles": "perfil-e350p.svg",
+    // Datos rápidos que se muestran destacados (peso, potencia)
     "detalles": [
       {
         "titulo": "PESO",
@@ -18,8 +40,10 @@
         "valor": "271 HP"
       }
     ],
+    // Especificaciones técnicas con iconos decorativos
     "especificaciones": [
       {
+        // Icono de la spec (en public/img/iconos/)
         "icono": "capacidad.webp",
         "titulo": "CAPACIDAD DEL CUCHARÓN",
         "valor": "2.51 m³"
@@ -30,11 +54,16 @@
         "valor": "222 kN"
       }
     ],
+    // Características detalladas con marcadores sobre la imagen de la máquina
     "caracteristicas": [
       {
+        // Posición del marcador sobre la imagen (coordenadas normalizadas 0-1)
+        // d = dirección de la etiqueta: O (Oeste), E (Este), N (Norte), S (Sur)
         "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
+        // Icono de la característica
         "icono": "torque.webp",
         "titulo": "MAYOR TORQUE DE GIRO",
+        // Descripción con soporte Markdown
         "descripcion": "120 kN·m, Permite romper la inercia más rápido para ciclos de trabajo más ágiles."
       },
       {
@@ -59,13 +88,14 @@
         "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
         "icono": "aplicaciones.webp",
         "titulo": "APLICACIONES DE TRABAJO",
+        // Lista Markdown con viñetas (-) y **negrita**
         "descripcion": "- **Minería de Tajo Abierto**: Movimiento de tierras, limpieza de bancos y mantenimiento de vías minerales.\n- **Infraestructura Vial**: Cortes de talud, defensa ribereña y obras de saneamiento.\n- **Canteras y Agregados**: Alimentación de plantas de trituración y acopio de materiales.\n- **Demolición Urbana e Industrial**: Derribo de estructuras y carga de escombros de alta densidad."
       }
     ]
   },
   {
     "id": "R320P",
-  "categoria": "RETROEXCAVADORA",
+    "categoria": "RETROEXCAVADORA",
     "modelo": "320P",
     "descripcion": "La **320P** es una inversión inteligente que reemplaza varias máquinas con agilidad excepcional. Su control suave y rendimiento superior la hacen ideal para condiciones adversas, brindando versatilidad y rentabilidad en proyectos eficientes.",
     "imagen": "R320P.webp",
@@ -129,7 +159,7 @@
   },
   {
     "id": "CF644G",
-  "categoria": "CARGADOR FRONTAL",
+    "categoria": "CARGADOR FRONTAL",
     "modelo": "644G-TIER",
     "descripcion": "Solución rentable que redefine la fiabilidad en el acarreo, equilibrando durabilidad y desempeño sobresaliente.",
     "imagen": "CF644G.webp",
@@ -193,7 +223,7 @@
   },
   {
     "id": "TT850J",
-  "categoria": "TRACTOR TOPADOR",
+    "categoria": "TRACTOR TOPADOR",
     "modelo": "850J-II",
     "descripcion": "Potencia hidrostática para movimiento de tierras sin precedentes, con maniobras ágiles y eficiencia radical en combustible.",
     "imagen": "TT850J.webp",
@@ -245,7 +275,7 @@
   },
   {
     "id": "M620G",
-  "categoria": "MOTONIVELADORA",
+    "categoria": "MOTONIVELADORA",
     "modelo": "620G",
     "descripcion": "Precisión absoluta y equilibrio superior con diseño optimizado para reducir el consumo de combustible hasta en un 10%.",
     "imagen": "M620G.webp",
@@ -309,7 +339,7 @@
   },
   {
     "id": "CHHC110",
-  "categoria": "COMPACTADORA",
+    "categoria": "COMPACTADORA",
     "modelo": "HAMM HC 110",
     "descripcion": "Rodillo compactador diseñado para alto rendimiento y uniformidad en asfalto y tierra, reduciendo tiempos y costos.",
     "imagen": "HHC110.webp",

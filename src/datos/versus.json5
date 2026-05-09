@@ -1,14 +1,33 @@
+// ============================================
+// COMPARATIVAS VERSUS — Máquinas lado a lado
+// ============================================
+// Cada entrada compara dos modelos de la misma categoría.
+//
+// Plantillas de layout:
+//   "A" — Cada máquina tiene sus propias características (se muestran en columnas separadas)
+//   "B" — Las máquinas comparten características (tabla única con specs compartidas)
+//
+// NOTA: El campo "carateristicas" tiene typo intencional para mantener compatibilidad
+// con los componentes que ya lo leen. No renombrar sin actualizar el código Vue.
+
 [
   {
+    // Identificador único de la comparativa
     "id": "VS-310P-320P",
+    // Imagen de la tarjeta para el menú de navegación
     "tarjeta": "/img/tarjetas/t-versus-310p-320p.webp",
+    // Layout a usar: "A" = specs por máquina, "B" = specs compartidas
     "plantilla": "A",
+    // Las dos máquinas a comparar (siempre 2)
     "maquinas": [
       {
+        // ID de la máquina (coincide con info.json5 y vistas360.json5)
         "id": "R310P",
         "categoria": "RETROEXCAVADORA",
         "modelo": "310P",
+        // Imagen recortada de la máquina (fondo transparente preferido)
         "imagen": "/img/modelos/r310p-min.webp",
+        // Especificaciones técnicas — par título/valor para tabla comparativa
         "carateristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ 4,5l" },
           { "titulo": "Potencia bruta (HP)", "valor": "92 HP" },
@@ -117,6 +136,8 @@
   {
     "id": "VS-620G-620P",
     "tarjeta": "/img/tarjetas/t-versus-620g-620p.webp",
+    // Plantilla B: ambas máquinas comparten las mismas especificaciones
+    // Se muestran en una tabla única en vez de columnas separadas
     "plantilla": "B",
     "maquinas": [
       {
@@ -132,6 +153,7 @@
         "imagen": "/img/modelos/m620p-min.webp"
       }
     ],
+    // Especificaciones compartidas por ambas máquinas (solo en plantilla B)
     "carateristicas": [
       { "titulo": "Motor", "valor": "JD PowerTech™ Plus de 6,8l" },
       { "titulo": "Par máximo neto", "valor": "915 Nm" },

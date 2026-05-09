@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia'
-import datos from '../datos/contenidos.json'
+import datos from '../datos/contenidos.json5'
 
-interface IInfografia {
+export interface IInfografia {
   id: string
   titulo: string
   imagen: string
 }
 
-interface IContenido {
+export interface IContenido {
   tituloApp: string
   fondoInicio: string
   fondoMenu: string
@@ -33,7 +33,8 @@ export const useAlmacenContenidos = defineStore('contenidos', {
 
   actions: {
     cargarContenidos() {
-      // Already loaded from JSON5
+      // Los datos se cargan estáticamente desde contenidos.json5 en build time.
+      // Este action queda como hook para futura carga dinámica si es necesaria.
     },
     seleccionarInfografia(id: string) {
       this.infografiaActual =

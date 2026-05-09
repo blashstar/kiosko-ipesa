@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import datos from '../datos/versus.json'
+import datos from '../datos/versus.json5'
 
 interface IComparativa {
   id: string

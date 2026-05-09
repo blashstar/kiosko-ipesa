@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import datos from '../datos/vistas360.json'
+import datos from '../datos/vistas360.json5'
 
 interface IVista360 {
   id: string

@@ -1,9 +1,0 @@
-{
-  tituloApp: "KIOSCO IPESA",
-  fondoInicio: "/img/fondos/inicio.jpg",
-  fondoMenu: "/img/fondos/menu.jpg",
-  infografias: [
-    { id: "info-1", titulo: "Beneficios LED", imagen: "/img/infografias/beneficios-led.jpg" },
-    { id: "info-2", titulo: "Ahorro Energético", imagen: "/img/infografias/ahorro.jpg" }
-  ]
-}

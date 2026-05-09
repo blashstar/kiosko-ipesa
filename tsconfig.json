@@ -22,7 +22,7 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.vue",
-    "src/componentes/comun/KioskoEscenavue"
+    "src/**/*.d.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

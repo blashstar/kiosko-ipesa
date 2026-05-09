@@ -1,14 +1,31 @@
+// ============================================
+// VISTAS 360° DE MAQUINARIA
+// ============================================
+// Cada entrada representa una máquina con múltiples ángulos fotográficos.
+// Se consume con @blashstar/vue-360 que solo soporta "imagen" como tipoMedio.
+// Los marcadores son hotspots interactivos (pendientes de llenar).
+
 [
 	{
+		// Identificador único de la máquina (prefijo = categoría)
 		"id": "R320P",
+		// Tipo de maquinaria (se usa para filtros y agrupación)
 		"categoria": "RETROEXCAVADORA",
+		// Nombre comercial del modelo
 		"modelo": "320P",
+		// Imagen de la tarjeta para el menú de navegación (1080x1920)
 		"tarjeta": "/img/tarjetas/t-v360-320p.webp",
+		// Ángulos fotográficos de la máquina
 		"escenas": [
 			{
+				// ID único de la escena (máquina + ángulo)
 				"id": "R320P-plano1",
+				// Ruta de la imagen del ángulo (WebP optimizado)
 				"medio": "/img/vistas/vista-320p-plano1.webp",
+				// Tipo de contenido — por ahora solo "imagen" (soporte de vue-360)
 				"tipoMedio": "imagen",
+				// Hotspots interactivos sobre la imagen (pendientes de llenar)
+				// Cada marcador futuro: { x, y, titulo, descripcion }
 				"marcadores": []
 			},
 			{
@@ -24,6 +41,7 @@
 				"marcadores": []
 			},
 			{
+				// Vista interior de la cabina
 				"id": "R320P-interior",
 				"medio": "/img/vistas/vista-320p-interior.webp",
 				"tipoMedio": "imagen",

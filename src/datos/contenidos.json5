@@ -1,0 +1,28 @@
+{
+  // Título principal que se muestra en la pantalla de inicio del kiosko
+  tituloApp: "KIOSCO IPESA",
+
+  // Imagen de fondo para la pantalla de inicio (resolución 1080x1920)
+  fondoInicio: "/img/fondos/inicio.jpg",
+
+  // Imagen de fondo para el menú principal de navegación
+  fondoMenu: "/img/fondos/menu.jpg",
+
+  // Lista de infografías disponibles para visualización
+  // Cada entrada debe tener: id único, título visible y ruta de imagen
+  infografias: [
+    {
+      // Identificador único usado para navegación y tracking
+      id: "info-1",
+      // Título que se muestra en la tarjeta/miniatura del menú
+      titulo: "Beneficios LED",
+      // Ruta de la imagen a pantalla completa (1080x1920)
+      imagen: "/img/infografias/beneficios-led.jpg"
+    },
+    {
+      id: "info-2",
+      titulo: "Ahorro Energético",
+      imagen: "/img/infografias/ahorro.jpg"
+    }
+  ]
+}
