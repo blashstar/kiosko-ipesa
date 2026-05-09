@@ -24,13 +24,11 @@ interface EstadoPresionado {
 
 interface Props {
   deshabilitado?: boolean;
-  duracionMs?: number;
   estadoPresionado?: EstadoPresionado;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   deshabilitado: false,
-  duracionMs: 150,
   estadoPresionado: () => ({}),
 });
 
@@ -39,8 +37,6 @@ const emit = defineEmits<{
 }>();
 
 const { presionado, escala, duracionMs, alPresionar, alSoltar, alAbandonar } = usarBotonTactil({
-  escala: props.escala,
-  duracionMs: props.duracionMs,
   onAccion: () => emit('accion'),
 });
 
@@ -52,7 +48,6 @@ const clases = computed(() => ({
 const estilos = computed(() => {
   if (!presionado.value || !props.estadoPresionado.estilo) return {};
   return {
-    transitionDuration: `${duracionMs.value}ms`,
     ...props.estadoPresionado.estilo,
   };
 });
@@ -60,7 +55,8 @@ const estilos = computed(() => {
 
 <style lang="stylus" scoped>
 .boton-tactil
-  user-select none
-  -webkit-tap-highlight-color transparent
-  touch-action manipulation
+    user-select none
+    -webkit-tap-highlight-color transparent
+    touch-action manipulation
+    transition all 0.1s ease-in-out
 </style>

@@ -41,6 +41,11 @@ const rutas: RouteRecordRaw[] = [
     name: 'comparativa',
     component: () => import('../componentes/secciones/Comparativa.vue'),
   },
+  {
+    path: '/qr',
+    name: 'qr',
+    component: () => import('../componentes/secciones/inicio.vue'),
+  },
 ]
 
 const router = createRouter({

@@ -7,5 +7,13 @@ export default function usarNavegacion() {
 		router.push({ name: nombre })
 	}
 
-	return { seccion }
+	const volver = () => {
+		if (window.history.length > 1) {
+			router.back();
+		} else {
+			router.push('/');
+		}
+	};
+
+	return { seccion, volver }
 }
