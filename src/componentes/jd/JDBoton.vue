@@ -24,18 +24,21 @@ const botonPresionado = {
 .jd_boton
 	display inline-block
 	padding 1em 2em
-	background-color #00ff88
-	color #0a0a0a
-	font-size 1.5em
-	border-radius 8px
+	color white
+	font-size vh(25px)
+	font-weight 900
+	background-color #404040
+	background-image linear-gradient(to bottom right, #404040, #000000)
+	border: 1px solid #FFCC00
+	border-radius 10px
 	user-select none
 	cursor pointer
 	text-align center
-	transition background-color 150ms, color 150ms, transform 150ms
 
 	&--presionado
-		background-color #00cc70
-		color #0a0a0a
-		transform scale(0.95)
+		background-image linear-gradient(to top right, #404040, #000000);
+		color #FFCC00
+		transform scale(0.9)
+		box-shadow 0 0 25px 15px #FFCC0066
 
 </style>

@@ -1,18 +1,11 @@
 <template lang="pug">
-figure.jd_logo
-	img(src="/img/logo.svg" alt="John Deere")
+	h1.jd-texto
+		slot
 </template>
-
-
 
 <script setup lang="ts">
 </script>
 
 <style lang="stylus" scoped>
-
-.jd_logo
-	img
-		display block
-		height vh(77px)
 
 </style>
