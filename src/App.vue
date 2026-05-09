@@ -1,5 +1,5 @@
 <template lang="pug">
-Kiosko
+Kiosko(depurar)
   router-view
 </template>
 
@@ -10,9 +10,4 @@ import Kiosko from '@/componentes/comun/Kiosko.vue'
 </script>
 
 <style lang="stylus" scoped>
-.contenedor-app
-  width: 100vw
-  height: 100vh
-  overflow: hidden
-  background: #000
 </style>
