@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
 
 /**
  * Tipos para el estado de la interfaz del kiosko
