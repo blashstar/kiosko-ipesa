@@ -18,6 +18,7 @@
     "categoria": "EXCAVADORA",
     // Modelo comercial
     "modelo": "350P",
+    "tarjeta": "/img/tarjetas/t-info-350p.webp",
     // Descripción comercial con formato Markdown
     // Se renderiza con un parser (soporta **negrita**, \n saltos, listas -)
     "descripcion": "La **350 P-Tier** contiene potencia pura de 271 hp diseñada para dominar los entornos más exigentes. Su robustez en el frente de batalla y tecnología hidráulica maximizan la carga de materiales de alta densidad. Un equipo de alta disponibilidad que garantiza productividad continua con costos operativos reducidos.",
@@ -97,6 +98,7 @@
     "id": "R320P",
     "categoria": "RETROEXCAVADORA",
     "modelo": "320P",
+    "tarjeta": "/img/tarjetas/t-info-320p.webp",
     "descripcion": "La **320P** es una inversión inteligente que reemplaza varias máquinas con agilidad excepcional. Su control suave y rendimiento superior la hacen ideal para condiciones adversas, brindando versatilidad y rentabilidad en proyectos eficientes.",
     "imagen": "R320P.webp",
     "color": "#FCB515",
@@ -161,6 +163,7 @@
     "id": "CF644G",
     "categoria": "CARGADOR FRONTAL",
     "modelo": "644G-TIER",
+    "tarjeta": "/img/tarjetas/t-info-644g.webp",
     "descripcion": "Solución rentable que redefine la fiabilidad en el acarreo, equilibrando durabilidad y desempeño sobresaliente.",
     "imagen": "CF644G.webp",
     "color": "#FCB515",
@@ -225,6 +228,7 @@
     "id": "TT850J",
     "categoria": "TRACTOR TOPADOR",
     "modelo": "850J-II",
+    "tarjeta": "/img/tarjetas/t-info-850.webp",
     "descripcion": "Potencia hidrostática para movimiento de tierras sin precedentes, con maniobras ágiles y eficiencia radical en combustible.",
     "imagen": "TT850J.webp",
     "color": "#FCB515",
@@ -277,6 +281,7 @@
     "id": "M620G",
     "categoria": "MOTONIVELADORA",
     "modelo": "620G",
+    "tarjeta": "/img/tarjetas/t-info-620g.webp",
     "descripcion": "Precisión absoluta y equilibrio superior con diseño optimizado para reducir el consumo de combustible hasta en un 10%.",
     "imagen": "M620G.webp",
     "color": "#FCB515",
@@ -341,6 +346,7 @@
     "id": "CHHC110",
     "categoria": "COMPACTADORA",
     "modelo": "HAMM HC 110",
+    "tarjeta": "/img/tarjetas/t-info-hc110.webp",
     "descripcion": "Rodillo compactador diseñado para alto rendimiento y uniformidad en asfalto y tierra, reduciendo tiempos y costos.",
     "imagen": "HHC110.webp",
     "color": "#FCB515",

@@ -35,9 +35,9 @@ export const useAlmacenInterfaz = defineStore('interfaz', {
     estaCargando: false,
     mensajeError: null,
     menuOpciones: [
-        { id: 'infografia', nombre: 'menu-infografias', titulo: 'Infografías', tarjeta: '/img/tarjetas/t-pagina-info.webp' },
+        { id: 'infografia', nombre: 'menu-infografias', titulo: 'Infografías', tarjeta: '/img/tarjetas/t-pagina-infografias.webp' },
         { id: 'comparativa', nombre: 'menu-comparativas', titulo: 'Duelo de gigantes', tarjeta: '/img/tarjetas/t-pagina-versus.webp' },
-        { id: 'vista-360', nombre: 'menu-vistas-360', titulo: 'Vistas 360°', tarjeta: '/img/tarjetas/t-pagina-vista360.webp' },
+        { id: 'vista-360', nombre: 'menu-vistas-360', titulo: 'Vistas 360°', tarjeta: '/img/tarjetas/t-pagina-vistas360.webp' },
       ]
   }),
 
