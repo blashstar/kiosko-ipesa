@@ -13,9 +13,9 @@ describe('useAlmacenInfografias', () => {
       expect(store.infografias.length).toBeGreaterThan(0);
     });
 
-    it('debería inicializar infografiaActual como null', () => {
+    it('debería inicializar infografiaActual con la primera infografia', () => {
       const store = useAlmacenInfografias();
-      expect(store.infografiaActual).toBeNull();
+      expect(store.infografiaActual).toEqual(store.infografias[0]);
     });
 
     it('debería inicializar categoriaActiva como null', () => {
@@ -123,28 +123,32 @@ describe('useAlmacenInfografias', () => {
       expect(store.infografiaActual).toEqual(store.infografias[0]);
     });
 
-    it('debería establecer infografiaActual como null si no encuentra el ID', () => {
+    it('debería establecer infografiaActual como la primera infografia si no encuentra el ID', () => {
       const store = useAlmacenInfografias();
+      const primera = store.infografias[0];
       store.seleccionarInfografia('id-no-existente');
-      expect(store.infografiaActual).toBeNull();
+      expect(store.infografiaActual).toEqual(primera);
     });
 
     it('debería manejar ID vacío', () => {
       const store = useAlmacenInfografias();
+      const primera = store.infografias[0];
       store.seleccionarInfografia('');
-      expect(store.infografiaActual).toBeNull();
+      expect(store.infografiaActual).toEqual(primera);
     });
 
     it('debería manejar ID nulo', () => {
       const store = useAlmacenInfografias();
+      const primera = store.infografias[0];
       store.seleccionarInfografia(null as unknown as string);
-      expect(store.infografiaActual).toBeNull();
+      expect(store.infografiaActual).toEqual(primera);
     });
 
     it('debería manejar ID undefined', () => {
       const store = useAlmacenInfografias();
+      const primera = store.infografias[0];
       store.seleccionarInfografia(undefined as unknown as string);
-      expect(store.infografiaActual).toBeNull();
+      expect(store.infografiaActual).toEqual(primera);
     });
 
     it('debería sobrescribir la selección anterior', () => {
@@ -163,19 +167,21 @@ describe('useAlmacenInfografias', () => {
       expect(typeof store.limpiarSeleccion).toBe('function');
     });
 
-    it('debería establecer infografiaActual como null', () => {
+    it('debería volver a la primera infografia al limpiar selección', () => {
       const store = useAlmacenInfografias();
+      const primera = store.infografias[0];
       store.seleccionarInfografia(store.infografias[0].id);
       expect(store.infografiaActual).not.toBeNull();
       store.limpiarSeleccion();
-      expect(store.infografiaActual).toBeNull();
+      expect(store.infografiaActual).toEqual(primera);
     });
 
-    it('debería mantener infografiaActual como null si ya es null', () => {
+    it('debería mantener la primera infografia al limpiar si no había selección', () => {
       const store = useAlmacenInfografias();
-      expect(store.infografiaActual).toBeNull();
+      const primera = store.infografias[0];
+      expect(store.infografiaActual).toEqual(primera);
       store.limpiarSeleccion();
-      expect(store.infografiaActual).toBeNull();
+      expect(store.infografiaActual).toEqual(primera);
     });
 
     it('debería ejecutarse sin errores', () => {

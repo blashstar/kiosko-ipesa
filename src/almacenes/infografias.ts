@@ -29,6 +29,7 @@ export interface IInfografia {
   id: string
   categoria: string
   modelo: string
+  tarjeta: string,
   descripcion: string
   imagen: string
   color: string
@@ -41,7 +42,7 @@ export interface IInfografia {
 
 interface Estado {
   infografias: IInfografia[]
-  infografiaActual: IInfografia | null
+  seleccion: IInfografia | null
   categoriaActiva: string | null
 }
 
@@ -50,6 +51,7 @@ function mapearInfografias(datos: any[]): IInfografia[] {
     id: d.id,
     categoria: d.categoria,
     modelo: d.modelo,
+    tarjeta: d.tarjeta,
     descripcion: d.descripcion,
     imagen: d.imagen,
     color: d.color,
@@ -68,11 +70,15 @@ const infografiasIniciales = mapearInfografias(
 export const useAlmacenInfografias = defineStore('infografias', {
   state: (): Estado => ({
     infografias: infografiasIniciales,
-    infografiaActual: null,
+    seleccion: null,
     categoriaActiva: null,
   }),
 
   getters: {
+    infografiaActual(): IInfografia | null {
+      return this.seleccion || this.infografias[0] || null
+    },
+
     categorias(): string[] {
       return [...new Set(this.infografias.map((i) => i.categoria))]
     },
@@ -89,6 +95,15 @@ export const useAlmacenInfografias = defineStore('infografias', {
     total(): number {
       return this.infografias.length
     },
+
+    listaInfografias(): Array<{ id: string; tarjeta: string; categoria: string; modelo: string }> {
+      return this.infografias.map((i) => ({
+        id: i.id,
+        tarjeta: i.tarjeta,
+        categoria: i.categoria,
+        modelo: i.modelo,
+      }))
+    },
   },
 
   actions: {
@@ -97,11 +112,11 @@ export const useAlmacenInfografias = defineStore('infografias', {
     },
 
     seleccionarInfografia(id: string) {
-      this.infografiaActual = this.infografias.find((i) => i.id === id) || null
+      this.seleccion = this.infografias.find((i) => i.id === id) || null
     },
 
     limpiarSeleccion() {
-      this.infografiaActual = null
+      this.seleccion = null
     },
 
     filtrarPorCategoria(categoria: string | null) {

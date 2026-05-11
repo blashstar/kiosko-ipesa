@@ -1,100 +1,68 @@
 <template lang="pug">
-KioskoEscena
-  .encabezado
-    BotonTactil.btn-volver(
-      @accion="volver"
-      :estadoPresionado="estilosBoton"
-    ) ← VOLVER
-    .titulo {{ comparativaActual?.titulo || 'COMPARATIVA' }}
-  .contenido
-    .productos(v-if="comparativaActual")
-      .producto
-        img(
-          :src="comparativaActual.producto1.imagen",
-          :alt="comparativaActual.producto1.nombre"
-        )
-        .nombre {{ comparativaActual.producto1.nombre }}
-      .vs VS
-      .producto
-        img(
-          :src="comparativaActual.producto2.imagen",
-          :alt="comparativaActual.producto2.nombre"
-        )
-        .nombre {{ comparativaActual.producto2.nombre }}
+
+JDVista
+  template(v-slot:encabezado)
+    JDLogo
+    JDLogoSeccion(seccion="infografias")
+
+
+  JDTitulo.titular
+    | ¡COMPARA Y DECIDE TU PRÓXIMO EQUIPO!
+
+  pre {{comparativaActual}}
+
+
+  template(v-slot:pie)
+    JDBotonQR
+    .grupo
+      JDBotonVolver
+      JDBotonInicio
+
+  template(v-slot:fondo)
+    img(src="/img/fondo-02.jpg")
 </template>
 
 <script setup lang="ts">
+import { ref, computed, shallowRef } from 'vue';
+import _ from 'lodash';
 import { storeToRefs } from 'pinia';
-import { useRouter } from 'vue-router';
-import { useAlmacenComparativas } from '@/almacenes/comparativas';
-import KioskoEscena from '../comun/KioskoEscena.vue';
-import BotonTactil from '../comun/BotonTactil.vue';
+import JDVista from '@jd/JDVista.vue';
+import JDLogo from '@jd/JDLogo.vue';
+import JDLogoSeccion from '@jd/JDLogoSeccion.vue';
+import JDTitulo from '@jd/JDTitulo.vue';
+import JDBotonQR from '@jd/JDBotonQR.vue';
+import JDBotonInicio from '@jd/JDBotonInicio.vue';
+import JDBotonVolver from '@jd/JDBotonVolver.vue';
+import JDBotonNav from '@jd/JDBotonNav.vue';
 
-const router = useRouter();
+import { usarObservadorResize } from '@utiles/dimensiones';
+import usarNavegacion from '@utiles/navegacion';
+import { useAlmacenComparativas } from '@/almacenes/comparativas';
+
 const almacenComparativas = useAlmacenComparativas();
 const { comparativaActual } = storeToRefs(almacenComparativas);
 
-const estilosBoton = {
-  clase: 'btn-volver--presionado',
-  estilo: {
-    backgroundColor: 'rgba(0, 255, 136, 0.1)',
-    transform: 'scale(0.95)',
-  },
-};
-
-function volver() {
-  router.push({ name: 'menu-comparativas' });
-}
 </script>
 
 <style lang="stylus" scoped>
-.encabezado
-  display flex
-  align-items center
-  gap 2rem
-  margin-bottom 2rem
 
-.btn-volver
-  padding 0.8rem 1.5rem
-  border 1px solid #00ff88
-  color #00ff88
-  font-size 1rem
+.titular
 
-  &--presionado
-    background rgba(0, 255, 136, 0.1)
-    transform scale(0.95)
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 78px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 
-.titulo
-  font-size 1.8rem
-  color #00ff88
+  background: linear-gradient(180deg, #FFFFFF 0%, #E0E0E0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 
-.contenido
-  flex 1
-  display flex
-  align-items center
-  justify-content center
-  gap 4rem
+  text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.49);
 
-.productos
-  display flex
-  align-items center
-  gap 4rem
 
-.producto
-  display flex
-  flex-direction column
-  align-items center
 
-  img
-    max-width 400px
-    object-fit contain
-
-  .nombre
-    margin-top 1rem
-    font-size 1.2rem
-
-.vs
-  font-size 2rem
-  color #00ff88
-  font-weight bold
 </style>

@@ -9,9 +9,16 @@ export interface IComparativa {
   producto2: { nombre: string; imagen: string; especificacion?: any }
 }
 
+export interface IResumenComparativa {
+  id: string
+  tarjeta: string
+  maquinariaA: { id: string; categoria: string; modelo: string }
+  maquinariaB: { id: string; categoria: string; modelo: string }
+}
+
 interface Estado {
   comparativas: IComparativa[]
-  comparativaActual: IComparativa | null
+  seleccion: IComparativa | null
 }
 
 function mapearComparativas(datos: any[]): IComparativa[] {
@@ -39,18 +46,41 @@ const comparativasIniciales = mapearComparativas(
 export const useAlmacenComparativas = defineStore('comparativas', {
   state: (): Estado => ({
     comparativas: comparativasIniciales,
-    comparativaActual: null,
+    seleccion: null,
   }),
+
+  getters: {
+    comparativaActual(): IComparativa | null {
+      return this.seleccion || this.comparativas[0] || null
+    },
+
+    listaComparativas(): IResumenComparativa[] {
+      return datosCrudos.map((d: any) => ({
+        id: d.id,
+        tarjeta: d.tarjeta,
+        maquinariaA: {
+          id: d.maquinas?.[0]?.id || '',
+          categoria: d.maquinas?.[0]?.categoria || '',
+          modelo: d.maquinas?.[0]?.modelo || '',
+        },
+        maquinariaB: {
+          id: d.maquinas?.[1]?.id || '',
+          categoria: d.maquinas?.[1]?.categoria || '',
+          modelo: d.maquinas?.[1]?.modelo || '',
+        },
+      }))
+    },
+  },
 
   actions: {
     cargarComparativas() {
       this.comparativas = comparativasIniciales
     },
     seleccionarComparativa(id: string) {
-      this.comparativaActual = this.comparativas.find((c) => c.id === id) || null
+      this.seleccion = this.comparativas.find((c) => c.id === id) || null
     },
     limpiarSeleccion() {
-      this.comparativaActual = null
+      this.seleccion = null
     },
   },
 })

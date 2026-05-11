@@ -18,9 +18,9 @@ describe('useAlmacenComparativas', () => {
       expect(store.comparativas[0]).toHaveProperty('producto2');
     });
 
-    it('debería inicializar comparativaActual como null', () => {
+    it('debería inicializar comparativaActual con la primera comparativa', () => {
       const store = useAlmacenComparativas();
-      expect(store.comparativaActual).toBeNull();
+      expect(store.comparativaActual).toEqual(store.comparativas[0]);
     });
 
     it('debería mapear correctamente los productos con nombre e imagen', () => {
@@ -72,28 +72,32 @@ describe('useAlmacenComparativas', () => {
       expect(store.comparativaActual).toEqual(store.comparativas[0]);
     });
 
-    it('debería establecer comparativaActual como null si no encuentra el ID', () => {
+    it('debería establecer comparativaActual como la primera comparativa si no encuentra el ID', () => {
       const store = useAlmacenComparativas();
+      const primera = store.comparativas[0];
       store.seleccionarComparativa('id-no-existente');
-      expect(store.comparativaActual).toBeNull();
+      expect(store.comparativaActual).toEqual(primera);
     });
 
     it('debería manejar ID vacío', () => {
       const store = useAlmacenComparativas();
+      const primera = store.comparativas[0];
       store.seleccionarComparativa('');
-      expect(store.comparativaActual).toBeNull();
+      expect(store.comparativaActual).toEqual(primera);
     });
 
     it('debería manejar ID nulo', () => {
       const store = useAlmacenComparativas();
+      const primera = store.comparativas[0];
       store.seleccionarComparativa(null as unknown as string);
-      expect(store.comparativaActual).toBeNull();
+      expect(store.comparativaActual).toEqual(primera);
     });
 
     it('debería manejar ID undefined', () => {
       const store = useAlmacenComparativas();
+      const primera = store.comparativas[0];
       store.seleccionarComparativa(undefined as unknown as string);
-      expect(store.comparativaActual).toBeNull();
+      expect(store.comparativaActual).toEqual(primera);
     });
 
     it('debería sobrescribir la selección anterior', () => {
@@ -112,19 +116,21 @@ describe('useAlmacenComparativas', () => {
       expect(typeof store.limpiarSeleccion).toBe('function');
     });
 
-    it('debería establecer comparativaActual como null', () => {
+    it('debería volver a la primera comparativa al limpiar selección', () => {
       const store = useAlmacenComparativas();
+      const primera = store.comparativas[0];
       store.seleccionarComparativa(store.comparativas[0].id);
       expect(store.comparativaActual).not.toBeNull();
       store.limpiarSeleccion();
-      expect(store.comparativaActual).toBeNull();
+      expect(store.comparativaActual).toEqual(primera);
     });
 
-    it('debería mantener comparativaActual como null si ya es null', () => {
+    it('debería mantener la primera comparativa al limpiar si no había selección', () => {
       const store = useAlmacenComparativas();
-      expect(store.comparativaActual).toBeNull();
+      const primera = store.comparativas[0];
+      expect(store.comparativaActual).toEqual(primera);
       store.limpiarSeleccion();
-      expect(store.comparativaActual).toBeNull();
+      expect(store.comparativaActual).toEqual(primera);
     });
 
     it('debería ejecutarse sin errores', () => {

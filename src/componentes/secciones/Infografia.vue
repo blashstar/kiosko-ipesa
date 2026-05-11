@@ -1,72 +1,49 @@
 <template lang="pug">
-KioskoEscena
-  .encabezado
-    BotonTactil.btn-volver(
-      @accion="volver"
-      :estadoPresionado="estilosBoton"
-    ) ← VOLVER
-    .titulo {{ infografiaActual?.titulo || 'INFOGRAFÍA' }}
-  .contenido
-    img(
-      :src="infografiaActual?.imagen",
-      :alt="infografiaActual?.titulo",
-      v-if="infografiaActual"
-    )
+JDVista
+  template(v-slot:encabezado)
+    JDLogo
+    JDLogoSeccion(seccion="infografias")
+
+  .contenido(v-if="infografiaActual")
+    JDTitulo.titulo {{ infografiaActual.modelo }}
+    img(:src="`/img/modelos/${infografiaActual.imagen}`" :alt="infografiaActual.modelo")
+
+  template(v-slot:pie)
+    JDBotonQR
+    .grupo
+      JDBotonVolver
+      JDBotonInicio
+
+  template(v-slot:fondo)
+    img(src="/img/fondo-02.jpg")
 </template>
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia';
-import { useRouter } from 'vue-router';
-import { useAlmacenContenidos } from '@/almacenes/contenidos';
-import KioskoEscena from '../comun/KioskoEscena.vue';
-import BotonTactil from '../comun/BotonTactil.vue';
+import JDVista from '@jd/JDVista.vue';
+import JDLogo from '@jd/JDLogo.vue';
+import JDLogoSeccion from '@jd/JDLogoSeccion.vue';
+import JDTitulo from '@jd/JDTitulo.vue';
+import JDBotonQR from '@jd/JDBotonQR.vue';
+import JDBotonVolver from '@jd/JDBotonVolver.vue';
+import JDBotonInicio from '@jd/JDBotonInicio.vue';
+import { useAlmacenInfografias } from '@/almacenes/infografias';
 
-const router = useRouter();
-const almacenContenidos = useAlmacenContenidos();
-const { infografiaActual } = storeToRefs(almacenContenidos);
-
-const estilosBoton = {
-  clase: 'btn-volver--presionado',
-  estilo: {
-    backgroundColor: 'rgba(0, 255, 136, 0.1)',
-    transform: 'scale(0.95)',
-  },
-};
-
-function volver() {
-  router.push({ name: 'menu-infografias' });
-}
+const almacenInfografias = useAlmacenInfografias();
+const { infografiaActual } = storeToRefs(almacenInfografias);
 </script>
 
 <style lang="stylus" scoped>
-.encabezado
-  display flex
-  align-items center
-  gap 2rem
-  margin-bottom 2rem
-
-.btn-volver
-  padding 0.8rem 1.5rem
-  border 1px solid #00ff88
-  color #00ff88
-  font-size 1rem
-
-  &--presionado
-    background rgba(0, 255, 136, 0.1)
-    transform scale(0.95)
-
-.titulo
-  font-size 1.8rem
-  color #00ff88
-
 .contenido
   flex 1
   display flex
+  flex-direction column
   align-items center
   justify-content center
+  gap 2rem
 
   img
-    max-width 100%
-    max-height 100%
+    max-width 90%
+    max-height 70vh
     object-fit contain
 </style>
