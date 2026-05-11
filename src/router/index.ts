@@ -44,7 +44,7 @@ const rutas: RouteRecordRaw[] = [
   {
     path: '/qr',
     name: 'qr',
-    component: () => import('../componentes/secciones/inicio.vue'),
+    component: () => import('../componentes/secciones/QR.vue'),
   },
 ]
 

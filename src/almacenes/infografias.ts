@@ -32,8 +32,9 @@ export interface IInfografia {
   tarjeta: string,
   descripcion: string
   imagen: string
+  logo: string
   color: string
-  plantilla: string
+  plantilla?: string
   perfiles: string
   detalles: IDetalle[]
   especificaciones: IEspecificacion[]
@@ -54,6 +55,7 @@ function mapearInfografias(datos: any[]): IInfografia[] {
     tarjeta: d.tarjeta,
     descripcion: d.descripcion,
     imagen: d.imagen,
+    logo: d.logo,
     color: d.color,
     plantilla: d.plantilla,
     perfiles: d.perfiles,

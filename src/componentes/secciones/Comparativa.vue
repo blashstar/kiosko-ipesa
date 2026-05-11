@@ -3,13 +3,13 @@
 JDVista
   template(v-slot:encabezado)
     JDLogo
-    JDLogoSeccion(seccion="infografias")
+    JDLogoSeccion(seccion="versus")
 
 
-  JDTitulo.titular
-    | ¡COMPARA Y DECIDE TU PRÓXIMO EQUIPO!
+  //- JDTitulo.titular
+  //-   | ¡COMPARA Y DECIDE TU PRÓXIMO EQUIPO!
 
-  pre {{comparativaActual}}
+  //- pre {{comparativaActual}}
 
 
   template(v-slot:pie)
