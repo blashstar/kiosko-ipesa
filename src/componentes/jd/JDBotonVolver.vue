@@ -1,5 +1,5 @@
 <template lang="pug">
-	JDBotonBrillo(@accion="volver()")
+	JDBotonBrillo.jd_boton_volver(@accion="volver()")
 		img(src="/img/boton-volver.svg")
 </template>
 
@@ -9,3 +9,9 @@ import usarNavegacion from '@utiles/navegacion';
 
 const { volver } = usarNavegacion();
 </script>
+
+<style lang="stylus">
+.jd_boton_volver
+	img
+		transform scale(0.85)
+</style>

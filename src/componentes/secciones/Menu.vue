@@ -5,7 +5,7 @@ JDVista
 
   JDTitulo.titular
     | ¡DESCUBRE LO QUE NOS HACE GIGANTES!
-  transition-group(name="opciones" tag="div", class="opciones")
+  transition-group(name="opciones" tag="div", class="opciones" appear)
     JDBotonImagen.opcion(
       v-for="opcion, key in opcionesArregladas"
       :key="opcion.id"
@@ -14,7 +14,7 @@ JDVista
     )
   .nav
     JDBotonNav.boton(direccion="oeste" @accion="izquierda")
-    JDTitulo.titulo {{ opcionResaltada.titulo }}
+    .titulo(ref="tituloNavRef") {{ opcionResaltada.titulo }}
     JDBotonNav.boton(direccion="este" @accion="derecha")
   template(v-slot:pie)
     JDBotonQR
@@ -27,8 +27,9 @@ JDVista
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 import _ from 'lodash';
+import { gsap } from 'gsap';
 import JDVista from '@jd/JDVista.vue';
 import JDLogo from '@jd/JDLogo.vue';
 import JDTitulo from '@jd/JDTitulo.vue';
@@ -51,6 +52,16 @@ const opcionResaltada = computed(() => _.nth(menuOpciones.value, idResaltado.val
 const opcionesArregladas = computed(() => {
   return rotarAlCentro(menuOpciones.value, idResaltado.value);
 });
+
+const tituloNavRef = ref<HTMLElement | null>(null);
+
+watch(opcionResaltada, () => {
+  if (!tituloNavRef.value) return;
+  gsap.fromTo(tituloNavRef.value,
+    { opacity: 0, y: 18, scale: 0.97 },
+    { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: 'power2.out' }
+  );
+}, { flush: 'post' });
 
 function izquierda() {
   if (idResaltado.value > 0)
@@ -94,11 +105,16 @@ function derecha() {
   justify-content center
   padding vh(40px) vh(48px) vh(80px)
 
-  &-enter-active,
+  &-enter-active
+    transition: all 0.5s ease-out;
+
   &-leave-active
     transition: all 0.3s ease;
 
-  &-enter-from,
+  &-enter-from
+    opacity: 0;
+    transform: translateY(-50vh) scale(0.8);
+
   &-leave-to
     opacity: 0;
     transform: scale(0.8);
@@ -115,6 +131,9 @@ function derecha() {
         height vh(780px)
 
     for i in 1..5
+      &:nth-child({i})
+        transition-delay (i - 1) * 0.1s
+
       &:nth-child({i}) :deep(.jd_boton_imagen__contenido)
         animation-delay (i - 1) * 0.5s
         animation-duration 2.5s + (i - 1) * 0.5s
