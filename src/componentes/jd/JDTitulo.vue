@@ -4,11 +4,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch, nextTick } from 'vue';
+import { ref, onMounted, onActivated, watch, nextTick } from 'vue';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 
 gsap.registerPlugin(SplitText);
+
+const props = defineProps({
+  delay: {
+    type: Number,
+    default: 0.1,
+  },
+});
 
 const elementoTitulo = ref<HTMLElement | null>(null);
 let splitTextInstance: SplitText | null = null;
@@ -45,11 +52,17 @@ function animarEntrada() {
     duration: 0.6,
     ease: 'power3.out',
     stagger: 0.08,
-    delay: 0.1,
+    delay: props.delay,
   });
 }
 
 onMounted(() => {
+  nextTick(() => {
+    animarEntrada();
+  });
+});
+
+onActivated(() => {
   nextTick(() => {
     animarEntrada();
   });

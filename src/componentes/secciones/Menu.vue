@@ -5,13 +5,14 @@ JDVista
 
   JDTitulo.titular
     | ¡DESCUBRE LO QUE NOS HACE GIGANTES!
-  transition-group(name="opciones" tag="div", class="opciones" appear)
-    JDBotonImagen.opcion(
-      v-for="opcion, key in opcionesArregladas"
-      :key="opcion.id"
-      :imagen="opcion.tarjeta"
-      @accion="seccion(opcion.nombre)"
-    )
+  .opciones(ref="opcionesRef")
+    TransitionGroup(name="menu-opciones")
+      JDBotonImagen.opcion(
+        v-for="opcion in opcionesArregladas"
+        :key="opcion.id"
+        :imagen="opcion.tarjeta"
+        @accion="seccion(opcion.nombre)"
+      )
   .nav
     JDBotonNav.boton(direccion="oeste" @accion="izquierda")
     .titulo(ref="tituloNavRef") {{ opcionResaltada.titulo }}
@@ -27,9 +28,10 @@ JDVista
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, nextTick, onMounted, onActivated } from 'vue';
 import _ from 'lodash';
 import { gsap } from 'gsap';
+import { CSSPlugin } from 'gsap/CSSPlugin';
 import JDVista from '@jd/JDVista.vue';
 import JDLogo from '@jd/JDLogo.vue';
 import JDTitulo from '@jd/JDTitulo.vue';
@@ -42,6 +44,8 @@ import usarNavegacion from '@utiles/navegacion';
 import { useAlmacenInterfaz } from '@/almacenes/interfaz';
 import { rotarAlCentro } from '@utiles/colecciones';
 
+gsap.registerPlugin(CSSPlugin);
+
 const { seccion } = usarNavegacion();
 const almacenInterfaz = useAlmacenInterfaz();
 
@@ -53,7 +57,45 @@ const opcionesArregladas = computed(() => {
   return rotarAlCentro(menuOpciones.value, idResaltado.value);
 });
 
+const opcionesRef = ref<HTMLElement | null>(null);
 const tituloNavRef = ref<HTMLElement | null>(null);
+
+function animarEntradaOpciones() {
+  nextTick(() => {
+    if (!opcionesRef.value) return;
+
+    const elementos = opcionesRef.value.querySelectorAll('.opcion');
+    if (elementos.length === 0) return;
+
+    // Estado inicial: opciones arriba y transparentes
+    // gsap.set(elementos, {
+    //   opacity: 0,
+    //   y: -600,
+    //   scale: 0.8,
+    // });
+
+    // // Animación escalonada desde arriba
+    // gsap.to(elementos, {
+    //   opacity: 1,
+    //   y: 0,
+    //   scale: 1,
+    //   duration: 0.8,
+    //   ease: 'power3.out',
+    //   stagger: 0.15,
+    //   delay: 0.2,
+    // });
+
+    // gsap.from(elementos, {
+    //   opacity: 0,
+    //   y: -600,
+    //   scale: 0.6,
+    //   duration: 0.8,
+    //   ease: 'power3.out',
+    //   stagger: 0.15,
+
+    // })
+  });
+}
 
 watch(opcionResaltada, () => {
   if (!tituloNavRef.value) return;
@@ -77,6 +119,13 @@ function derecha() {
     idResaltado.value = 0
 }
 
+onMounted(() => {
+  animarEntradaOpciones();
+});
+
+onActivated(() => {
+  animarEntradaOpciones();
+});
 </script>
 
 <style lang="stylus" scoped>
@@ -105,28 +154,10 @@ function derecha() {
   justify-content center
   padding vh(40px) vh(48px) vh(80px)
 
-  &-enter-active
-    transition: all 0.5s ease-out;
-
-  &-leave-active
-    transition: all 0.3s ease;
-
-  &-enter-from
-    opacity: 0;
-    transform: translateY(-50vh) scale(0.8);
-
-  &-leave-to
-    opacity: 0;
-    transform: scale(0.8);
-
-  &-move
-    transition: transform 0.3s ease;
-
   .opcion
     margin-inline vh(-24px)
     :deep(.jd_boton_imagen__contenido)
       animation levitacion 3s ease-in-out infinite
-      transition all 0.3s ease
       img
         height vh(780px)
 
@@ -139,6 +170,23 @@ function derecha() {
         animation-duration 2.5s + (i - 1) * 0.5s
         margin-bottom vh((i - 1) * 80px)
 
+// Transiciones del TransitionGroup
+.menu-opciones-move
+  transition transform 0.6s ease
+
+.menu-opciones-enter-active
+  transition all 0.8s ease
+
+.menu-opciones-leave-active
+  transition all 0.4s ease
+
+.menu-opciones-enter-from
+  opacity 0
+  transform translateY(-100px) scale(0.8)
+
+.menu-opciones-leave-to
+  opacity 0
+  transform translateY(100px) scale(0.8)
 
 .nav
   display flex
@@ -162,7 +210,4 @@ function derecha() {
 
   .boton
     flex 0 0 auto
-
-
-
 </style>

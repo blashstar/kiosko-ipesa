@@ -1,5 +1,5 @@
 <template lang="pug">
-Kiosko(depurar)
+Kiosko()
   router-view(v-slot="{ Component }")
     Transition(:css="false" @before-enter="antesEntrar" @enter="alEntrar" @leave="alSalir")
       KeepAlive

@@ -4,7 +4,7 @@ JDVista
     JDLogo
     JDLogoSeccion(seccion="infografias")
 
-
+  .subtitulo &nbsp;
   JDTitulo.titular
     | CONOCE MÁS DE TU PRÓXIMO EQUIPO
 
@@ -116,6 +116,14 @@ function derecha() {
   padding vh(36px)
   text-shadow 0 10px 5px #00000099
 
+.subtitulo
+  font-weight: 500;
+  font-size: vh(35px);
+  color: #FCB515;
+  text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.49);
+  margin-bottom vh(24px)
+  text-align center
+
 .carrusel-container
   width: 100%
   max-width: 1200px
@@ -146,6 +154,7 @@ function derecha() {
     word-break normal
     text-align center
     text-transform uppercase
+    line-height 1.1
 
   .categoria
     display block

@@ -4,6 +4,7 @@ JDVista
     JDLogo
     JDLogoSeccion(seccion="vistas-360")
 
+  .subtitulo &nbsp;
   JDTitulo.titular
     | ¡DESCUBRE LO QUE NOS HACE GIGANTES!
 
@@ -116,6 +117,14 @@ function derecha() {
   text-align center
   padding vh(36px)
   text-shadow 0 10px 5px #00000099
+
+.subtitulo
+  font-weight: 500;
+  font-size: vh(35px);
+  color: #FCB515;
+  text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.49);
+  margin-bottom vh(24px)
+  text-align center
 
 .carrusel-container
   width: 100%

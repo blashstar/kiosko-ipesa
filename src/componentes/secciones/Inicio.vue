@@ -1,31 +1,31 @@
 <template lang="pug">
-jdVista
+JDVista
   template(v-slot:encabezado)
-    jdLogo
+    JDLogo
 
   .contenido
-    jdTexto.titular ¡CONOCE TODO LO QUE #[BR] TENEMOS PARA TI!
+    JDTexto.titular ¡CONOCE TODO LO QUE #[BR] TENEMOS PARA TI!
     figure.logo-ipesa
       img(src="/img/logo-ipesa.png")
-    jdBoton.btn-empezar(
+    JDBoton.btn-empezar(
       @accion="seccion('menu')"
     ) ¡EMPECEMOS!
 
   template(v-slot:pie)
-    jdBotonQR
+    JDBotonQR
 
   template(v-slot:fondo)
     img(src="/img/fondo-01.jpg")
 </template>
 
 <script setup lang="ts">
-import jdVista from '@jd/JDVista.vue';
-import jdBoton from '@jd/JDBoton.vue';
+import JDVista from '@jd/JDVista.vue';
+import JDBoton from '@jd/JDBoton.vue';
 import JDBotonBrillo from '@jd/JDBotonBrillo.vue';
-import jdBotonInicio from '@jd/JDBotonInicio.vue';
-import jdLogo from '@jd/JDLogo.vue';
-import jdTexto from '@jd/JDTexto.vue';
-import jdBotonQR from '@jd/JDBotonQR.vue';
+import JDBotonInicio from '@jd/JDBotonInicio.vue';
+import JDLogo from '@jd/JDLogo.vue';
+import JDTexto from '@jd/JDTexto.vue';
+import JDBotonQR from '@jd/JDBotonQR.vue';
 import usarNavegacion from '@utiles/navegacion';
 
 const { seccion } = usarNavegacion();
