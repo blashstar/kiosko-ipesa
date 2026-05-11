@@ -37,7 +37,7 @@ function manejarMouseDown(e: MouseEvent) {
 function manejarMouseMove(e: MouseEvent) {
   if (!estaArrastrando.value) return
 
-  constdelta = e.clientX - posicionInicial.value
+  const delta = e.clientX - posicionInicial.value
   const cambio = Math.floor(Math.abs(delta) / sensibilidad)
 
   if (cambio >= 1) {
@@ -71,7 +71,7 @@ function manejarTouchMove(e: TouchEvent) {
   if (!estaArrastrando.value) return
   e.preventDefault()
 
-  constdelta = e.touches[0].clientX - posicionInicial.value
+  const delta = e.touches[0].clientX - posicionInicial.value
   const cambio = Math.floor(Math.abs(delta) / sensibilidad)
 
   if (cambio >= 1) {

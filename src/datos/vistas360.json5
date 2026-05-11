@@ -3,210 +3,1845 @@
 // ============================================
 // Cada entrada representa una máquina con múltiples ángulos fotográficos.
 // Se consume con @blashstar/vue-360 que solo soporta "imagen" como tipoMedio.
-// Los marcadores son hotspots interactivos (pendientes de llenar).
+// Los marcadores son hotspots interactivos; los de tipo navegación llevan
+// data.escenaDestino para saltar a otra escena de la misma máquina.
+// Los marcadores informativos usan tooltip con trigger: click.
 
 [
 	{
-		// Identificador único de la máquina (prefijo = categoría)
-		"id": "R320P",
-		// Tipo de maquinaria (se usa para filtros y agrupación)
-		"categoria": "RETROEXCAVADORA",
-		// Nombre comercial del modelo
-		"modelo": "320P",
-		// Imagen de la tarjeta para el menú de navegación (1080x1920)
-		"tarjeta": "/img/tarjetas/t-v360-320p.webp",
-		// Ángulos fotográficos de la máquina
-		"escenas": [
+		id: 'R320P',
+		categoria: 'RETROEXCAVADORA',
+		modelo: '320P',
+		tarjeta: '/img/tarjetas/t-v360-320p.webp',
+		escenas: [
 			{
-				// ID único de la escena (máquina + ángulo)
-				"id": "R320P-plano1",
-				// Ruta de la imagen del ángulo (WebP optimizado)
-				"medio": "/img/vistas/vista-320p-plano1.webp",
-				// Tipo de contenido — por ahora solo "imagen" (soporte de vue-360)
-				"tipoMedio": "imagen",
-				// Hotspots interactivos sobre la imagen (pendientes de llenar)
-				// Cada marcador futuro: { x, y, titulo, descripcion }
-				"marcadores": []
+				id: 'R320P-plano1',
+				medio: '/img/vistas/vista-320p-plano1.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'R320P-plano1-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-plano1-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-plano1-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-plano2-info-cabina',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2,
+							pitch: 0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Cabina Premium</strong><br>Diseño ergonómico con controles intuitivos, visibilidad panorámica y confort durante toda la jornada.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "R320P-plano2",
-				"medio": "/img/vistas/vista-320p-plano2.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'R320P-plano2',
+				medio: '/img/vistas/vista-320p-plano2.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'R320P-plano2-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-plano2-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-plano2-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-plano2-info-cabina',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2,
+							pitch: 0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Cabina Premium</strong><br>Diseño ergonómico con controles intuitivos, visibilidad panorámica y confort durante toda la jornada.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "R320P-plano3",
-				"medio": "/img/vistas/vista-320p-plano3.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'R320P-plano3',
+				medio: '/img/vistas/vista-320p-plano3.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'R320P-plano3-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-plano3-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-plano3-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-interior',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				// Vista interior de la cabina
-				"id": "R320P-interior",
-				"medio": "/img/vistas/vista-320p-interior.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
-			}
-		]
+				id: 'R320P-interior',
+				medio: '/img/vistas/vista-320p-interior.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'R320P-interior-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-interior-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'R320P-interior-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'R320P-plano3',
+						},
+						anchor: 'bottom center',
+					},
+				],
+			},
+		],
 	},
 	{
-		"id": "E350P",
-		"categoria": "EXCAVADORA",
-		"modelo": "350P",
-		"tarjeta": "/img/tarjetas/t-v360-350p.webp",
-		"escenas": [
+		id: 'E350P',
+		categoria: 'EXCAVADORA',
+		modelo: '350P',
+		tarjeta: '/img/tarjetas/t-v360-350p.webp',
+		escenas: [
 			{
-				"id": "E350P-plano1",
-				"medio": "/img/vistas/vista-350p-plano1.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'E350P-plano1',
+				medio: '/img/vistas/vista-350p-plano1.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'E350P-plano1-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-plano1-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-plano1-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-interior',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "E350P-plano2",
-				"medio": "/img/vistas/vista-350p-plano2.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'E350P-plano2',
+				medio: '/img/vistas/vista-350p-plano2.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'E350P-plano2-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-plano2-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-plano2-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-plano2-info-hidraulico',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0.5,
+							pitch: -0.3,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Sistema Hidráulico</strong><br>Respuesta precisa y flujo optimizado que garantiza mayor productividad en cada movimiento.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "E350P-plano3",
-				"medio": "/img/vistas/vista-350p-plano3.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'E350P-plano3',
+				medio: '/img/vistas/vista-350p-plano3.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'E350P-plano3-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-plano3-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-plano3-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-interior',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "E350P-interior",
-				"medio": "/img/vistas/vista-350p-interior.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
-			}
-		]
+				id: 'E350P-interior',
+				medio: '/img/vistas/vista-350p-interior.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'E350P-interior-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-interior-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-interior-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'E350P-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'E350P-interior-info-transmision',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -0.8,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Transmisión Inteligente</strong><br>Cambios suaves y adaptativos que se ajustan automáticamente según la carga de trabajo.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
+			},
+		],
 	},
 	{
-		"id": "M620P",
-		"categoria": "MOTONIVELADORA",
-		"modelo": "620P",
-		"tarjeta": "/img/tarjetas/t-v360-620p.webp",
-		"escenas": [
+		id: 'M620P',
+		categoria: 'MOTONIVELADORA',
+		modelo: '620P',
+		tarjeta: '/img/tarjetas/t-v360-620p.webp',
+		escenas: [
 			{
-				"id": "M620P-plano1",
-				"medio": "/img/vistas/vista-620p-plano1.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'M620P-plano1',
+				medio: '/img/vistas/vista-620p-plano1.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'M620P-plano1-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-plano1-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-plano1-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-interior',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "M620P-plano2",
-				"medio": "/img/vistas/vista-620p-plano2.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'M620P-plano2',
+				medio: '/img/vistas/vista-620p-plano2.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'M620P-plano2-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-plano2-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-plano2-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-interior',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "M620P-plano3",
-				"medio": "/img/vistas/vista-620p-plano3.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'M620P-plano3',
+				medio: '/img/vistas/vista-620p-plano3.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'M620P-plano3-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-plano3-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-plano3-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-plano3-info-eje',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0.5,
+							pitch: -0.3,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Eje Reforzado</strong><br>Construcción robusta diseñada para mayor durabilidad en terrenos difíciles y exigentes.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "M620P-interior",
-				"medio": "/img/vistas/vista-620p-interior.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
-			}
-		]
+				id: 'M620P-interior',
+				medio: '/img/vistas/vista-620p-interior.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'M620P-interior-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-interior-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-interior-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'M620P-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'M620P-interior-info-enfriamiento',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Sistema de Enfriamiento</strong><br>Mantiene la temperatura óptima del motor incluso en condiciones extremas de operación.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
+			},
+		],
 	},
 	{
-		"id": "CF644G",
-		"categoria": "CARGADOR FRONTAL",
-		"modelo": "644G-TIER",
-		"tarjeta": "/img/tarjetas/t-v360-644g.webp",
-		"escenas": [
+		id: 'CF644G',
+		categoria: 'CARGADOR FRONTAL',
+		modelo: '644G-TIER',
+		tarjeta: '/img/tarjetas/t-v360-644g.webp',
+		escenas: [
 			{
-				"id": "C644G-plano1",
-				"medio": "/img/vistas/vista-644g-plano1.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'C644G-plano1',
+				medio: '/img/vistas/vista-644g-plano1.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'C644G-plano1-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-plano1-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-plano1-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-plano1-info-motor',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -0.5,
+							pitch: -0.3,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Motor PowerTech™</strong><br>Alta potencia con bajo consumo de combustible y emisiones reducidas.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "C644G-plano2",
-				"medio": "/img/vistas/vista-644g-plano2.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'C644G-plano2',
+				medio: '/img/vistas/vista-644g-plano2.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'C644G-plano2-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-plano2-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-plano2-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-interior',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "C644G-plano3",
-				"medio": "/img/vistas/vista-644g-plano3.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'C644G-plano3',
+				medio: '/img/vistas/vista-644g-plano3.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'C644G-plano3-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-plano3-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-plano3-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-plano3-info-cabina',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2,
+							pitch: 0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Cabina Premium</strong><br>Amplia cabina con suspensión neumática, aire acondicionado y monitor digital de alta resolución.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "C644G-interior",
-				"medio": "/img/vistas/vista-644g-interior.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
-			}
-		]
+				id: 'C644G-interior',
+				medio: '/img/vistas/vista-644g-interior.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'C644G-interior-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-interior-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'C644G-interior-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'C644G-plano3',
+						},
+						anchor: 'bottom center',
+					},
+				],
+			},
+		],
 	},
 	{
-		"id": "TT850J",
-		"categoria": "TRACTOR TOPADOR",
-		"modelo": "850J-II",
-		"tarjeta": "/img/tarjetas/t-v360-850j.webp",
-		"escenas": [
+		id: 'TT850J',
+		categoria: 'TRACTOR TOPADOR',
+		modelo: '850J-II',
+		tarjeta: '/img/tarjetas/t-v360-850j.webp',
+		escenas: [
 			{
-				"id": "TT850J-plano1",
-				"medio": "/img/vistas/vista-850j-plano1.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'TT850J-plano1',
+				medio: '/img/vistas/vista-850j-plano1.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'TT850J-plano1-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-plano1-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-plano1-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-plano1-info-hidraulico',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0.5,
+							pitch: -0.3,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Sistema Hidráulico</strong><br>Alta presión hidráulica para un control preciso de la hoja y mayor eficiencia en el empuje.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "TT850J-plano2",
-				"medio": "/img/vistas/vista-850j-plano2.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'TT850J-plano2',
+				medio: '/img/vistas/vista-850j-plano2.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'TT850J-plano2-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-plano2-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-plano2-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-plano2-info-transmision',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2,
+							pitch: 0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Transmisión Inteligente</strong><br>Transmisión automática que optimiza el torque y la tracción en cualquier terreno.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "TT850J-plano3",
-				"medio": "/img/vistas/vista-850j-plano3.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'TT850J-plano3',
+				medio: '/img/vistas/vista-850j-plano3.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'TT850J-plano3-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-plano3-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-plano3-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-interior',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "TT850J-interior",
-				"medio": "/img/vistas/vista-850j-interior.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
-			}
-		]
+				id: 'TT850J-interior',
+				medio: '/img/vistas/vista-850j-interior.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'TT850J-interior-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-interior-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'TT850J-interior-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'TT850J-plano3',
+						},
+						anchor: 'bottom center',
+					},
+				],
+			},
+		],
 	},
 	{
-		"id": "CHHC110",
-		"categoria": "COMPACTADORA",
-		"modelo": "HAMM HC 110",
-		"tarjeta": "/img/tarjetas/t-v360-hc110.webp",
-		"escenas": [
+		id: 'CHHC110',
+		categoria: 'COMPACTADORA',
+		modelo: 'HAMM HC 110',
+		tarjeta: '/img/tarjetas/t-v360-hc110.webp',
+		escenas: [
 			{
-				"id": "CHHC110-plano1",
-				"medio": "/img/vistas/vista-hc110-plano1.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'CHHC110-plano1',
+				medio: '/img/vistas/vista-hc110-plano1.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'CHHC110-plano1-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-plano1-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-plano1-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-interior',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "CHHC110-plano2",
-				"medio": "/img/vistas/vista-hc110-plano2.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'CHHC110-plano2',
+				medio: '/img/vistas/vista-hc110-plano2.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'CHHC110-plano2-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-plano2-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-plano3',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-plano2-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 2.6,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-plano2-info-eje',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0.5,
+							pitch: -0.3,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Eje Reforzado</strong><br>Estructura reforzada que soporta vibraciones extremas y prolonga la vida útil del equipo.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "CHHC110-plano3",
-				"medio": "/img/vistas/vista-hc110-plano3.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
+				id: 'CHHC110-plano3',
+				medio: '/img/vistas/vista-hc110-plano3.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'CHHC110-plano3-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2.6,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-plano3-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.3,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-plano3-a-interior',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.3,
+							pitch: -0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver interior',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-interior',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-plano3-info-enfriamiento',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -2,
+							pitch: 0.2,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: {
+							content: '<strong>Sistema de Enfriamiento</strong><br>Ventiladores de alto rendimiento que previenen el sobrecalentamiento durante compactación continua.',
+							className: 'info-tooltip',
+							position: 'top',
+							trigger: 'click',
+						},
+						anchor: 'bottom center',
+					},
+				],
 			},
 			{
-				"id": "CHHC110-interior",
-				"medio": "/img/vistas/vista-hc110-interior.webp",
-				"tipoMedio": "imagen",
-				"marcadores": []
-			}
-		]
-	}
+				id: 'CHHC110-interior',
+				medio: '/img/vistas/vista-hc110-interior.webp',
+				tipoMedio: 'imagen',
+				posicionInicial: {
+					yaw: 0,
+					pitch: 0,
+				},
+				marcadores: [
+					{
+						id: 'CHHC110-interior-a-plano1',
+						image: '/img/pin.svg',
+						position: {
+							yaw: -1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 1',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-plano1',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-interior-a-plano2',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 0,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 2',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-plano2',
+						},
+						anchor: 'bottom center',
+					},
+					{
+						id: 'CHHC110-interior-a-plano3',
+						image: '/img/pin.svg',
+						position: {
+							yaw: 1.5,
+							pitch: 0,
+						},
+						size: {
+							width: 64,
+							height: 64,
+						},
+						tooltip: 'Ver ángulo 3',
+						data: {
+							tipo: 'navegacion',
+							escenaDestino: 'CHHC110-plano3',
+						},
+						anchor: 'bottom center',
+					},
+				],
+			},
+		],
+	},
 ]

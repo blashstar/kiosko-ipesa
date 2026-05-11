@@ -1,15 +1,20 @@
 import { defineStore } from 'pinia'
 import datosCrudos from '../datos/vistas360.json5'
 
+export interface IEscena {
+  id: string
+  medio: string
+  tipoMedio: string
+  posicionInicial?: { yaw: number; pitch: number }
+  marcadores: any[]
+}
+
 export interface IVista360 {
   id: string
-  nombre: string
-  miniatura: string
-  imagenes: string[]
-  configuracion?: {
-    velocidad?: number
-    sensibilidad?: number
-  }
+  categoria: string
+  modelo: string
+  tarjeta: string
+  escenas: IEscena[]
 }
 
 interface Estado {
@@ -20,10 +25,16 @@ interface Estado {
 function mapearVistas(datos: any[]): IVista360[] {
   return datos.map((d: any) => ({
     id: d.id,
-    nombre: d.modelo,
-    miniatura: d.tarjeta,
-    imagenes: d.escenas?.map((e: any) => e.medio) || [],
-    configuracion: d.configuracion,
+    categoria: d.categoria,
+    modelo: d.modelo,
+    tarjeta: d.tarjeta,
+    escenas: (d.escenas || []).map((e: any) => ({
+      id: e.id,
+      medio: e.medio,
+      tipoMedio: e.tipoMedio,
+      posicionInicial: e.posicionInicial || { yaw: 0, pitch: 0 },
+      marcadores: e.marcadores || [],
+    })),
   }))
 }
 
@@ -34,9 +45,21 @@ const vistasIniciales = mapearVistas(
 export const useAlmacenVistas360 = defineStore('vistas360', {
   state: (): Estado => ({
     vistas: vistasIniciales,
-    vistaActual: null,
+    vistaActual: vistasIniciales[0],
   }),
-
+  getters: {
+    listaMaquinarias(): Array<{id: string; modelo: string; categoria: string; tarjeta: string}> {
+      return this.vistas.map(v => ({
+        id: v.id,
+        modelo: v.modelo,
+        categoria: v.categoria,
+        tarjeta: v.tarjeta,
+      }))
+    },
+    maquinariaPorId: (state) => (id: string): IVista360 | undefined => {
+      return state.vistas.find(v => v.id === id)
+    }
+  },
   actions: {
     cargarVistas() {
       this.vistas = vistasIniciales
