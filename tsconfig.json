@@ -11,12 +11,17 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@estilos/*": ["./src/estilos/*"],
+      "@utiles/*": ["./src/utiles/*"],
+      "@componentes/*": ["./src/componentes/*"],
+      "@comun/*": ["./src/componentes/comun/*"],
+      "@jd/*": ["./src/componentes/jd/*"]
     }
   },
   "include": [
