@@ -15,7 +15,7 @@ JDVista
       :height="altoSlide"
       :perspective="0"
       :space="300"
-      :display="6"
+      :loop="true"
       :startIndex="idResaltado"
       :onMainSlideClick="() => {seleccionar(opcionResaltada.id)}"
       @after-slide-change="alCambiarSlide"

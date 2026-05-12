@@ -15,9 +15,7 @@
     // Identificador único de la comparativa
     "id": "VS-310P-320P",
     // Imagen de la tarjeta para el menú de navegación
-    "tarjeta": "/img/tarjetas/t-versus-310p-320p.webp",
-    // Layout a usar: "A" = specs por máquina, "B" = specs compartidas
-    "plantilla": "A",
+    "tarjeta": "/img/tarjetas/t-versus-1.png",
     // Las dos máquinas a comparar (siempre 2)
     "maquinas": [
       {
@@ -59,14 +57,47 @@
   },
   {
     "id": "VS-350P-250P",
-    "tarjeta": "/img/tarjetas/t-versus-350p-250p.webp",
-    "plantilla": "A",
+    "tarjeta": "/img/tarjetas/t-versus-2.png",
     "maquinas": [
       {
         "id": "E350P",
         "categoria": "EXCAVADORA",
         "modelo": "350P",
         "imagen": "/img/modelos/e350p-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ Plus 9,0l" },
+          { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "271 HP" },
+          { "titulo": "Peso operativo (kg)", "valor": "37 452 kg" },
+          { "titulo": "Capacidad cucharón estándar (m³)", "valor": "2,51 m³" },
+          { "titulo": "Par de giro", "valor": "120 kN" },
+          { "titulo": "Fuerza excavación brazo ISO", "valor": "222 kN" }
+        ]
+      },
+      {
+        "id": "E250P",
+        "categoria": "EXCAVADORA",
+        "modelo": "250P",
+        "imagen": "/img/modelos/e250p-min.webp",
+        "carateristicas": [
+          { "titulo": "Motor", "valor": "JD PowerTech™ 6,8l" },
+          { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "177 hp" },
+          { "titulo": "Peso operativo (kg)", "valor": "25 900 kg" },
+          { "titulo": "Capacidad cucharón estándar (m³)", "valor": "1,80 m³" },
+          { "titulo": "Par de giro", "valor": "74 kN" },
+          { "titulo": "Fuerza excavación brazo ISO", "valor": "158 kN" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "VS-250P-210P",
+    "tarjeta": "/img/tarjetas/t-versus-3.png",
+    "maquinas": [
+      {
+        "id": "E250P",
+        "categoria": "EXCAVADORA",
+        "modelo": "350P",
+        "imagen": "/img/modelos/e250p-min.webp",
         "carateristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ Plus 9,0l" },
           { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "271 HP" },
