@@ -1,63 +1,62 @@
-{
-  "name": "kiosko-ipesa",
-  "version": "1.0.0",
-  "description": "Kiosko táctil vertical para exhibición de productos",
-  "main": "electron/principal.ts",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --host",
-    "build": "vue-tsc --noEmit && vite build",
-    "build:ssg": "vite build",
-    "build:electron": "npm run build && electron-builder",
-    "preview": "vite preview",
-    "test": "vitest",
-    "lint": "eslint src --ext .vue,.ts",
-    "typecheck": "vue-tsc --noEmit"
-  },
-  "dependencies": {
-    "@blashstar/kiosko-css": "gitlab:blashstar/kiosko-css",
-    "@nanoandrew4/vue3-carousel-3d": "^1.0.2",
-    "@photo-sphere-viewer/core": "^5.14.1",
-    "@photo-sphere-viewer/markers-plugin": "^5.14.1",
-    "electron": "^28.0.0",
-    "gsap": "^3.12.2",
-    "image-size": "^2.0.2",
-    "json5": "^2.2.3",
-    "lodash": "^4.17.21",
-    "markdown-it": "^14.1.1",
-    "markdown-it-vue": "^1.1.7",
-    "pinia": "^2.1.7",
-    "three": "^0.184.0",
-    "vue": "^3.4.0",
-    "vue-router": "^4.6.4"
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.14.202",
-    "@vitejs/plugin-vue": "^5.0.0",
-    "@vue/compiler-sfc": "^3.5.34",
-    "@vue/eslint-config-typescript": "^14.7.0",
-    "electron-builder": "^24.9.1",
-    "pug": "^3.0.4",
-    "stylus": "^0.63.0",
-    "typescript": "^5.3.0",
-    "vite": "^5.0.0",
-    "vite-plugin-json5": "^1.0.0",
-    "vite-plugin-stylus-alias": "^1.1.2",
-    "vitest": "^1.0.0",
-    "vue-tsc": "^3.2.8"
-  },
-  "build": {
-    "appId": "com.ipesa.kiosko",
-    "productName": "Kiosko IPESA",
-    "directories": {
-      "output": "dist"
-    },
-    "files": [
-      "dist/**/*",
-      "electron/**/*"
-    ],
-    "win": {
-      "target": "portable"
-    }
-  }
-}
+{
+  "name": "kiosko-ipesa",
+  "version": "1.0.0",
+  "description": "Kiosko táctil vertical para exhibición de productos",
+  "main": "electron/principal.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "build:ssg": "vite build",
+    "build:electron": "npm run build && electron-builder",
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "eslint src --ext .vue,.ts",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@nanoandrew4/vue3-carousel-3d": "^1.0.2",
+    "@photo-sphere-viewer/core": "^5.14.1",
+    "@photo-sphere-viewer/markers-plugin": "^5.14.1",
+    "electron": "^28.0.0",
+    "gsap": "^3.12.2",
+    "image-size": "^2.0.2",
+    "json5": "^2.2.3",
+    "lodash": "^4.17.21",
+    "markdown-it": "^14.1.1",
+    "markdown-it-vue": "^1.1.7",
+    "pinia": "^2.1.7",
+    "three": "^0.184.0",
+    "vue": "^3.4.0",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/compiler-sfc": "^3.5.34",
+    "@vue/eslint-config-typescript": "^14.7.0",
+    "electron-builder": "^24.9.1",
+    "pug": "^3.0.4",
+    "stylus": "^0.63.0",
+    "typescript": "^5.3.0",
+    "vite": "^5.0.0",
+    "vite-plugin-json5": "^1.0.0",
+    "vite-plugin-stylus-alias": "^1.1.2",
+    "vitest": "^1.0.0",
+    "vue-tsc": "^3.2.8"
+  },
+  "build": {
+    "appId": "com.ipesa.kiosko",
+    "productName": "Kiosko IPESA",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "win": {
+      "target": "portable"
+    }
+  }
+}
