@@ -23,6 +23,14 @@ export interface ICaracteristica {
   icono: string
   titulo: string
   descripcion: string
+  panel?: IPanel
+}
+
+export interface IPanel {
+  top?: string
+  bottom?: string
+  left?: string
+  right?: string
 }
 
 export interface IInfografia {
@@ -61,7 +69,13 @@ function mapearInfografias(datos: any[]): IInfografia[] {
     perfiles: d.perfiles,
     detalles: d.detalles || [],
     especificaciones: d.especificaciones || [],
-    caracteristicas: d.caracteristicas || [],
+    caracteristicas: (d.caracteristicas || []).map((c: any) => ({
+      marcador: c.marcador,
+      icono: c.icono,
+      titulo: c.titulo,
+      descripcion: c.descripcion,
+      panel: c.panel,
+    })),
   }))
 }
 
