@@ -30,6 +30,7 @@
     // SVG decorativo con la silueta de la máquina (fondo transparente)
     "perfiles": "/img/perfiles/e350p-perfil.png",
     // Datos rápidos que se muestran destacados (peso, potencia)
+	"distancia": "12.5",
     "detalles": [
       {
         "titulo": "PESO",
@@ -44,12 +45,12 @@
     "especificaciones": [
       {
         // Icono de la spec (en public/img/iconos/)
-        "icono": "capacidad.webp",
+        "icono": "/img/ico-cucharon.svg",
         "titulo": "CAPACIDAD DEL CUCHARÓN",
         "valor": "2.51 m³"
       },
       {
-        "icono": "fuerza.webp",
+        "icono": "/img/ico-excavadora.svg",
         "titulo": "FUERZA DE EXCAVACIÓN DE BRAZO",
         "valor": "222 kN"
       }
@@ -59,37 +60,37 @@
       {
         // Posición del marcador sobre la imagen (coordenadas normalizadas 0-1)
         // d = dirección de la etiqueta: O (Oeste), E (Este), N (Norte), S (Sur)
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
+        "marcador": { "x": 0.93, "y": 0.09, "d": "O" },
         // Icono de la característica
-        "icono": "torque.webp",
+        "icono": "/img/ico-rocas.svg",
         "titulo": "MAYOR TORQUE DE GIRO",
         // Descripción con soporte Markdown
-        "descripcion": "120 kN·m, Permite romper la inercia más rápido para ciclos de trabajo más ágiles."
+        "descripcion": "120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "velocidad.webp",
+        "marcador": { "x": 0.56, "y": 0.41, "d": "O" },
+        "icono": "/img/ico-flechas.svg",
         "titulo": "MEJOR VELOCIDAD DE GIRO",
         "descripcion": "Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "rompimiento.webp",
+        "marcador": { "x": 0.93, "y": 0.41, "d": "O" },
+        "icono": "/img/ico-energia.svg",
         "titulo": "FUERZA DE ROMPIMIENTO EN EL BRAZO",
         "descripcion": "Concentra la fuerza en el brazo (no solo en la cuchara) para una penetración más eficiente."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "bombas.webp",
+        "marcador": { "x": 0.40, "y": 0.37, "d": "E" },
+        "icono": "/img/ico-herramientas.svg",
         "titulo": "DOS BOMBAS HIDRÁULICAS INDEPENDIENTES",
         "descripcion": "Si el sistema de traslación se daña, la máquina puede seguir excavando con el flujo de la otra bomba."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "aplicaciones.webp",
+        "marcador": { "x": -0.05, "y": 0.65, "d": "E" },
+        "icono": "/img/ico-pendiente.svg",
         "titulo": "APLICACIONES DE TRABAJO",
         // Lista Markdown con viñetas (-) y **negrita**
-        "descripcion": "- **Minería de Tajo Abierto**: Movimiento de tierras, limpieza de bancos y mantenimiento de vías minerales.\n- **Infraestructura Vial**: Cortes de talud, defensa ribereña y obras de saneamiento.\n- **Canteras y Agregados**: Alimentación de plantas de trituración y acopio de materiales.\n- **Demolición Urbana e Industrial**: Derribo de estructuras y carga de escombros de alta densidad."
+        "descripcion": "- **Minería de Tajo Abierto**: Movimiento de tierras, limpieza de bancos y mantenimiento de vías minerales.\n- **Infraestructura Vial**: Cortes de talud, defensa ribereña y obras de saneamiento.\n- **Canteras y Agregados**: Alimentación de plantas de trituración y acopio de materiales.\n- **Demolición Urbana e Industrial**: Demolición de edificios."
       }
     ]
   },
@@ -103,6 +104,7 @@
     "logo": "/img/logo-320P.png",
     "color": "#FCB515",
     "perfiles": "/img/perfiles/r320p-perfil.png",
+	"distancia": "20",
     "detalles": [
       {
         "titulo": "PESO",
@@ -115,111 +117,46 @@
     ],
     "especificaciones": [
       {
-        "icono": "capacidad_excavadora.webp",
-        "titulo": "CAPACIDAD CUCHARÓN EXCAVADORA",
+        "icono": "/img/ico-cucharon.svg",
+        "titulo": "CAP. DEL CUCHARÓN EXCAVADORA",
         "valor": "0.25 m³"
       },
       {
-        "icono": "capacidad_cargador.webp",
+        "icono": "/img/ico-retroexcavadora.svg",
         "titulo": "CAPACIDAD CUCHARÓN CARGADOR",
-        "valor": "1.00 m³"
+        "valor": "0.25 m³"
       }
     ],
     "caracteristicas": [
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "cuchara.webp",
-        "titulo": "CUCHARA POSTERIOR MÁS GRANDE",
-        "descripcion": "Con 0.25 m3, es la más grande del mercado en su segmento."
-      },
-      {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "hidraulico.webp",
+        "marcador": { "x": 0.41, "y": 0.32, "d": "S" },
+        "icono": "/img/ico-hidraulica.svg",
         "titulo": "SISTEMA HIDRÁULICO A DEMANDA",
-        "descripcion": "Bombas de pistones axiales para un control suave y eficiente."
+        "descripcion": "Utiliza bombas de pistones axiales para entregar solo el caudal necesario, optimizando el combustible."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "precision.webp",
+        "marcador": { "x": 87, "y": -0.09, "d": "S" },
+        "icono": "/img/ico-brazo.svg",
+        "titulo": "CUCHARA POSTERIOR",
+        "descripcion": "La más grande del mercado (0.25 m3), aumentando la productividad por ciclo."
+      },
+      {
+        "marcador": { "x": 0.94, "y": 0.15, "d": "E" },
+        "icono": "/img/ico-herramientas.svg",
         "titulo": "MODO PRECISIÓN",
-        "descripcion": "Incluido de serie para movimientos extremadamente lentos."
+        "descripcion": "Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "powerlift.webp",
-        "titulo": "SISTEMA POWERLIFT",
-        "descripcion": "Proporciona un 15% más de potencia hidráulica."
+        "marcador": { "x": 0.80, "y": 0.01, "d": "E" },
+        "icono": "/img/ico-objetivo.svg",
+        "titulo": "POWERLIFT",
+        "descripcion": "Proporciona un 15% más de potencia hidráulica para levantar cargas pesadas en modo retroexcavadora."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "aplicaciones.webp",
+        "marcador": { "x": 0.02, "y": 0.67, "d": "E" },
+        "icono": "/img/ico-pendiente.svg",
         "titulo": "APLICACIONES DE TRABAJO",
-        "descripcion": "- **Obras Municipales y Urbanismo**: Zanjeo para tuberías, mantenimiento de parques.\n- **Sector Agrícola**: Preparación de terrenos y canales de regadío.\n- **Minería y Energía**: Apoyo en campamentos y redes eléctricas.\n- **Emergencias (El Niño)**: Limpieza de cauces y descolmatación."
-      }
-    ]
-  },
-  {
-    "id": "CF644G",
-    "categoria": "CARGADOR FRONTAL",
-    "modelo": "644G-TIER",
-    "tarjeta": "/img/tarjetas/t-info-644g.webp",
-    "descripcion": "Solución rentable que redefine la fiabilidad en el acarreo, equilibrando durabilidad y desempeño sobresaliente.",
-    "imagen": "/img/modelos/cf644g.webp",
-    "logo": "/img/logo-644G.png",
-    "color": "#FCB515",
-    "perfiles": "/img/perfiles/cf644g-perfil.png",
-    "detalles": [
-      {
-        "titulo": "PESO",
-        "valor": "17,044 KG"
-      },
-      {
-        "titulo": "POTENCIA",
-        "valor": "248 HP"
-      }
-    ],
-    "especificaciones": [
-      {
-        "icono": "capacidad.webp",
-        "titulo": "CAPACIDAD DE CUCHARÓN",
-        "valor": "3.25 m³"
-      },
-      {
-        "icono": "carga_vuelco.webp",
-        "titulo": "CARGA DE VUELCO GIRO MÁX 40°",
-        "valor": "12,328 KG"
-      }
-    ],
-    "caracteristicas": [
-      {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "quadcool.webp",
-        "titulo": "SISTEMA QUADCOOL",
-        "descripcion": "Caja de enfriamiento de fácil acceso."
-      },
-      {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "ahorro.webp",
-        "titulo": "AUTO IDLE AUTO SHUT OFF",
-        "descripcion": "Reducción de RPM y apagado automático para ahorro de combustible."
-      },
-      {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "ejes.webp",
-        "titulo": "ENFRIADORES DE EJES DE SERIE",
-        "descripcion": "Garantizan operación continua en largas distancias."
-      },
-      {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "nivelacion.webp",
-        "titulo": "AUTO NIVELACIÓN DE CUCHARA",
-        "descripcion": "Automatización para mayor eficiencia en ciclos de carga."
-      },
-      {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "aplicaciones.webp",
-        "titulo": "APLICACIONES DE TRABAJO",
-        "descripcion": "- **Agregados y Canteras**: Carga de volquetes y tolvas.\n- **Vías y Pavimentación**: Distribución de materiales base.\n- **Logístico e Industrial**: Movimiento de materiales y reciclaje.\n- **Minería**: Acarreo de mineral y mantenimiento de stock."
+        "descripcion": "- **Obras Municipales y Urbanismo**: Alcantarillado, limpieza de desmontes y nivelación de áreas públicas.\n- **Sector Agrícola**: Limpieza de canales, apertura de trochas y excavación de pozos.\n- **Minería y Energía**: Tendido de cables, mantenimiento de campamentos y apoyo en gasoductos.\n- **Emergencias (El Niño)**: Descolmatación y canalización de emergencia.",
       }
     ]
   },
@@ -228,11 +165,12 @@
     "categoria": "TRACTOR TOPADOR",
     "modelo": "850J-II",
     "tarjeta": "/img/tarjetas/t-info-850.webp",
-    "descripcion": "Potencia hidrostática para movimiento de tierras sin precedentes, con maniobras ágiles y eficiencia radical en combustible.",
+    "descripcion": "El **850J-II** entrega 205 hp de potencia hidrostática para movimientos de tierras excepcionales. Realiza giros a máxima potencia y maniobras ágiles, optimizando el consumo de combustible en aplicaciones industriales exigentes.",
     "imagen": "/img/modelos/tt850j.webp",
     "logo": "/img/logo-850J.png",
     "color": "#FCB515",
     "perfiles": "/img/perfiles/tt850j-perfil.png",
+	"distancia": "10",
     "detalles": [
       {
         "titulo": "PESO",
@@ -245,34 +183,34 @@
     ],
     "especificaciones": [
       {
-        "icono": "hoja.webp",
-        "titulo": "CAPACIDAD HOJA TOPADORA",
+        "icono": "/img/ico-cuchara.svg",
+        "titulo": "CAPACIDAD DE HOJA TOPADORA",
         "valor": "5.57 m³"
       },
       {
-        "icono": "tipo_hoja.webp",
+        "icono": "/img/ico-hoja.svg",
         "titulo": "TIPO DE HOJA",
         "valor": "SEMI U"
       }
     ],
     "caracteristicas": [
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "transmision.webp",
-        "titulo": "TRANSMISIÓN HIDROSTÁTICA VARIABLE",
-        "descripcion": "Ajuste automático de torque y velocidad."
+        "marcador": { "x": 0.51, "y": 0.22, "d": "S" },
+        "icono": "/img/ico-config.svg",
+        "titulo": "TRANSMISIÓN HIDROSTÁTICA",
+        "descripcion": "Transmisión variable que ajusta automáticamente torque y velocidad según la resistencia sin cambios de marcha."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "ergonomia.webp",
-        "titulo": "ERGONOMÍA MEJORADA",
-        "descripcion": "Reduce la fatiga al eliminar cambios manuales constantes."
+        "marcador": { "x": 0.26, "y": 0.21, "d": "S" },
+        "icono": "/img/ico-casco.svg",
+        "titulo": "MAYOR ERGONOMÍA",
+        "descripcion": "Al no requerir cambios constantes, se reduce drásticamente la fatiga del operador."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "aplicaciones.webp",
+        "marcador": false,
+        "icono": "/img/ico-pendiente.svg",
         "titulo": "APLICACIONES DE TRABAJO",
-        "descripcion": "- **Minería**: Empuje de grandes volúmenes y nivelación.\n- **Infraestructura Vial**: Apertura de trochas y terraplenes.\n- **Sector Energético**: Mantenimiento de servidumbres.\n- **Gestión de Desastres**: Remoción de escombros y encauzamiento."
+        "descripcion": "- **Minería y Movimiento de Tierras**: Botaderos, plataformas y corte de material.\n- **Infraestructura Vial**: Apertura de trochas y estabilización de taludes.\n- **Sector Energético**: Derecho de vía y control de erosión.\n- **Gestión de Desastres**: Encauzamiento y limpieza de cauces."
       }
     ]
   },
@@ -281,7 +219,7 @@
     "categoria": "MOTONIVELADORA",
     "modelo": "620G",
     "tarjeta": "/img/tarjetas/t-info-620g.webp",
-    "descripcion": "Precisión absoluta y equilibrio superior con diseño optimizado para reducir el consumo de combustible hasta en un 10%.",
+    "descripcion": "La **620G** ofrece precisión absoluta y un equilibrio superior con su motor de 215 hp. Su diseño optimizado reduce el consumo de combustible hasta en un 10% liderando en economía vial. Visibilidad panorámica y estabilidad excepcional para elevar la productividad en terrenos desafiantes.",
     "imagen": "/img/modelos/m620g.webp",
     "logo": "/img/logo-620G.png",
     "color": "#FCB515",
@@ -298,60 +236,136 @@
     ],
     "especificaciones": [
       {
-        "icono": "hoja_dim.webp",
+        "icono": "/img/ico-dimensiones.svg",
         "titulo": "DIMENSIONES DE LA HOJA",
         "valor": "4,27 m x 610 mm x 22 mm"
       },
       {
-        "icono": "traccion.webp",
+        "icono": "/img/ico-traccion.svg",
         "titulo": "TIPO DE TRACCIÓN",
         "valor": "6X4"
       }
     ],
     "caracteristicas": [
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "ebs.webp",
-        "titulo": "SISTEMA EBS",
-        "descripcion": "Transmisión con cambios directos y automáticos."
+        "marcador": { "x": 0.43, "y": 0.22, "d": "S" },
+        "icono": "/img/ico-config.svg",
+        "titulo": "TRANSMISIÓN CON SISTEMA EBS",
+        "descripcion": "Permite cambios directos de marcha adelante a atrás de forma segura y automática."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "mantenimiento.webp",
+        "marcador": { "x": 0.54, "y": 0.26, "d": "S" },
+        "icono": "/img/ico-lubrica.svg",
         "titulo": "SISTEMA NEVER GREASE",
-        "descripcion": "64% de los pines sellados de por vida."
+        "descripcion": "El 64% de los pines están sellados de por vida y no requieren lubricación manual."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "frio.webp",
+        "marcador": { "x": 0.06, "y": 0.22, "d": "S" },
+        "icono": "/img/ico-frio.svg",
         "titulo": "SISTEMA DE ARRANQUE EN FRÍO",
-        "descripcion": "Desacopla la bomba hidráulica para facilitar el encendido."
+        "descripcion": "Desacopla la bomba hidráulica para un encendido suave en altura o climas fríos."
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "estabilidad.webp",
+        "marcador": { "x": 0.29, "y": 0.79, "d": "E" },
+        "icono": "/img/ico-inclinacion.svg",
         "titulo": "BAJO CENTRO DE GRAVEDAD",
-        "descripcion": "Mayor estabilidad de la hoja para acabados precisos."
+        "descripcion": "Proporciona mayor estabilidad para evitar que la hoja se levante.",
+		"panel": {
+			"bottom": "35%"
+		}
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "aplicaciones.webp",
+        "marcador": { "x": 0.01, "y": 0.39, "d": "E" },
+        "icono": "/img/ico-pendiente.svg",
         "titulo": "APLICACIONES DE TRABAJO",
-        "descripcion": "- **Carreteras**: Perfilado de bases y mantenimiento de vías.\n- **Minería**: Mantenimiento de pistas de acarreo.\n- **Agricultura**: Nivelación de terrenos y canales.\n- **Emergencias**: Recuperación de transitabilidad."
+        "descripcion": "- **Carreteras**: Perfilado, mantenimiento y corte de taludes.\n- **Minería (Tajo Abierto)**: Vías de acarreo y control de polvo/lodo.\n- **Agricultura**: Preparación de terrenos y canales secundarios.\n- **Emergencias**: Remoción de lodo y escombros."
+      }
+    ]
+  },
+  {
+    "id": "CF644G",
+    "categoria": "CARGADOR FRONTAL",
+    "modelo": "644G-TIER",
+    "tarjeta": "/img/tarjetas/t-info-644g.webp",
+  "descripcion": "El **644 G-Tier** redefine la fiabilidad en el acarreo con un potente motor de 235 hp. Es la solución más rentable por excelencia, ofreciendo facilidad de manejo y bajos costos de mantenimiento. Una máquina \"bien hecha\" que equilibra durabilidad legendaria con un desempeño sobresaliente.",
+    "imagen": "/img/modelos/cf644g.webp",
+    "logo": "/img/logo-644G.png",
+    "color": "#FCB515",
+    "perfiles": "/img/perfiles/cf644g-perfil.png",
+	"distancia": "17",
+    "detalles": [
+      {
+        "titulo": "PESO",
+        "valor": "17,044 KG"
+      },
+      {
+        "titulo": "POTENCIA",
+        "valor": "248 HP"
+      }
+    ],
+    "especificaciones": [
+      {
+        "icono": "/img/ico-tractor.svg",
+        "titulo": "CAPACIDAD DE CUCHARÓN",
+        "valor": "3.25 m³"
+      },
+      {
+        "icono": "/img/ico-giro.svg",
+        "titulo": "CARGO DE VUELCO, GIRO MÁXIMO DE 40°",
+        "valor": "12,328 KG"
+      }
+    ],
+    "caracteristicas": [
+      {
+        "marcador": { "x": 0.84, "y": 0.17, "d": "S" },
+        "icono": "/img/ico-frio.svg",
+        "titulo": "SISTEMA QUADCOOL",
+        "descripcion": "Caja de enfriamiento patentada con acceso total para limpieza, evitando sobrecalentamientos."
+      },
+      {
+        "marcador": { "x": 0.51, "y": 0.17, "d": "S" },
+        "icono": "/img/ico-config.svg",
+        "titulo": "AUTO IDLE AUTO SHUT OFF",
+        "descripcion": "Reducción de RPM y apagado automático tras periodos de inactividad."
+      },
+      {
+        "marcador": { "x": 0.64, "y": 0.64, "d": "S" },
+        "icono": "/img/ico-ejes.svg",
+        "titulo": "ENFRIADORES DE EJES DE SERIE",
+        "descripcion": "Permite operación continua sin paradas forzadas para enfriar los ejes.",
+		"panel": {
+			"bottom": "40%"
+		}
+      },
+      {
+        "marcador": { "x": 0.02, "y": 0.66, "d": "E" },
+        "icono": "/img/ico-cuchara.svg",
+        "titulo": "AUTO NIVELACIÓN DE CUCHARA",
+        "descripcion": "Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.",
+		"panel": {
+			"bottom": "40%"
+		}
+      },
+      {
+        "marcador": { "x": 0.0, "y": 0.60, "d": "E" },
+        "icono": "/img/ico-pendiente.svg",
+        "titulo": "APLICACIONES DE TRABAJO",
+        "descripcion": "- **Agregados y Canteras**: Carga de tolvas, apilamiento y volquetes.\n- **Vías y Pavimentación**: Mezcla de materiales, asfalto y limpieza de trazo.\n- **Logístico e Industrial**: Manejo de carga a granel y limpieza de almacenes.\n- **Minería (Mediana Escala)**: Mantenimiento, gestión de residuos y trabajos en altura."
       }
     ]
   },
   {
     "id": "CHHC110",
     "categoria": "COMPACTADORA",
-    "modelo": "HAMM HC 110",
+    "modelo": "HC 110",
     "tarjeta": "/img/tarjetas/t-info-hc110.webp",
-    "descripcion": "Rodillo compactador diseñado para alto rendimiento y uniformidad en asfalto y tierra, reduciendo tiempos y costos.",
+    "descripcion": "El **HC 110** está diseñado para ofrecer un alto rendimiento en la compactación de diferentes materiales como asfalto y tierra, asegurando una compactación uniforme y eficiente en proyectos de construcción de caminos y otras obras viales.",
     "imagen": "/img/modelos/chhc110.webp",
     "logo": "/img/logo-HC110.png",
     "color": "#EB6608",
     "plantilla": "a",
     "perfiles": "/img/perfiles/chhc110-perfil.png",
+	"distancia": "17",
     "detalles": [
       {
         "titulo": "PESO",
@@ -364,52 +378,69 @@
     ],
     "especificaciones": [
       {
-        "icono": "centrifuga.webp",
-        "titulo": "FUERZA CENTRÍFUGA",
-        "valor": "145 / 250 kN"
+        "icono": "/img/ico-autonomia.svg",
+        "titulo": "FUERZA DE COMPACTACIÓN",
+        "valor": "250 kN, con carga lineal de 29,81 kg/cm para una compactación eficiente."
       },
       {
-        "icono": "vibracion.webp",
-        "titulo": "FRECUENCIA VIBRACIÓN",
-        "valor": "35 / 30 Hz"
+        "icono": "/img/ico-potencia.svg",
+        "titulo": "POTENCIA DEL MOTOR",
+        "valor": "Motor John Deere de 135.4 HP"
       }
     ],
     "caracteristicas": [
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "compactacion.webp",
-        "titulo": "COMPACTACIÓN PROFUNDA",
-        "descripcion": "Densidades óptimas en menos pasadas."
+        "marcador": { "x": 0.91, "y": 0.42, "d": "O" },
+        "icono": "/img/ico-autonomia.svg",
+        "titulo": "AUTONOMÍA DE OPERACIÓN",
+        "descripcion": "Depósito de 270 L, ideal para jornadas prolongadas sin interrupciones",
+		"panel": {
+			"left": "0%",
+			"bottom": "40%"
+		}
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "sensor.webp",
-        "titulo": "NÚMERO DE PASADAS EXACTAS",
-        "descripcion": "Equipado con acelerómetro como sensor de compactación."
+        "marcador": { "x": 0.85, "y": 0.33, "d": "S" },
+        "icono": "/img/ico-eco.svg",
+        "titulo": "EFICIENCIA OPERATIVA",
+        "descripcion": "Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.",
+		"panel": {
+			"left": "0%",
+			"bottom": "17%"
+		}
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "articulacion.webp",
-        "titulo": "UNIFORMIDAD EN COMPACTACIÓN",
-        "descripcion": "Dirección articulada de tres puntos para distribución homogénea."
+        "marcador": { "x": 0.93, "y": 0.41, "d": "O" },
+        "icono": "/img/ico-maniobra.svg",
+        "titulo": "MANIOBRABILIDAD Y CONTROL",
+        "descripcion": "Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.",
+		"panel":{
+			"left": "0%",
+			"right": "5%",
+			"bottom": "46%",
+		}
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "vibracion_auto.webp",
-        "titulo": "VIBRACIÓN CUANDO SE REQUIERE",
-        "descripcion": "Activación y desactivación automática según movimiento."
+        "marcador": { "x": 0.88, "y": 0.32, "d": "S" },
+        "icono": "/img/ico-herramientas.svg",
+        "titulo": "FACILIDAD DE MANTENIMIENTO",
+        "descripcion": "Acceso optimizado a componentes clave para revisiones rápidas y menor tiempo de parada.",
+		"panel":{
+			"left": "0%",
+			"right": "10%",
+			"bottom": "2%",
+		}
       },
       {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "gestion.webp",
-        "titulo": "GESTIÓN EN TODO MOMENTO",
-        "descripcion": "Integración con Operation Center para seguimiento preciso."
-      },
-      {
-        "marcador": { "x": 0.25, "y": 0.75, "d": "O" },
-        "icono": "aplicaciones.webp",
+        "marcador": { "x": 0.94, "y": 0.47, "d": "O" },
+        "icono": "/img/ico-pendiente.svg",
         "titulo": "APLICACIONES DE TRABAJO",
-        "descripcion": "- **Carreteras**: Preparación de superficies.\n- **Obras Civiles**: Compactación en proyectos de vivienda.\n- **Minería y Canteras**: Accesos y vías internas.\n- **Movimiento de Tierra**: Estabilización de suelo.\n- **Alquiler**: Rápida reposición de inversión."
+        "descripcion": "- **Carreteras y autopistas**: Compactación de subrasante, base y asfalto.\n- **Pavimentación urbana**: Calles, avenidas y accesos logísticos.\n- **Obras industriales**: Parques y zonas de alto tránsito.\n- **Terrenos exigentes**: Compactación uniforme en suelos difíciles gracias a su vibración ajustable.",
+		"panel":{
+			"left": "0%",
+			"right": "12%",
+			"bottom": "13%",
+		}
       }
     ]
   }
