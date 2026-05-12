@@ -3,12 +3,12 @@ import datosCrudos from '../datos/versus.json5'
 
 export interface ICaracteristicaComparativa {
   titulo: string
-  valor: string
+  valor: string,
+  estiloValor?: any
 }
 
 export interface IMaquinaComparativa {
   id: string
-  categoria: string
   modelo: string
   imagen: string
   carateristicas: ICaracteristicaComparativa[]
@@ -17,8 +17,11 @@ export interface IMaquinaComparativa {
 export interface IComparativa {
   id: string
   tarjeta: string
-  producto1: Omit<IMaquinaComparativa, 'categoria'>
-  producto2: Omit<IMaquinaComparativa, 'categoria'>
+  categoria: string
+  color: string
+  estiloModelo?: any
+  maquinariaA: IMaquinaComparativa
+  maquinariaB: IMaquinaComparativa
 }
 
 export interface IResumenComparativa {
@@ -37,13 +40,16 @@ function mapearComparativas(datos: any[]): IComparativa[] {
   return datos.map((d: any) => ({
     id: d.id,
     tarjeta: d.tarjeta,
-    producto1: {
+    categoria: d.categoria,
+    color: d.color,
+    estiloModelo: d.estiloModelo,
+    maquinariaA: {
       id: d.maquinas?.[0]?.id || '',
       modelo: d.maquinas?.[0]?.modelo || '',
       imagen: d.maquinas?.[0]?.imagen || '',
       carateristicas: d.maquinas?.[0]?.carateristicas || [],
     },
-    producto2: {
+    maquinariaB: {
       id: d.maquinas?.[1]?.id || '',
       modelo: d.maquinas?.[1]?.modelo || '',
       imagen: d.maquinas?.[1]?.imagen || '',
@@ -64,7 +70,7 @@ export const useAlmacenComparativas = defineStore('comparativas', {
 
   getters: {
     comparativaActual(): IComparativa | null {
-      return this.seleccion || this.comparativas[0] || null
+      return this.seleccion || this.comparativas[8] || null
     },
 
     listaComparativas(): IResumenComparativa[] {
@@ -73,12 +79,12 @@ export const useAlmacenComparativas = defineStore('comparativas', {
         tarjeta: d.tarjeta,
         maquinariaA: {
           id: d.maquinas?.[0]?.id || '',
-          categoria: d.maquinas?.[0]?.categoria || '',
+          categoria: d.categoria  || '',
           modelo: d.maquinas?.[0]?.modelo || '',
         },
         maquinariaB: {
           id: d.maquinas?.[1]?.id || '',
-          categoria: d.maquinas?.[1]?.categoria || '',
+          categoria: d.categoria || '',
           modelo: d.maquinas?.[1]?.modelo || '',
         },
       }))

@@ -15,7 +15,8 @@ JDVista
     JDBotonQR
 
   template(v-slot:fondo)
-    img(src="/img/fondo-01.jpg")
+    //- img(src="/img/fondo-01.jpg")
+    video(src="/video/fondo01.mp4" loop muted autoplay)
 </template>
 
 <script setup lang="ts">
