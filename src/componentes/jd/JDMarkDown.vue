@@ -27,10 +27,6 @@ function animarEntrada() {
   nextTick(() => {
     if (!mdContentRef.value) return;
 
-    if (splitTextInstance) {
-      splitTextInstance.revert();
-    }
-
     splitTextInstance = new SplitText(mdContentRef.value, {
       type: 'lines',
       linesClass: 'linea-markdown',
@@ -39,31 +35,28 @@ function animarEntrada() {
     const lineas = splitTextInstance.lines;
     if (!lineas || lineas.length === 0) return;
 
-    gsap.set(lineas, {
-      opacity: 0,
-      y: 20,
-    });
-
-    gsap.to(lineas, {
-      opacity: 1,
-      y: 0,
-      duration: 0.5,
-      ease: 'power2.out',
-      stagger: 0.15,
-    });
+    gsap.fromTo(lineas,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: 0.15 }
+    );
   });
 }
 
 onMounted(() => {
-  // animarEntrada();
+  animarEntrada();
 });
 
 onActivated(() => {
   animarEntrada();
 });
 
-
 watch(() => props.markdown, () => {
+  // Revertir SplitText ANTES de que Vue actualice el DOM,
+  // para no sobreescribir el nuevo contenido
+  if (splitTextInstance) {
+    splitTextInstance.revert();
+    splitTextInstance = null;
+  }
   animarEntrada();
 });
 </script>
