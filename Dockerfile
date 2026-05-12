@@ -9,7 +9,7 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
-RUN npx vite build
+RUN npm run build
 
 # ============================================
 # Etapa 2: Servir con nginx
