@@ -1,5 +1,6 @@
 <template lang="pug">
 	.jd_panel
+		img.marca(src="/img/triangulo.svg")
 		slot
 </template>
 
@@ -23,4 +24,8 @@
 	position relative
 	margin 8px
 	padding 16px
+
+	.marca
+		position absolute
+		bottom 97%
 </style>
