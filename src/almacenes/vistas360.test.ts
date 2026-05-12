@@ -12,31 +12,34 @@ describe('useAlmacenVistas360', () => {
       const store = useAlmacenVistas360();
       expect(store.vistas.length).toBeGreaterThan(0);
       expect(store.vistas[0]).toHaveProperty('id');
-      expect(store.vistas[0]).toHaveProperty('nombre');
-      expect(store.vistas[0]).toHaveProperty('miniatura');
-      expect(store.vistas[0]).toHaveProperty('imagenes');
+      expect(store.vistas[0]).toHaveProperty('categoria');
+      expect(store.vistas[0]).toHaveProperty('modelo');
+      expect(store.vistas[0]).toHaveProperty('tarjeta');
+      expect(store.vistas[0]).toHaveProperty('escenas');
     });
 
-    it('debería inicializar vistaActual como null', () => {
+    it('debería inicializar vistaActual con la primera vista', () => {
       const store = useAlmacenVistas360();
-      expect(store.vistaActual).toBeNull();
+      expect(store.vistaActual).toEqual(store.vistas[0]);
     });
 
-    it('debería mapear imagenes como array de rutas de escenas', () => {
+    it('debería mapear escenas como array de objetos', () => {
       const store = useAlmacenVistas360();
       store.vistas.forEach((vista) => {
-        expect(Array.isArray(vista.imagenes)).toBe(true);
-        if (vista.imagenes.length > 0) {
-          expect(typeof vista.imagenes[0]).toBe('string');
+        expect(Array.isArray(vista.escenas)).toBe(true);
+        if (vista.escenas.length > 0) {
+          expect(typeof vista.escenas[0].id).toBe('string');
+          expect(typeof vista.escenas[0].medio).toBe('string');
+          expect(typeof vista.escenas[0].tipoMedio).toBe('string');
         }
       });
     });
 
-    it('debería usar el modelo como nombre', () => {
+    it('debería usar el modelo como identificador principal', () => {
       const store = useAlmacenVistas360();
       store.vistas.forEach((vista) => {
-        expect(typeof vista.nombre).toBe('string');
-        expect(vista.nombre.length).toBeGreaterThan(0);
+        expect(typeof vista.modelo).toBe('string');
+        expect(vista.modelo.length).toBeGreaterThan(0);
       });
     });
   });
@@ -106,12 +109,12 @@ describe('useAlmacenVistas360', () => {
       expect(store.vistaActual).toEqual(store.vistas[1]);
     });
 
-    it('debería incluir configuración opcional cuando exista', () => {
+    it('debería seleccionar vistas con escenas definidas', () => {
       const store = useAlmacenVistas360();
-      const vistaConConfig = store.vistas.find((v) => v.configuracion !== undefined);
-      if (!vistaConConfig) return;
-      store.seleccionarVista(vistaConConfig.id);
-      expect(store.vistaActual?.configuracion).toBeDefined();
+      const vistaConEscenas = store.vistas.find((v) => v.escenas.length > 0);
+      if (!vistaConEscenas) return;
+      store.seleccionarVista(vistaConEscenas.id);
+      expect(store.vistaActual?.escenas.length).toBeGreaterThan(0);
     });
   });
 
@@ -129,8 +132,9 @@ describe('useAlmacenVistas360', () => {
       expect(store.vistaActual).toBeNull();
     });
 
-    it('debería mantener vistaActual como null si ya es null', () => {
+    it('debería establecer vistaActual como null si ya es null', () => {
       const store = useAlmacenVistas360();
+      store.limpiarSeleccion();
       expect(store.vistaActual).toBeNull();
       store.limpiarSeleccion();
       expect(store.vistaActual).toBeNull();
