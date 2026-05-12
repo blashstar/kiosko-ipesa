@@ -1,12 +1,24 @@
 import { defineStore } from 'pinia'
 import datosCrudos from '../datos/versus.json5'
 
+export interface ICaracteristicaComparativa {
+  titulo: string
+  valor: string
+}
+
+export interface IMaquinaComparativa {
+  id: string
+  categoria: string
+  modelo: string
+  imagen: string
+  carateristicas: ICaracteristicaComparativa[]
+}
+
 export interface IComparativa {
   id: string
-  titulo: string
-  imagen: string
-  producto1: { nombre: string; imagen: string; especificacion?: any }
-  producto2: { nombre: string; imagen: string; especificacion?: any }
+  tarjeta: string
+  producto1: Omit<IMaquinaComparativa, 'categoria'>
+  producto2: Omit<IMaquinaComparativa, 'categoria'>
 }
 
 export interface IResumenComparativa {
@@ -24,17 +36,18 @@ interface Estado {
 function mapearComparativas(datos: any[]): IComparativa[] {
   return datos.map((d: any) => ({
     id: d.id,
-    titulo: `${d.maquinas?.[0]?.modelo || ''} vs ${d.maquinas?.[1]?.modelo || ''}`,
-    imagen: d.tarjeta,
+    tarjeta: d.tarjeta,
     producto1: {
-      nombre: d.maquinas?.[0]?.modelo || '',
+      id: d.maquinas?.[0]?.id || '',
+      modelo: d.maquinas?.[0]?.modelo || '',
       imagen: d.maquinas?.[0]?.imagen || '',
-      especificacion: d.maquinas?.[0]?.carateristicas,
+      carateristicas: d.maquinas?.[0]?.carateristicas || [],
     },
     producto2: {
-      nombre: d.maquinas?.[1]?.modelo || '',
+      id: d.maquinas?.[1]?.id || '',
+      modelo: d.maquinas?.[1]?.modelo || '',
       imagen: d.maquinas?.[1]?.imagen || '',
-      especificacion: d.maquinas?.[1]?.carateristicas,
+      carateristicas: d.maquinas?.[1]?.carateristicas || [],
     },
   }))
 }
@@ -76,9 +89,11 @@ export const useAlmacenComparativas = defineStore('comparativas', {
     cargarComparativas() {
       this.comparativas = comparativasIniciales
     },
+
     seleccionarComparativa(id: string) {
       this.seleccion = this.comparativas.find((c) => c.id === id) || null
     },
+
     limpiarSeleccion() {
       this.seleccion = null
     },

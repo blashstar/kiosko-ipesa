@@ -18,14 +18,6 @@ export interface IMarcador {
   d: string
 }
 
-export interface ICaracteristica {
-  marcador: IMarcador
-  icono: string
-  titulo: string
-  descripcion: string
-  panel?: IPanel
-}
-
 export interface IPanel {
   top?: string
   bottom?: string
@@ -33,17 +25,26 @@ export interface IPanel {
   right?: string
 }
 
+export interface ICaracteristica {
+  marcador: IMarcador | false
+  icono: string
+  titulo: string
+  descripcion: string
+  panel?: IPanel
+}
+
 export interface IInfografia {
   id: string
   categoria: string
   modelo: string
-  tarjeta: string,
+  tarjeta: string
   descripcion: string
   imagen: string
   logo: string
   color: string
   plantilla?: string
   perfiles: string
+  distancia?: string
   detalles: IDetalle[]
   especificaciones: IEspecificacion[]
   caracteristicas: ICaracteristica[]
@@ -67,6 +68,7 @@ function mapearInfografias(datos: any[]): IInfografia[] {
     color: d.color,
     plantilla: d.plantilla,
     perfiles: d.perfiles,
+    distancia: d.distancia,
     detalles: d.detalles || [],
     especificaciones: d.especificaciones || [],
     caracteristicas: (d.caracteristicas || []).map((c: any) => ({

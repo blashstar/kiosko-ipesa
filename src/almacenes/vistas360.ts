@@ -1,12 +1,51 @@
 import { defineStore } from 'pinia'
 import datosCrudos from '../datos/vistas360.json5'
 
+export interface IPosicion {
+  yaw: number
+  pitch: number
+}
+
+export interface ISize {
+  width: number
+  height: number
+}
+
+export interface IMarcadorNavegacion {
+  id: string
+  image: string
+  position: IPosicion
+  size: ISize
+  tooltip: string
+  data: {
+    tipo: 'navegacion'
+    escenaDestino: string
+  }
+  anchor: string
+}
+
+export interface IMarcadorInformativo {
+  id: string
+  image: string
+  position: IPosicion
+  size: ISize
+  tooltip: {
+    content: string
+    className: string
+    position: string
+    trigger: string
+  }
+  anchor: string
+}
+
+export type Marcador = IMarcadorNavegacion | IMarcadorInformativo | any
+
 export interface IEscena {
   id: string
   medio: string
   tipoMedio: string
-  posicionInicial?: { yaw: number; pitch: number }
-  marcadores: any[]
+  posicionInicial?: IPosicion
+  marcadores: Marcador[]
 }
 
 export interface IVista360 {
@@ -45,28 +84,33 @@ const vistasIniciales = mapearVistas(
 export const useAlmacenVistas360 = defineStore('vistas360', {
   state: (): Estado => ({
     vistas: vistasIniciales,
-    vistaActual: vistasIniciales[0],
+    vistaActual: null,
   }),
+
   getters: {
-    listaMaquinarias(): Array<{id: string; modelo: string; categoria: string; tarjeta: string}> {
-      return this.vistas.map(v => ({
+    listaMaquinarias(): Array<{ id: string; modelo: string; categoria: string; tarjeta: string }> {
+      return this.vistas.map((v) => ({
         id: v.id,
         modelo: v.modelo,
         categoria: v.categoria,
         tarjeta: v.tarjeta,
       }))
     },
+
     maquinariaPorId: (state) => (id: string): IVista360 | undefined => {
-      return state.vistas.find(v => v.id === id)
-    }
+      return state.vistas.find((v) => v.id === id)
+    },
   },
+
   actions: {
     cargarVistas() {
       this.vistas = vistasIniciales
     },
+
     seleccionarVista(id: string) {
       this.vistaActual = this.vistas.find((v) => v.id === id) || null
     },
+
     limpiarSeleccion() {
       this.vistaActual = null
     },
