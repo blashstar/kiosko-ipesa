@@ -9,7 +9,6 @@ JDVista
   .cargando(v-else) Cargando...
 
   template(v-slot:pie)
-    JDBotonQR
     .grupo
       JDBotonVolver
       JDBotonInicio
@@ -87,6 +86,9 @@ function alNavegar(destino: string) {
   height: 100%
   color: #FCB515
   font-size: 1.5rem
+
+.grupo
+  margin-left auto
 
 .nav-escenas
   display: flex
