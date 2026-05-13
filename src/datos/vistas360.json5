@@ -56,7 +56,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'SISTEMA HIDR�ULICO A DEMANDA',
+              titulo: 'SISTEMA HIDRÁULICO A DEMANDA',
               descripcion: 'Utiliza bombas de pistones axiales para entregar solo el caudal necesario, optimizando el combustible.',
             },
           },
@@ -116,7 +116,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'SISTEMA HIDR�ULICO A DEMANDA',
+              titulo: 'SISTEMA HIDRÁULICO A DEMANDA',
               descripcion: 'Utiliza bombas de pistones axiales para entregar solo el caudal necesario, optimizando el combustible.',
             },
           },
@@ -130,7 +130,7 @@
             datos: {
               tipo: 'info',
               titulo: 'CUCHARA POSTERIOR',
-              descripcion: 'La m�s grande del mercado (0.25 m3), aumentando la productividad por ciclo.',
+              descripcion: 'La más grande del mercado (0.25 m3), aumentando la productividad por ciclo.',
             },
           },
           {
@@ -142,7 +142,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'MODO PRECISI�N',
+              titulo: 'MODO PRECISIÓN',
               descripcion: 'Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie.',
             },
           },
@@ -156,7 +156,7 @@
             datos: {
               tipo: 'info',
               titulo: 'POWERLIFT',
-              descripcion: 'Proporciona un 15% m�s de potencia hidr�ulica para levantar cargas pesadas en modo retroexcavadora.',
+              descripcion: 'Proporciona un 15% más de potencia hidráulica para levantar cargas pesadas en modo retroexcavadora.',
             },
           },
         ],
@@ -204,7 +204,7 @@
             datos: {
               tipo: 'info',
               titulo: 'CUCHARA POSTERIOR',
-              descripcion: 'La m�s grande del mercado (0.25 m3), aumentando la productividad por ciclo.',
+              descripcion: 'La más grande del mercado (0.25 m3), aumentando la productividad por ciclo.',
             },
           },
           {
@@ -216,7 +216,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'MODO PRECISI�N',
+              titulo: 'MODO PRECISIÓN',
               descripcion: 'Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie.',
             },
           },
@@ -230,7 +230,7 @@
             datos: {
               tipo: 'info',
               titulo: 'POWERLIFT',
-              descripcion: 'Proporciona un 15% m�s de potencia hidr�ulica para levantar cargas pesadas en modo retroexcavadora.',
+              descripcion: 'Proporciona un 15% más de potencia hidráulica para levantar cargas pesadas en modo retroexcavadora.',
             },
           },
         ],
@@ -345,7 +345,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MAYOR TORQUE DE GIRO',
-              descripcion: '120 kN�m; Permite romper la inercia m�s r�pido para ciclos de trabajo m�s �giles.',
+              descripcion: '120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.',
             },
           },
           {
@@ -358,7 +358,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MEJOR VELOCIDAD DE GIRO',
-              descripcion: 'Combinada con el torque, logra el tiempo de ciclo m�s bajo frente a competidores.',
+              descripcion: 'Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.',
             },
           },
           {
@@ -371,7 +371,7 @@
             datos: {
               tipo: 'info',
               titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
-              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetraci�n m�s eficiente.',
+              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetración más eficiente.',
             },
           },
           {
@@ -383,8 +383,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'DOS BOMBAS HIDR�ULICAS INDEPENDIENTES',
-              descripcion: 'Si el sistema de traslaci�n se da�a, la m�quina puede seguir excavando con el flujo de la otra bomba.',
+              titulo: 'DOS BOMBAS HIDRÁULICAS INDEPENDIENTES',
+              descripcion: 'Si el sistema de traslación se daña, la máquina puede seguir excavando con el flujo de la otra bomba.',
             },
           },
         ],
@@ -444,7 +444,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MAYOR TORQUE DE GIRO',
-              descripcion: '120 kN�m; Permite romper la inercia m�s r�pido para ciclos de trabajo m�s �giles.',
+              descripcion: '120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.',
             },
           },
           {
@@ -457,7 +457,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MEJOR VELOCIDAD DE GIRO',
-              descripcion: 'Combinada con el torque, logra el tiempo de ciclo m�s bajo frente a competidores.',
+              descripcion: 'Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.',
             },
           },
           {
@@ -470,7 +470,7 @@
             datos: {
               tipo: 'info',
               titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
-              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetraci�n m�s eficiente.',
+              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetración más eficiente.',
             },
           },
           {
@@ -482,8 +482,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'DOS BOMBAS HIDR�ULICAS INDEPENDIENTES',
-              descripcion: 'Si el sistema de traslaci�n se da�a, la m�quina puede seguir excavando con el flujo de la otra bomba.',
+              titulo: 'DOS BOMBAS HIDRÁULICAS INDEPENDIENTES',
+              descripcion: 'Si el sistema de traslación se daña, la máquina puede seguir excavando con el flujo de la otra bomba.',
             },
           },
         ],
@@ -531,7 +531,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MAYOR TORQUE DE GIRO',
-              descripcion: '120 kN�m; Permite romper la inercia m�s r�pido para ciclos de trabajo m�s �giles.',
+              descripcion: '120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.',
             },
           },
           {
@@ -544,7 +544,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MEJOR VELOCIDAD DE GIRO',
-              descripcion: 'Combinada con el torque, logra el tiempo de ciclo m�s bajo frente a competidores.',
+              descripcion: 'Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.',
             },
           },
         ],
@@ -604,7 +604,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MAYOR TORQUE DE GIRO',
-              descripcion: '120 kN�m; Permite romper la inercia m�s r�pido para ciclos de trabajo m�s �giles.',
+              descripcion: '120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.',
             },
           },
           {
@@ -617,7 +617,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MEJOR VELOCIDAD DE GIRO',
-              descripcion: 'Combinada con el torque, logra el tiempo de ciclo m�s bajo frente a competidores.',
+              descripcion: 'Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.',
             },
           },
           {
@@ -630,7 +630,7 @@
             datos: {
               tipo: 'info',
               titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
-              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetraci�n m�s eficiente.',
+              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetración más eficiente.',
             },
           },
           {
@@ -642,8 +642,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'DOS BOMBAS HIDR�ULICAS INDEPENDIENTES',
-              descripcion: 'Si el sistema de traslaci�n se da�a, la m�quina puede seguir excavando con el flujo de la otra bomba.',
+              titulo: 'DOS BOMBAS HIDRÁULICAS INDEPENDIENTES',
+              descripcion: 'Si el sistema de traslación se daña, la máquina puede seguir excavando con el flujo de la otra bomba.',
             },
           },
         ],
@@ -710,8 +710,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'TRANSMISI�N CON SISTEMA EBS',
-              descripcion: 'Permite cambios directos de marcha adelante a atr�s de forma segura y autom�tica.',
+              titulo: 'TRANSMISIÓN CON SISTEMA EBS',
+              descripcion: 'Permite cambios directos de marcha adelante a atrás de forma segura y automática.',
             },
           },
           {
@@ -724,7 +724,7 @@
             datos: {
               tipo: 'info',
               titulo: 'SISTEMA NEVER GREASE',
-              descripcion: 'El 64% de los pines est�n sellados de por vida y no requieren lubricaci�n manual.',
+              descripcion: 'El 64% de los pines están sellados de por vida y no requieren lubricación manual.',
             },
           },
           {
@@ -796,8 +796,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'TRANSMISI�N CON SISTEMA EBS',
-              descripcion: 'Permite cambios directos de marcha adelante a atr�s de forma segura y autom�tica.',
+              titulo: 'TRANSMISIÓN CON SISTEMA EBS',
+              descripcion: 'Permite cambios directos de marcha adelante a atrás de forma segura y automática.',
             },
           },
           {
@@ -810,7 +810,7 @@
             datos: {
               tipo: 'info',
               titulo: 'SISTEMA NEVER GREASE',
-              descripcion: 'El 64% de los pines est�n sellados de por vida y no requieren lubricaci�n manual.',
+              descripcion: 'El 64% de los pines están sellados de por vida y no requieren lubricación manual.',
             },
           },
           {
@@ -822,8 +822,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'SISTEMA DE ARRANQUE EN FR�O',
-              descripcion: 'Desacopla la bomba hidr�ulica para un encendido suave en altura o climas fr�os.',
+              titulo: 'SISTEMA DE ARRANQUE EN FRÍO',
+              descripcion: 'Desacopla la bomba hidráulica para un encendido suave en altura o climas fríos.',
             },
           },
           {
@@ -883,8 +883,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'SISTEMA DE ARRANQUE EN FR�O',
-              descripcion: 'Desacopla la bomba hidr�ulica para un encendido suave en altura o climas fr�os.',
+              titulo: 'SISTEMA DE ARRANQUE EN FRÍO',
+              descripcion: 'Desacopla la bomba hidráulica para un encendido suave en altura o climas fríos.',
             },
           },
           {
@@ -956,8 +956,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'TRANSMISI�N CON SISTEMA EBS',
-              descripcion: 'Permite cambios directos de marcha adelante a atr�s de forma segura y autom�tica.',
+              titulo: 'TRANSMISIÓN CON SISTEMA EBS',
+              descripcion: 'Permite cambios directos de marcha adelante a atrás de forma segura y automática.',
             },
           },
           {
@@ -970,7 +970,7 @@
             datos: {
               tipo: 'info',
               titulo: 'SISTEMA NEVER GREASE',
-              descripcion: 'El 64% de los pines est�n sellados de por vida y no requieren lubricaci�n manual.',
+              descripcion: 'El 64% de los pines están sellados de por vida y no requieren lubricación manual.',
             },
           },
         ],
@@ -1026,7 +1026,7 @@
             datos: {
               tipo: 'info',
               titulo: 'AUTO IDLE AUTO SHUT OFF',
-              descripcion: 'Reducci�n de RPM y apagado autom�tico tras periodos de inactividad.',
+              descripcion: 'Reducción de RPM y apagado automático tras periodos de inactividad.',
             },
           },
           {
@@ -1038,7 +1038,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'AUTO NIVELACI�N DE CUCHARA',
+              titulo: 'AUTO NIVELACIÓN DE CUCHARA',
               descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
             },
           },
@@ -1112,7 +1112,7 @@
             datos: {
               tipo: 'info',
               titulo: 'AUTO IDLE AUTO SHUT OFF',
-              descripcion: 'Reducci�n de RPM y apagado autom�tico tras periodos de inactividad.',
+              descripcion: 'Reducción de RPM y apagado automático tras periodos de inactividad.',
             },
           },
           {
@@ -1125,7 +1125,7 @@
             datos: {
               tipo: 'info',
               titulo: 'ENFRIADORES DE EJES DE SERIE',
-              descripcion: 'Permite operaci�n continua sin paradas forzadas para enfriar los ejes.',
+              descripcion: 'Permite operación continua sin paradas forzadas para enfriar los ejes.',
             },
           },
           {
@@ -1137,7 +1137,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'AUTO NIVELACI�N DE CUCHARA',
+              titulo: 'AUTO NIVELACIÓN DE CUCHARA',
               descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
             },
           },
@@ -1199,7 +1199,7 @@
             datos: {
               tipo: 'info',
               titulo: 'ENFRIADORES DE EJES DE SERIE',
-              descripcion: 'Permite operaci�n continua sin paradas forzadas para enfriar los ejes.',
+              descripcion: 'Permite operación continua sin paradas forzadas para enfriar los ejes.',
             },
           },
           {
@@ -1211,7 +1211,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'AUTO NIVELACI�N DE CUCHARA',
+              titulo: 'AUTO NIVELACIÓN DE CUCHARA',
               descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
             },
           },
@@ -1272,7 +1272,7 @@
             datos: {
               tipo: 'info',
               titulo: 'AUTO IDLE AUTO SHUT OFF',
-              descripcion: 'Reducci�n de RPM y apagado autom�tico tras periodos de inactividad.',
+              descripcion: 'Reducción de RPM y apagado automático tras periodos de inactividad.',
             },
           },
           {
@@ -1284,7 +1284,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'AUTO NIVELACI�N DE CUCHARA',
+              titulo: 'AUTO NIVELACIÓN DE CUCHARA',
               descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
             },
           },
@@ -1340,8 +1340,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'TRANSMISI�N HIDROST�TICA',
-              descripcion: 'Transmisi�n variable que ajusta autom�ticamente torque y velocidad seg�n la resistencia sin cambios de marcha.',
+              titulo: 'TRANSMISIÓN HIDROSTÁTICA',
+              descripcion: 'Transmisión variable que ajusta automáticamente torque y velocidad según la resistencia sin cambios de marcha.',
             },
           },
         ],
@@ -1400,7 +1400,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'TRANSMISI�N HIDROST�TICA',
+              titulo: 'TRANSMISIÓN HIDROSTÁTICA',
               descripcion: '',
             },
           },
@@ -1413,7 +1413,7 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'MAYOR ERGONOM�A',
+              titulo: 'MAYOR ERGONOMÍA',
               descripcion: '',
             },
           },
@@ -1473,8 +1473,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'TRANSMISI�N HIDROST�TICA',
-              descripcion: 'Transmisi�n variable que ajusta autom�ticamente torque y velocidad seg�n la resistencia sin cambios de marcha.',
+              titulo: 'TRANSMISIÓN HIDROSTÁTICA',
+              descripcion: 'Transmisión variable que ajusta automáticamente torque y velocidad según la resistencia sin cambios de marcha.',
             },
           },
           {
@@ -1486,8 +1486,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'MAYOR ERGONOM�A',
-              descripcion: 'Al no requerir cambios constantes, se reduce dr�sticamente la fatiga del operador.',
+              titulo: 'MAYOR ERGONOMÍA',
+              descripcion: 'Al no requerir cambios constantes, se reduce drásticamente la fatiga del operador.',
             },
           },
         ],
@@ -1546,8 +1546,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'MAYOR ERGONOM�A',
-              descripcion: 'Al no requerir cambios constantes, se reduce dr�sticamente la fatiga del operador.',
+              titulo: 'MAYOR ERGONOMÍA',
+              descripcion: 'Al no requerir cambios constantes, se reduce drásticamente la fatiga del operador.',
             },
           },
         ],
@@ -1556,7 +1556,6 @@
   },
   {
     id: 'CHHC110',
-    marca: 'Hamm',
     categoria: 'COMPACTADORA',
     modelo: 'HAMM HC 110',
     tarjeta: '/img/tarjetas/t-v360-hc110.webp',
@@ -1604,7 +1603,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MANIOBRABILIDAD Y CONTROL',
-              descripcion: 'Direcci�n articulada y sistema de vibraci�n ajustable para mayor precisi�n en compactaci�n.',
+              descripcion: 'Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.',
             },
           },
         ],
@@ -1663,8 +1662,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'AUTONOM�A DE OPERACI�N',
-              descripcion: 'Dep�sito de 270 L, ideal para jornadas prolongadas sin interrupciones',
+              titulo: 'AUTONOMÍA DE OPERACIÓN',
+              descripcion: 'Depósito de 270 L, ideal para jornadas prolongadas sin interrupciones',
             },
           },
           {
@@ -1690,7 +1689,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MANIOBRABILIDAD Y CONTROL',
-              descripcion: 'Direcci�n articulada y sistema de vibraci�n ajustable para mayor precisi�n en compactaci�n.',
+              descripcion: 'Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.',
             },
           },
           {
@@ -1703,7 +1702,7 @@
             datos: {
               tipo: 'info',
               titulo: 'FACILIDAD DE MANTENIMIENTO',
-              descripcion: 'Acceso optimizado a componentes clave para revisiones r�pidas y menor tiempo de parada.',
+              descripcion: 'Acceso optimizado a componentes clave para revisiones rápidas y menor tiempo de parada.',
             },
           },
         ],
@@ -1750,8 +1749,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'AUTONOM�A DE OPERACI�N',
-              descripcion: 'Dep�sito de 270 L, ideal para jornadas prolongadas sin interrupciones',
+              titulo: 'AUTONOMÍA DE OPERACIÓN',
+              descripcion: 'Depósito de 270 L, ideal para jornadas prolongadas sin interrupciones',
             },
           },
           {
@@ -1777,7 +1776,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MANIOBRABILIDAD Y CONTROL',
-              descripcion: 'Direcci�n articulada y sistema de vibraci�n ajustable para mayor precisi�n en compactaci�n.',
+              descripcion: 'Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.',
             },
           },
           {
@@ -1790,7 +1789,7 @@
             datos: {
               tipo: 'info',
               titulo: 'FACILIDAD DE MANTENIMIENTO',
-              descripcion: 'Acceso optimizado a componentes clave para revisiones r�pidas y menor tiempo de parada.',
+              descripcion: 'Acceso optimizado a componentes clave para revisiones rápidas y menor tiempo de parada.',
             },
           },
         ],
@@ -1863,11 +1862,12 @@
             datos: {
               tipo: 'info',
               titulo: 'MANIOBRABILIDAD Y CONTROL',
-              descripcion: 'Direcci�n articulada y sistema de vibraci�n ajustable para mayor precisi�n en compactaci�n.',
+              descripcion: 'Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.',
             },
           },
         ],
       },
     ],
+    marca: 'Hamm',
   },
 ]

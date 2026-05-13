@@ -31,4 +31,5 @@ coverage/
 
 # Misc
 *.bak
-*.tmp*.csv
+*.tmp
+*.csv
