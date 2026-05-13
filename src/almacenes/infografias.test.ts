@@ -37,6 +37,19 @@ describe('useAlmacenInfografias', () => {
       expect(primera).toHaveProperty('detalles');
       expect(primera).toHaveProperty('especificaciones');
       expect(primera).toHaveProperty('caracteristicas');
+      expect(primera).toHaveProperty('marca');
+    });
+
+    it('debería mapear marca cuando existe en los datos', () => {
+      const store = useAlmacenInfografias();
+      const conMarca = store.infografias.find((i) => i.id === 'CHHC110');
+      expect(conMarca?.marca).toBe('Hamm');
+    });
+
+    it('debería mapear marca como undefined cuando no está en los datos', () => {
+      const store = useAlmacenInfografias();
+      const sinMarca = store.infografias.find((i) => i.id === 'E350P');
+      expect(sinMarca?.marca).toBeUndefined();
     });
 
     it('debería tener IDs únicos', () => {

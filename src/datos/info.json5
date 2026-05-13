@@ -104,7 +104,7 @@
     "logo": "/img/logo-320P.png",
     "color": "#FCB515",
     "perfiles": "/img/perfiles/r320p-perfil.png",
-	"distancia": "20",
+    "distancia": "20",
     "detalles": [
       {
         "titulo": "PESO",
@@ -135,20 +135,23 @@
         "descripcion": "Utiliza bombas de pistones axiales para entregar solo el caudal necesario, optimizando el combustible."
       },
       {
-        "marcador": { "x": 87, "y": -0.09, "d": "S" },
+        "marcador": { "x": 0.87, "y": -0.09, "d": "S" },
         "icono": "/img/ico-brazo.svg",
         "titulo": "CUCHARA POSTERIOR",
         "descripcion": "La más grande del mercado (0.25 m3), aumentando la productividad por ciclo."
       },
       {
-        "marcador": { "x": 0.94, "y": 0.15, "d": "E" },
-        "icono": "/img/ico-herramientas.svg",
+        "marcador": { "x": 0.94, "y": 0.15, "d": "O" },
+        "icono": "/img/ico-objetivo.svg",
         "titulo": "MODO PRECISIÓN",
-        "descripcion": "Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie."
+        "descripcion": "Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie.",
+        "panel": {
+          "left": "5%"
+        }
       },
       {
         "marcador": { "x": 0.80, "y": 0.01, "d": "E" },
-        "icono": "/img/ico-objetivo.svg",
+        "icono": "/img/ico-energia.svg",
         "titulo": "POWERLIFT",
         "descripcion": "Proporciona un 15% más de potencia hidráulica para levantar cargas pesadas en modo retroexcavadora."
       },
@@ -231,7 +234,7 @@
       },
       {
         "titulo": "POTENCIA",
-        "valor": "200 HP"
+        "valor": "150 HP/200 HP"
       }
     ],
     "especificaciones": [
@@ -356,6 +359,7 @@
   },
   {
     "id": "CHHC110",
+    "marca": "Hamm",
     "categoria": "COMPACTADORA",
     "modelo": "HC 110",
     "tarjeta": "/img/tarjetas/t-info-hc110.webp",
@@ -368,12 +372,12 @@
 	"distancia": "17",
     "detalles": [
       {
-        "titulo": "PESO",
+        "titulo": "PESO OPERATIVO",
         "valor": "13,700 KG"
       },
       {
-        "titulo": "POTENCIA",
-        "valor": "135.4 HP"
+        "titulo": "DIMENSIONES",
+        "valor": "5,989 mm"
       }
     ],
     "especificaciones": [
@@ -410,15 +414,15 @@
 		}
       },
       {
-        "marcador": { "x": 0.93, "y": 0.41, "d": "O" },
+        "marcador": { "x": 0.13, "y": 0.71, "d": "E" },
         "icono": "/img/ico-maniobra.svg",
         "titulo": "MANIOBRABILIDAD Y CONTROL",
         "descripcion": "Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.",
-		"panel":{
-			"left": "0%",
-			"right": "5%",
-			"bottom": "46%",
-		}
+        "panel":{
+          "left": "-5%",
+          "right": "5%",
+          "bottom": "46%",
+        }
       },
       {
         "marcador": { "x": 0.88, "y": 0.32, "d": "S" },
@@ -437,9 +441,9 @@
         "titulo": "APLICACIONES DE TRABAJO",
         "descripcion": "- **Carreteras y autopistas**: Compactación de subrasante, base y asfalto.\n- **Pavimentación urbana**: Calles, avenidas y accesos logísticos.\n- **Obras industriales**: Parques y zonas de alto tránsito.\n- **Terrenos exigentes**: Compactación uniforme en suelos difíciles gracias a su vibración ajustable.",
 		"panel":{
-			"left": "0%",
+			"left": "-10%",
 			"right": "12%",
-			"bottom": "13%",
+			"bottom": "5%",
 		}
       }
     ]

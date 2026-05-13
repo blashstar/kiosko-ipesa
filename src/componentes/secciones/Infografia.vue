@@ -19,10 +19,12 @@ JDVista
               .marca(:style="estiloMarca"): img(src="/img/triangulo.svg")
               JDPanel.panel(:style="estiloPanel")
                 .titulo {{info.titulo}}
-                JDMarkDown.descripcion(:markdown="info.descripcion")
+                .descripcion(v-html="infoDescripcion")
 
       .caracteristicas(ref="caracteristicasRef")
-        .mensaje EXPLORA LOS DETALLES DE TU MAQUINARIA, DA CLICK
+        .mensaje
+          span EXPLORA LOS DETALLES DE TU MAQUINARIA, DA CLICK
+          img(src="/img/ico-clic.png")
         .caracteristica(v-for="caracteristica, idx in infografiaActual.caracteristicas")
           //- img.icono(src="https://placehold.co/120")
           JDBotonImagen.icono(:imagen="caracteristica.icono" @accion="alternarMarcador(idx)")
@@ -40,14 +42,15 @@ JDVista
         .especificacion(v-for="especificacion in infografiaActual.especificaciones")
           figure.icono: img(:src="especificacion.icono")
           .texto
-            .titulo {{especificacion.titulo}}
-            .valor {{especificacion.valor}}
+            span.titulo {{especificacion.titulo}}
+            | &nbsp;
+            span.valor {{especificacion.valor}}
 
 
   //- pre {{infografiaActual}}
 
   template(v-slot:pie)
-    JDBotonQR
+    //- JDBotonQR
     .grupo
       JDBotonVolver
       JDBotonInicio
@@ -58,7 +61,7 @@ JDVista
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia';
-import { ref, computed, onUnmounted, onMounted, onActivated, watch, nextTick } from 'vue';
+import { ref, computed, onUnmounted, onMounted, onActivated, onDeactivated, watch, nextTick } from 'vue';
 import { gsap } from 'gsap';
 import JDVista from '@jd/JDVista.vue';
 import JDLogo from '@jd/JDLogo.vue';
@@ -70,10 +73,14 @@ import JDBotonInicio from '@jd/JDBotonInicio.vue';
 import JDBotonImagen from '@jd/JDBotonImagen.vue';
 import JDPanel from '@jd/JDPanel.vue';
 import JDMarkDown from '@jd/JDMarkDown.vue';
+import MarkdownIt from 'markdown-it';
 import { useAlmacenInfografias } from '@/almacenes/infografias';
+import { useAlmacenInterfaz } from '@/almacenes/interfaz';
 
 const almacenInfografias = useAlmacenInfografias();
 const { infografiaActual } = storeToRefs(almacenInfografias);
+
+const almacenInterfaz = useAlmacenInterfaz();
 
 const estilos = computed(() => {
   return {
@@ -123,6 +130,15 @@ const estiloPanel = computed(() => {
     left: panel?.left,
     right: panel?.right,
   }
+})
+
+const md = new MarkdownIt();
+
+const infoDescripcion = computed(() => {
+  if(!info?.value?.descripcion){
+    return ""
+  }
+  return md.render(info?.value?.descripcion)
 })
 
 
@@ -211,15 +227,23 @@ onMounted(() => {
 });
 
 onActivated(() => {
+  almacenInterfaz.setMarca(infografiaActual.value?.marca ?? 'JohnDeere');
   animarEntrada();
 });
 
-watch(infografiaActual, () => {
+watch(infografiaActual, (nueva) => {
+  almacenInterfaz.setMarca(nueva?.marca ?? 'JohnDeere');
   // animarEntrada();
 });
 
+onDeactivated(() => {
+  marcadorActivo.value = null;
+  almacenInterfaz.setMarca('JohnDeere');
+})
+
 onUnmounted(() => {
   marcadorActivo.value = null;
+  almacenInterfaz.setMarca('JohnDeere');
 })
 
 
@@ -352,6 +376,13 @@ onUnmounted(() => {
       font-size vh(26px)
       font-weight: 900;
 
+      img
+        margin-left: .2em;
+        display: inline-block;
+        height: 120%;
+        width: auto;
+        vertical-align: baseline;
+
     .terminal
       height 3px
       background #FCB515
@@ -387,17 +418,18 @@ onUnmounted(() => {
 
     .descripcion
       display flex
-      gap 1rem
       align-items center
 
       .texto
-        flex 0 0 60%
+        flex 0 0 50%
         font-weight 500
         font-size: vh(20px)
         word-break: keep-all;
-        text-wrap: balance;
 
         :deep()
+          > .linea-markdown
+            white-space nowrap
+
           p
             font-size inherit
             text-align left
@@ -408,7 +440,8 @@ onUnmounted(() => {
 
 
       .perfil
-        flex 1 1 35%
+        padding-left 1rem
+        flex 1 1 50%
 
     .especificaciones
       margin vh(56px) 0
@@ -417,23 +450,27 @@ onUnmounted(() => {
       gap vw(24px)
 
     .especificacion
-      flex 1 1 auto
+      flex 1 1 50%
       display flex
       align-items center
       gap vw(24px)
 
       .icono
+        flex: 0 0 vw(80px);
         width vw(80px)
+
 
       .titulo
         font-size vh(24px)
         text-wrap balance
 
       .valor
-        font-size vh(20px)
+        font-size vh(24px)
+        display inline-block
 
 
-
+.grupo
+  margin-left auto
 
 
 
@@ -461,10 +498,15 @@ onUnmounted(() => {
   .detalles
     top 0
     left 0
+    padding-bottom 3vh
+    padding-right 20vw
+
+    .detalle
+      font-size vh(35px)
 
   .imagen
-    margin-top vh(-24px)
-    padding-left vw(120px)
+    margin-top vh(-32px)
+    padding-left vw(140px)
 
 .TT850J
   .visor
@@ -488,13 +530,15 @@ onUnmounted(() => {
     right 0
     background: linear-gradient(90deg, var(--color), transparent);
     padding-left vw(240px)
+    padding-right vw(64px)
 
   .detalle
     font-size: vh(24px);
 
   .imagen
     margin-top vh(-48px)
-    padding-left vw(48px)
+    padding-left vw(24px)
+    padding-right vw(100px)
 
 
 .CHHC110
@@ -503,15 +547,25 @@ onUnmounted(() => {
   .detalles
     top 0
     left 0
-    padding-right vw(140px)
+    padding-right vw(160px)
+    padding-left vw(60px)
 
   .detalle
-    font-size: vh(28px);
+    font-size: vh(30px);
     font-weight 600
+
+    &__titulo
+      font-size: vh(25px);
 
   .imagen
     margin-top vh(-96px)
-    padding-left vw(160px)
+    padding-left vw(240px)
+
+  .datos .especificacion
+    .titulo
+      font-size vh(23px)
+    .valor
+      font-size vh(19px)
 
 .transicion-info
   &-enter-active

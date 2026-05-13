@@ -45,6 +45,7 @@ export interface IInfografia {
   plantilla?: string
   perfiles: string
   distancia?: string
+  marca?: string
   detalles: IDetalle[]
   especificaciones: IEspecificacion[]
   caracteristicas: ICaracteristica[]
@@ -69,6 +70,7 @@ function mapearInfografias(datos: any[]): IInfografia[] {
     plantilla: d.plantilla,
     perfiles: d.perfiles,
     distancia: d.distancia,
+    marca: d.marca,
     detalles: d.detalles || [],
     especificaciones: d.especificaciones || [],
     caracteristicas: (d.caracteristicas || []).map((c: any) => ({
@@ -94,7 +96,7 @@ export const useAlmacenInfografias = defineStore('infografias', {
 
   getters: {
     infografiaActual(): IInfografia | null {
-      return this.seleccion || this.infografias[0] || null
+      return this.seleccion || this.infografias[5] || null
     },
 
     categorias(): string[] {

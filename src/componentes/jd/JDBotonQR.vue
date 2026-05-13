@@ -44,10 +44,13 @@ const botonPresionado = {
 	align-items center
 	gap vh(32px)
 	background transparent
+	transform-origin vh(50px) vh(50px)
 
 	&--presionado
 		transform scale(0.9)
-		box-shadow 0 0 20px #FFD700
+		filter drop-shadow(0 0 10px #FFD700)
+		.jd_boton_qr__icono
+			// box-shadow 0 0 10px #FFD700
 
 	&__icono
 		display grid
@@ -55,6 +58,7 @@ const botonPresionado = {
 		width vh(100px)
 		height vh(100px)
 		aspect-ratio 1 / 1
+		border-radius 100%
 
 		img
 			grid-area 1 / 1

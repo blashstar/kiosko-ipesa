@@ -20,6 +20,7 @@ export interface EstadoInterfaz {
   mostrarCursor: boolean
   estaCargando: boolean
   mensajeError: string | null
+  marca: string
   menuOpciones: {
     id: string
     nombre: string
@@ -34,6 +35,7 @@ export const useAlmacenInterfaz = defineStore('interfaz', {
     mostrarCursor: true,
     estaCargando: false,
     mensajeError: null,
+    marca: 'JohnDeere',
     menuOpciones: [
         { id: 'infografia', nombre: 'menu-infografias', titulo: 'Infografías', tarjeta: '/img/tarjetas/t-pagina-infografias.webp' },
         { id: 'comparativa', nombre: 'menu-comparativas', titulo: 'Duelo de gigantes', tarjeta: '/img/tarjetas/t-pagina-versus.webp' },
@@ -91,12 +93,21 @@ export const useAlmacenInterfaz = defineStore('interfaz', {
     },
 
     /**
+     * Establece la marca activa del kiosko
+     * @param marca - Nombre de la marca
+     */
+    setMarca(marca: string): void {
+      this.marca = marca ?? 'JohnDeere'
+    },
+
+    /**
      * Resetea el estado de la interfaz a valores iniciales
      */
     resetear(): void {
       this.seccionActual = 'inicio'
       this.estaCargando = false
       this.mensajeError = null
+      this.marca = 'JohnDeere'
     },
   },
 })

@@ -20,6 +20,7 @@ export interface IComparativa {
   categoria: string
   color: string
   estiloModelo?: any
+  marca?: string
   maquinariaA: IMaquinaComparativa
   maquinariaB: IMaquinaComparativa
 }
@@ -43,6 +44,7 @@ function mapearComparativas(datos: any[]): IComparativa[] {
     categoria: d.categoria,
     color: d.color,
     estiloModelo: d.estiloModelo,
+    marca: d.marca,
     maquinariaA: {
       id: d.maquinas?.[0]?.id || '',
       modelo: d.maquinas?.[0]?.modelo || '',
@@ -70,7 +72,7 @@ export const useAlmacenComparativas = defineStore('comparativas', {
 
   getters: {
     comparativaActual(): IComparativa | null {
-      return this.seleccion || this.comparativas[8] || null
+      return this.seleccion || this.comparativas[6] || null
     },
 
     listaComparativas(): IResumenComparativa[] {

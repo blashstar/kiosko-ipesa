@@ -17,7 +17,7 @@ JDVista.comparativa(:style="estiloComparativa")
           span.letras {{modeloA.letras}}
           span.ultima {{modeloA.ultima}}
       .imagen
-        img(:src="comparativaActual.maquinariaA.imagen")
+        figure: img(:src="comparativaActual.maquinariaA.imagen")
       .caracteristica(v-for="carateristica, idc in comparativaActual.maquinariaA.carateristicas" :key="idc")
         .etiqueta {{carateristica.titulo}}
         .valor(:style="estiloValor(carateristica)")
@@ -31,7 +31,7 @@ JDVista.comparativa(:style="estiloComparativa")
           span.letras {{modeloB.letras}}
           span.ultima {{modeloB.ultima}}
       .imagen
-        img(:src="comparativaActual.maquinariaB.imagen")
+        figure: img(:src="comparativaActual.maquinariaB.imagen")
       .caracteristica(v-for="carateristica, idc in comparativaActual.maquinariaB.carateristicas" :key="idc")
         .etiqueta {{carateristica.titulo}}
         .valor(:style="estiloValor(carateristica)")
@@ -53,7 +53,7 @@ JDVista.comparativa(:style="estiloComparativa")
 </template>
 
 <script setup lang="ts">
-import { ref, computed, shallowRef, onMounted, watch, nextTick, onActivated } from 'vue';
+import { ref, computed, shallowRef, onMounted, watch, nextTick, onActivated, onDeactivated, onUnmounted } from 'vue';
 import _ from 'lodash';
 import { storeToRefs } from 'pinia';
 import { gsap } from 'gsap';
@@ -69,9 +69,12 @@ import JDBotonNav from '@jd/JDBotonNav.vue';
 import { usarObservadorResize } from '@utiles/dimensiones';
 import usarNavegacion from '@utiles/navegacion';
 import { useAlmacenComparativas } from '@/almacenes/comparativas';
+import { useAlmacenInterfaz } from '@/almacenes/interfaz';
 
 const almacenComparativas = useAlmacenComparativas();
 const { comparativaActual } = storeToRefs(almacenComparativas);
+
+const almacenInterfaz = useAlmacenInterfaz();
 
 const estiloComparativa = computed(() => ({
   "--color": comparativaActual?.value?.color ?? "#666666"
@@ -164,8 +167,22 @@ function estiloValor(caracteristica){
 }
 
 // onMounted(animarEntrada);
-onActivated(animarEntrada);
-watch(comparativaActual, animarEntrada);
+onActivated(() => {
+  almacenInterfaz.setMarca(comparativaActual.value?.marca ?? 'JohnDeere');
+  animarEntrada();
+});
+watch(comparativaActual, (nueva) => {
+  almacenInterfaz.setMarca(nueva?.marca ?? 'JohnDeere');
+  animarEntrada();
+});
+
+onDeactivated(() => {
+  almacenInterfaz.setMarca('JohnDeere');
+});
+
+onUnmounted(() => {
+  almacenInterfaz.setMarca('JohnDeere');
+});
 
 
 </script>
@@ -189,7 +206,7 @@ watch(comparativaActual, animarEntrada);
 
 
 .tabla
-  margin-top vh(48px)
+  margin-top vh(24px)
   display grid
   grid-template-columns 1fr 1fr
   grid-template-rows auto 1fr repeat(9, auto)
@@ -212,7 +229,7 @@ watch(comparativaActual, animarEntrada);
   padding-block-end vh(16px)
 
   .encabezado
-    padding vh(55px) vw(38px) 0
+    padding vh(48px) vw(38px) vh(16px)
     // align-self end
 
   .categoria
@@ -239,15 +256,18 @@ watch(comparativaActual, animarEntrada);
       color var(--color)
 
   .imagen
+    align-self stretch
     display flex
     flex-direction column
-    align-self end
+    justify-content end
 
-    img
-      margin-block-end vh(16px)
-      margin-inline auto
-      max-width 85%
-      max-height 10vh
+    figure
+      flex 1 1 auto
+      padding-inline vw(8px)
+      margin-block 0 vh(8px)
+      display flex
+      flex-direction column
+      justify-content center
 
     &::after
       content ""
@@ -257,7 +277,7 @@ watch(comparativaActual, animarEntrada);
   .caracteristica
     display flex
     flex-direction column
-    margin-inline vw(32px) vw(20px)
+    margin-inline vw(24px) vw(16px)
     padding-block vh(16px)
 
     .etiqueta
@@ -269,6 +289,7 @@ watch(comparativaActual, animarEntrada);
       font-size vh(24px)
       font-weight 500
       line-height 1.2
+      margin-inline 0 vw(-16px)
 
     &:first-of-type
       padding-block vh(16px)

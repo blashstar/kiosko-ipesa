@@ -29,6 +29,11 @@ describe('useAlmacenInterfaz', () => {
       expect(store.mensajeError).toBeNull();
     });
 
+    it('debería inicializar marca como "JohnDeere"', () => {
+      const store = useAlmacenInterfaz();
+      expect(store.marca).toBe('JohnDeere');
+    });
+
     it('debería tener 3 opciones de menú cargadas', () => {
       const store = useAlmacenInterfaz();
       expect(store.menuOpciones).toHaveLength(3);
@@ -146,6 +151,21 @@ describe('useAlmacenInterfaz', () => {
     });
   });
 
+  describe('Action: setMarca', () => {
+    it('debería establecer la marca', () => {
+      const store = useAlmacenInterfaz();
+      store.setMarca('Hamm');
+      expect(store.marca).toBe('Hamm');
+    });
+
+    it('debería permitir volver a JohnDeere', () => {
+      const store = useAlmacenInterfaz();
+      store.setMarca('Hamm');
+      store.setMarca('JohnDeere');
+      expect(store.marca).toBe('JohnDeere');
+    });
+  });
+
   describe('Action: resetear', () => {
     it('debería resetear seccionActual a inicio', () => {
       const store = useAlmacenInterfaz();
@@ -166,6 +186,13 @@ describe('useAlmacenInterfaz', () => {
       store.setError('Error');
       store.resetear();
       expect(store.mensajeError).toBeNull();
+    });
+
+    it('debería resetear marca a JohnDeere', () => {
+      const store = useAlmacenInterfaz();
+      store.setMarca('Hamm');
+      store.resetear();
+      expect(store.marca).toBe('JohnDeere');
     });
 
     it('no debería modificar mostrarCursor', () => {

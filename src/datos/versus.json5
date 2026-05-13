@@ -172,7 +172,7 @@
           { "titulo": "Sistema hidráulico — bomba", "valor": [
 			"Bomba de pistón axial",
 			"Desplazamiento variable · compensación de presión · centro cerrado"
-      ], estiloValor: {"font-size": "1vh"}},
+      ], estiloValor: {"font-size": "0.9vh"}},
           { "titulo": "Flujo hidráulico", "valor": "83 gpm" },
         ]
       },
@@ -186,11 +186,11 @@
           { "titulo": "Peso operativo base (Tier 3)", "valor": "24,745 kg" },
           { "titulo": "Cucharón (m³)", "valor": "4,2 m³ con uñas y cuchillas segmentadas reforzadas" },
           { "titulo": "Fuerza de dislocación", "valor": "16,057 kg" },
-          { "titulo": "Transmisión", "valor": "PowerShift tipo contraeje con convertidor de par con bloqueo" },
+          { "titulo": "Transmisión", "valor": "PowerShift tipo contraeje con convertidor de par con bloqueo", estiloValor: {"font-size": ".9vh"} },
           { "titulo": "Sistema hidráulico — bomba", "valor": [
             "2 bombas de pistón axial",
             "Detección de carga · desplazamiento variable · centro cerrado",
-			    ], estiloValor: {"font-size": "1vh"}},
+			    ], estiloValor: {"font-size": ".9vh"}},
           { "titulo": "Flujo hidráulico", "valor": "128 gpm" },
 
         ]
@@ -200,8 +200,8 @@
   {
     "id": "VS-M620G-M670G",
     "tarjeta": "/img/tarjetas/t-versus-6.png",
-	"categoria": "MOTONIVELADORA",
-	"color": "#FCB515",
+    "categoria": "MOTONIVELADORA",
+    "color": "#FCB515",
     "maquinas": [
       {
         "id": "M620G",
@@ -228,10 +228,10 @@
           { "titulo": "Par máximo neto", "valor": "1 196 Nm (882 lb-ft)" },
           { "titulo": "Transmisión", "valor": "PowerShift Plus™ 8F / 8R" },
           { "titulo": "Peso operativo base (Tier 3)", "valor": [
-			"Parte Delantera 5488 kg (12 100 lb)",
-			"Parte Trasera 13 093 kg (28 864 lb)",
-			"Total 18 581 kg (40 965 lb)",
-		  ] },
+            "Parte Delantera 5488 kg (12 100 lb)",
+            "Parte Trasera 13 093 kg (28 864 lb)",
+            "Total 18 581 kg (40 965 lb)",
+          ], estiloValor: {"font-size": "1.1vh"} },
           { "titulo": "Sistema de tracción", "valor": "Tracción en las 4 ruedas (4WD)" },
 
         ]
@@ -241,8 +241,8 @@
   {
     "id": "VS-TT750J-TT850J",
     "tarjeta": "/img/tarjetas/t-versus-7.png",
-	"categoria": "TRACTOR TOPADOR",
-	"color": "#FCB515",
+    "categoria": "TRACTOR TOPADOR",
+    "color": "#FCB515",
     "maquinas": [
       {
         "id": "TT750J",
@@ -274,8 +274,8 @@
   {
     "id": "VS-TT1050K-TT850J",
     "tarjeta": "/img/tarjetas/t-versus-8.png",
-	"categoria": "TRACTOR TOPADOR",
-	"color": "#FCB515",
+    "categoria": "TRACTOR TOPADOR",
+    "color": "#FCB515",
     "maquinas": [
       {
         "id": "TT1050K",
@@ -306,6 +306,7 @@
   },
   {
     "id": "VS-RCHC110G-RCHC110P",
+    "marca": "Hamm",
     "tarjeta": "/img/tarjetas/t-versus-9.png",
     "categoria": "RODILLO COMPACTADOR",
     "color": "#EB6608",
