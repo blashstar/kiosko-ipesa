@@ -7,12 +7,14 @@ import { ref, onMounted, onUnmounted, watch } from 'vue';
 import { Viewer, utils } from '@photo-sphere-viewer/core';
 import { MarkersPlugin, events } from '@photo-sphere-viewer/markers-plugin';
 import '@photo-sphere-viewer/markers-plugin/index.css';
+import type { IMarcador, IPosicion } from '@/almacenes/vistas360';
+import MarkdownIt from 'markdown-it';
 
 export interface EscenaVisor {
   id: string
   medio: string
-  posicionInicial?: { yaw: number; pitch: number }
-  marcadores?: any[]
+  posicion?: IPosicion
+  marcadores?: IMarcador[]
 }
 
 const props = defineProps<{
@@ -26,18 +28,20 @@ const emit = defineEmits<{
 const contenedorRef = ref<HTMLDivElement | null>(null)
 let visor: Viewer | null = null
 let marcadoresPlugin: MarkersPlugin | null = null
+let cambiando = false
+let rafId: number | null = null
 
 function alSeleccionarMarcador(evt: events.SelectMarkerEvent) {
-  const destino = evt.marker.data?.escenaDestino
-  if (destino) {
-    emit('navegar', destino)
+  const datos = evt.marker.data
+  if (datos?.tipo === 'navegacion' && datos?.destino) {
+    emit('navegar', datos.destino)
   }
 }
 
 function obtenerPosicion(escena: EscenaVisor) {
   return {
-    yaw: escena.posicionInicial?.yaw ?? 0,
-    pitch: escena.posicionInicial?.pitch ?? 0,
+    x: escena.posicion?.x ?? 0,
+    y: escena.posicion?.y ?? 0,
   }
 }
 
@@ -53,6 +57,11 @@ function animarOpacidadMarcadores(
       return
     }
 
+    if (rafId !== null) {
+      cancelAnimationFrame(rafId)
+      rafId = null
+    }
+
     const inicio = performance.now()
     const opacidadInicial = marcadores[0].config.opacity ?? 1
 
@@ -62,17 +71,22 @@ function animarOpacidadMarcadores(
       const opacidad = opacidadInicial + (destino - opacidadInicial) * progreso
 
       marcadores.forEach((m) => {
-        plugin.updateMarker({ id: m.id, opacity: opacidad })
+        try {
+          plugin.updateMarker({ id: m.id, opacity: opacidad })
+        } catch (e) {
+          // Marcador eliminado durante la animación, ignorar
+        }
       })
 
       if (progreso < 1) {
-        requestAnimationFrame(frame)
+        rafId = requestAnimationFrame(frame)
       } else {
+        rafId = null
         resolve()
       }
     }
 
-    requestAnimationFrame(frame)
+    rafId = requestAnimationFrame(frame)
   })
 }
 
@@ -85,24 +99,31 @@ function animarZoomIn() {
     touchmoveTwoFingers: true,
   })
 
+  const datos = visor.state.textureData
+  const posInicial = {
+    x: datos.texture.width * 0.5,
+    y: datos.texture.height * 0.5
+  }
+
   const pos = obtenerPosicion(props.escena)
+  console.log({textura:datos, posInicial, pos})
 
   new utils.Animation({
     properties: {
       zoom: { start: 50, end: 0 },
-      yaw: { start: 0, end: pos.yaw },
-      pitch: { start: 0, end: pos.pitch },
+      textureX: { start: posInicial.x, end: pos.x },
+      textureY: { start: posInicial.y, end: pos.y },
       maxFov: { start: 180, end:120 },
       fisheye: { start: 2, end: 0 },
     },
     duration: 1500,
     easing: 'inSine',
-    onTick: (properties: { zoom: number; fisheye: number, maxFov: number, yaw: number, pitch: number }) => {
+    onTick: (properties: { zoom: number; fisheye: number, maxFov: number, textureX: number, textureY: number }) => {
       visor.setOptions({
           fisheye: properties.fisheye,
           maxFov: properties.maxFov,
       });
-      visor.rotate({ yaw: properties.yaw, pitch: properties.pitch });
+      visor.rotate({ textureX: properties.textureX, textureY: properties.textureY });
       visor?.zoom(properties.zoom)
       // visor?.setFisheye(properties.fisheye)
 
@@ -116,16 +137,48 @@ function animarZoomIn() {
   })
 }
 
+function mapearMarcadorPlugin(m: IMarcador): any {
+  const base = {
+    id: m.id,
+    image: m.imagen,
+    position: { textureX: m.posicion.x, textureY: m.posicion.y },
+    size: { width: 64, height: 64 },
+    anchor: 'bottom center',
+    data: m.datos,
+  }
+
+  if (m.datos.tipo === 'navegacion') {
+    return base
+  }
+
+  return {
+    ...base,
+    tooltip: {
+      content: generarHTML(m.datos.titulo, m.datos.descripcion),
+      className: 'info-tooltip',
+      position: 'top',
+      trigger: 'click',
+    },
+  }
+}
+
+const md = new MarkdownIt();
+
+function generarHTML(titulo: string, descripcion: string) {
+  return `
+    <div class="titulo">${titulo}</div>
+    <div class="descripcion">${md.render(descripcion)}</div>
+  `;
+}
+
 function crearVisor() {
   if (!contenedorRef.value) return
-
-  const pos = obtenerPosicion(props.escena)
 
   visor = new Viewer({
     container: contenedorRef.value,
     panorama: props.escena.medio,
-    defaultYaw: pos.yaw,
-    defaultPitch: pos.pitch,
+    defaultYaw: "180deg",
+    defaultPitch: "90deg",
     defaultZoomLvl: 0,
     navbar: false,
     mousewheel: true,
@@ -134,9 +187,29 @@ function crearVisor() {
     plugins: [
       [MarkersPlugin, {
         clickEventOnMarker: true,
-        markers: props.escena.marcadores || [],
+        markers: (props.escena.marcadores || []).map(mapearMarcadorPlugin),
       }],
     ],
+
+    lang: {
+      zoom: 'Zoom',
+      zoomOut: 'Alejar',
+      zoomIn: 'Acercar',
+      moveUp: 'Mover arriba',
+      moveDown: 'Mover abajo',
+      moveLeft: 'Mover izquierda',
+      moveRight: 'Mover derecha',
+      description: 'Descripción',
+      download: 'Descargar',
+      fullscreen: 'Pantalla completa',
+      loading: 'Cargando...',
+      menu: 'Menú',
+      close: 'Cerrar',
+      twoFingers: 'Usa dos dedos para navegar',
+      ctrlZoom: 'Usa CTRL + scroll para hacer zoom',
+      loadError: 'No se pudo cargar el panorama',
+      webglError: 'Tu navegador no soporta WebGL',
+    },
   })
 
   visor.addEventListener('ready', () => {
@@ -150,23 +223,31 @@ function crearVisor() {
 }
 
 async function cambiarPanorama(escena: EscenaVisor) {
-  if (!visor) return
+  if (!visor || cambiando) return
 
-  if (marcadoresPlugin) {
-    await animarOpacidadMarcadores(marcadoresPlugin, 0, 250)
-    marcadoresPlugin.clearMarkers()
-  }
+  cambiando = true
 
-  const pos = obtenerPosicion(escena)
-  await visor.setPanorama(escena.medio, {
-    position: { yaw: pos.yaw, pitch: pos.pitch },
-  })
+  try {
+    if (marcadoresPlugin) {
+      await animarOpacidadMarcadores(marcadoresPlugin, 0, 250)
+      marcadoresPlugin.clearMarkers()
+    }
 
-  if (marcadoresPlugin) {
-    ;(escena.marcadores || []).forEach((m) => {
-      marcadoresPlugin!.addMarker({ ...m, opacity: 0 })
+    const pos = obtenerPosicion(escena)
+    await visor.setPanorama(escena.medio, {
+      position: { textureX: pos.x, textureY: pos.y },
     })
-    await animarOpacidadMarcadores(marcadoresPlugin, 1, 250)
+
+    if (marcadoresPlugin) {
+      ;(escena.marcadores || []).forEach((m) => {
+        marcadoresPlugin!.addMarker({ ...mapearMarcadorPlugin(m), opacity: 0 })
+      })
+      await animarOpacidadMarcadores(marcadoresPlugin, 1, 250)
+    }
+  } catch (error) {
+    console.error('Error al cambiar panorama:', error)
+  } finally {
+    cambiando = false
   }
 }
 
@@ -175,6 +256,10 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+  if (rafId !== null) {
+    cancelAnimationFrame(rafId)
+    rafId = null
+  }
   if (marcadoresPlugin) {
     marcadoresPlugin.removeEventListener('select-marker', alSeleccionarMarcador)
     marcadoresPlugin = null
@@ -189,7 +274,7 @@ watch(() => props.escena, (nueva) => {
   } else {
     crearVisor()
   }
-}, { deep: true })
+})
 </script>
 
 <style lang="stylus" scoped>

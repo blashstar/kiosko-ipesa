@@ -19,8 +19,8 @@ JDVista
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue';
-import { storeToRefs } from 'pinia';
+import { ref, computed, watch, onActivated, onDeactivated, onUnmounted } from 'vue';
+import type { ComputedRef } from 'vue';
 import JDVista from '@jd/JDVista.vue';
 import JDLogo from '@jd/JDLogo.vue';
 import JDLogoSeccion from '@jd/JDLogoSeccion.vue';
@@ -28,40 +28,39 @@ import JDTitulo from '@jd/JDTitulo.vue';
 import JDBotonQR from '@jd/JDBotonQR.vue';
 import JDBotonInicio from '@jd/JDBotonInicio.vue';
 import JDBotonVolver from '@jd/JDBotonVolver.vue';
-import JDBotonNav from '@jd/JDBotonNav.vue';
 import Visor360 from '../comun/Visor360.vue';
-import { useAlmacenVistas360 } from '@/almacenes/vistas360';
+import { useAlmacenVistas360, type IEscena } from '@/almacenes/vistas360';
+import { useAlmacenInterfaz } from '@/almacenes/interfaz';
 
 const almacenVistas360 = useAlmacenVistas360();
-const { vistaActual } = storeToRefs(almacenVistas360);
+const vistaActual = computed(() => almacenVistas360.vistaActual);
+
+const almacenInterfaz = useAlmacenInterfaz();
 
 const indiceEscena = ref(0);
 
-const escenaActual = computed(() => {
+const escenaActual: ComputedRef<IEscena | null> = computed(() => {
   return vistaActual.value?.escenas[indiceEscena.value] || null;
 });
 
 const totalEscenas = computed(() => vistaActual.value?.escenas.length || 0);
 
-watch(() => vistaActual.value, () => {
+watch(() => vistaActual.value, (nueva) => {
   indiceEscena.value = 0;
+  almacenInterfaz.setMarca(nueva?.marca ?? 'JohnDeere');
 });
 
-function anterior() {
-  if (indiceEscena.value > 0) {
-    indiceEscena.value -= 1;
-  } else {
-    indiceEscena.value = totalEscenas.value - 1;
-  }
-}
+onActivated(() => {
+  almacenInterfaz.setMarca(vistaActual.value?.marca ?? 'JohnDeere');
+});
 
-function siguiente() {
-  if (indiceEscena.value < totalEscenas.value - 1) {
-    indiceEscena.value += 1;
-  } else {
-    indiceEscena.value = 0;
-  }
-}
+onDeactivated(() => {
+  almacenInterfaz.setMarca('JohnDeere');
+});
+
+onUnmounted(() => {
+  almacenInterfaz.setMarca('JohnDeere');
+});
 
 function alNavegar(destino: string) {
   const indice = vistaActual.value?.escenas.findIndex((e) => e.id === destino);
@@ -74,7 +73,7 @@ function alNavegar(destino: string) {
 <style lang="stylus" scoped>
 .titulo
   font-size: 1.8rem
-  color: #00ff88
+  color: #FCB515
 
 .visor-wrapper
   width: 100%
@@ -86,7 +85,7 @@ function alNavegar(destino: string) {
   justify-content: center
   width: 100%
   height: 100%
-  color: #00ff88
+  color: #FCB515
   font-size: 1.5rem
 
 .nav-escenas

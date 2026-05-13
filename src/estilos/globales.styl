@@ -27,7 +27,7 @@ body
 
 // ----- Tooltip informativo del visor 360 -----
 .psv-tooltip.info-tooltip
-	max-width 500px
+	max-width 640px
 	background rgba(42, 42, 42, 0.95)
 	border 2px solid #FCB515
 	border-radius vh(16px)
@@ -35,13 +35,13 @@ body
 	box-shadow none !important
 
 	&[class*='psv-tooltip--top'] .psv-tooltip-arrow
-		border-top-color rgba(42, 42, 42, 0.95)
+		border-top-color #FCB515
 	&[class*='psv-tooltip--bottom'] .psv-tooltip-arrow
-		border-bottom-color rgba(42, 42, 42, 0.95)
+		border-bottom-color #FCB515
 	&[class*='psv-tooltip--left'] .psv-tooltip-arrow
-		border-left-color rgba(42, 42, 42, 0.95)
+		border-left-color #FCB515
 	&[class*='psv-tooltip--right'] .psv-tooltip-arrow
-		border-right-color rgba(42, 42, 42, 0.95)
+		border-right-color #FCB515
 
 	.psv-tooltip-content
 		font-size vh(24px)
@@ -50,9 +50,22 @@ body
 
 		strong
 			color #FCB515
-			font-size vh(28px)
-			display block
-			margin-bottom vh(8px)
+
+		.titulo
+			font-size vh(26px)
+			font-weight 900
+			background: linear-gradient(90deg, #FCB515 -50%, transparent);
+			padding .2em .3em
+			margin-bottom vh(16px)
+
+		.descripcion
+			font-size vh(24px)
+			p
+				font-size inherit
+				text-align left
+
+			li
+				margin-bottom .5em
 
 // ----- Animaciones base reutilizables -----
 @keyframes aparece

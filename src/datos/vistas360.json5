@@ -9,2124 +9,1865 @@
 
 [
   {
-    "id": "R320P",
-    "categoria": "RETROEXCAVADORA",
-    "modelo": "320P",
-    "tarjeta": "/img/tarjetas/t-v360-320p.webp",
-    "escenas": [
+    id: 'R320P',
+    categoria: 'RETROEXCAVADORA',
+    modelo: '320P',
+    tarjeta: '/img/tarjetas/t-v360-320p.webp',
+    escenas: [
       {
-        "id": "R320P-plano1",
-        "medio": "/img/vistas/vista-320p-plano1.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'R320P-plano1',
+        medio: '/img/vistas/vista-320p-plano1.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "R320P-plano1-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'R320P-plano1-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2633,
+              y: 1120,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-plano1-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": 0
+            id: 'R320P-plano1-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2065,
+              y: 855,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-interior',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-plano1-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0,
-              "pitch": 0.2
+            id: 'R320P-plano1-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1980,
+              y: 902,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA HIDR�ULICO A DEMANDA',
+              descripcion: 'Utiliza bombas de pistones axiales para entregar solo el caudal necesario, optimizando el combustible.',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-interior"
-            },
-            "anchor": "bottom center"
           },
-          {
-            "id": "R320P-plano1-sistemahidrulic",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -0.57,
-              "pitch": 0.57
-            },
-            "size": {
-              "width": 64,
-              "height": 64
-            },
-            "tooltip": {
-              "content": "<strong>SISTEMA HIDRÁULICO A DEMANDA</strong><br>Utiliza bombas de pistones axiales para entregar solo el caudal necesario, optimizando el combustible.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
-          },
-          {
-            "id": "R320P-plano1-powerlift",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.88,
-              "pitch": 1.54
-            },
-            "size": {
-              "width": 64,
-              "height": 64
-            },
-            "tooltip": {
-              "content": "<strong>POWERLIFT</strong><br>Proporciona un 15% más de potencia hidráulica para levantar cargas pesadas en modo retroexcavadora.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
-          }
-        ]
+        ],
       },
       {
-        "id": "R320P-plano2",
-        "medio": "/img/vistas/vista-320p-plano2.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'R320P-plano2',
+        medio: '/img/vistas/vista-320p-plano2.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "R320P-plano2-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'R320P-plano2-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 960,
+              y: 1150,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-plano2-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'R320P-plano2-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2915,
+              y: 1205,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-plano2-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0,
-              "pitch": 0.2
+            id: 'R320P-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1980,
+              y: 800,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-interior',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-plano2-cucharaposterio",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 3.14,
-              "pitch": 1.57
+            id: 'R320P-plano2-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1705,
+              y: 885,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA HIDR�ULICO A DEMANDA',
+              descripcion: 'Utiliza bombas de pistones axiales para entregar solo el caudal necesario, optimizando el combustible.',
             },
-            "tooltip": {
-              "content": "<strong>CUCHARA POSTERIOR</strong><br>La más grande del mercado (0.25 m3), aumentando la productividad por ciclo.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-plano2-aplicacionesdet",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -3.02,
-              "pitch": -0.53
+            id: 'R320P-plano2-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2411,
+              y: 649,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'CUCHARA POSTERIOR',
+              descripcion: 'La m�s grande del mercado (0.25 m3), aumentando la productividad por ciclo.',
             },
-            "tooltip": {
-              "content": "<strong>APLICACIONES DE TRABAJO</strong><br>- **Obras Municipales y Urbanismo**: Alcantarillado, limpieza de desmontes y nivelación de áreas públicas.\n- **Sector Agrícola**: Limpieza de canales, apertura de trochas y excavación de pozos.\n- **Minería y Energía**: Tendido de cables, mantenimiento de campamentos y apoyo en gasoductos.\n- **Emergencias (El Niño)**: Descolmatación y canalización de emergencia.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'R320P-plano2-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2450,
+              y: 782,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'MODO PRECISI�N',
+              descripcion: 'Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie.',
+            },
+          },
+          {
+            id: 'R320P-plano2-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2325,
+              y: 752,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'POWERLIFT',
+              descripcion: 'Proporciona un 15% m�s de potencia hidr�ulica para levantar cargas pesadas en modo retroexcavadora.',
+            },
+          },
+        ],
       },
       {
-        "id": "R320P-plano3",
-        "medio": "/img/vistas/vista-320p-plano3.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'R320P-plano3',
+        medio: '/img/vistas/vista-320p-plano3.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "R320P-plano3-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -2.6,
-              "pitch": 0
+            id: 'R320P-plano3-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1244,
+              y: 1286,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-plano2',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-plano3-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'R320P-plano3-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1718,
+              y: 743,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-interior',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-plano3-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0,
-              "pitch": 0.2
+            id: 'R320P-plano3-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2206,
+              y: 397,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'CUCHARA POSTERIOR',
+              descripcion: 'La m�s grande del mercado (0.25 m3), aumentando la productividad por ciclo.',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-plano3-modoprecisin",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.76,
-              "pitch": 1.1
+            id: 'R320P-plano3-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2411,
+              y: 517,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'MODO PRECISI�N',
+              descripcion: 'Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie.',
             },
-            "tooltip": {
-              "content": "<strong>MODO PRECISIÓN</strong><br>Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'R320P-plano3-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2043,
+              y: 568,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'POWERLIFT',
+              descripcion: 'Proporciona un 15% m�s de potencia hidr�ulica para levantar cargas pesadas en modo retroexcavadora.',
+            },
+          },
+        ],
       },
       {
-        "id": "R320P-interior",
-        "medio": "/img/vistas/vista-320p-interior.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'R320P-interior',
+        medio: '/img/vistas/vista-320p-interior.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "R320P-interior-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.5,
-              "pitch": 0
+            id: 'R320P-interior-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2167,
+              y: 1188,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-interior-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0,
-              "pitch": 0
+            id: 'R320P-interior-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1205,
+              y: 1329,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "R320P-interior-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.5,
-              "pitch": 0
+            id: 'R320P-interior-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 500,
+              y: 1282,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'R320P-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "R320P-plano3"
-            },
-            "anchor": "bottom center"
-          }
-        ]
-      }
-    ]
+          },
+        ],
+      },
+    ],
   },
   {
-    "id": "E350P",
-    "categoria": "EXCAVADORA",
-    "modelo": "350P",
-    "tarjeta": "/img/tarjetas/t-v360-350p.webp",
-    "escenas": [
+    id: 'E350P',
+    categoria: 'EXCAVADORA',
+    modelo: '350P',
+    tarjeta: '/img/tarjetas/t-v360-350p.webp',
+    escenas: [
       {
-        "id": "E350P-plano1",
-        "medio": "/img/vistas/vista-350p-plano1.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'E350P-plano1',
+        medio: '/img/vistas/vista-350p-plano1.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "E350P-plano1-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'E350P-plano1-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2650,
+              y: 1316,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano1-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": 0
+            id: 'E350P-plano1-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2240,
+              y: 1145,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano1-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": -0.2
+            id: 'E350P-plano1-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1829,
+              y: 829,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-interior',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano1-mayortorquedegi",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.7,
-              "pitch": 1.29
+            id: 'E350P-plano1-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2526,
+              y: 692,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'MAYOR TORQUE DE GIRO',
+              descripcion: '120 kN�m; Permite romper la inercia m�s r�pido para ciclos de trabajo m�s �giles.',
             },
-            "tooltip": {
-              "content": "<strong>MAYOR TORQUE DE GIRO</strong><br>120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano1-dosbombashidrul",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -0.63,
-              "pitch": 0.41
+            id: 'E350P-plano1-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2035,
+              y: 885,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'MEJOR VELOCIDAD DE GIRO',
+              descripcion: 'Combinada con el torque, logra el tiempo de ciclo m�s bajo frente a competidores.',
             },
-            "tooltip": {
-              "content": "<strong>DOS BOMBAS HIDRÁULICAS INDEPENDIENTES</strong><br>Si el sistema de traslación se daña, la máquina puede seguir excavando con el flujo de la otra bomba.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'E350P-plano1-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2535,
+              y: 927,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
+              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetraci�n m�s eficiente.',
+            },
+          },
+          {
+            id: 'E350P-plano1-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1941,
+              y: 756,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'DOS BOMBAS HIDR�ULICAS INDEPENDIENTES',
+              descripcion: 'Si el sistema de traslaci�n se da�a, la m�quina puede seguir excavando con el flujo de la otra bomba.',
+            },
+          },
+        ],
       },
       {
-        "id": "E350P-plano2",
-        "medio": "/img/vistas/vista-350p-plano2.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'E350P-plano2',
+        medio: '/img/vistas/vista-350p-plano2.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "E350P-plano2-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'E350P-plano2-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1487,
+              y: 1201,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano2-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'E350P-plano2-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2056,
+              y: 1158,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano2-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": -0.2
+            id: 'E350P-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2052,
+              y: 876,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-interior',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano2-mejorvelocidadd",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0.38,
-              "pitch": 0.28
+            id: 'E350P-plano2-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2642,
+              y: 513,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'MAYOR TORQUE DE GIRO',
+              descripcion: '120 kN�m; Permite romper la inercia m�s r�pido para ciclos de trabajo m�s �giles.',
             },
-            "tooltip": {
-              "content": "<strong>MEJOR VELOCIDAD DE GIRO</strong><br>Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano2-aplicacionesdet",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -3.14,
-              "pitch": -0.47
+            id: 'E350P-plano2-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1988,
+              y: 803,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'MEJOR VELOCIDAD DE GIRO',
+              descripcion: 'Combinada con el torque, logra el tiempo de ciclo m�s bajo frente a competidores.',
             },
-            "tooltip": {
-              "content": "<strong>APLICACIONES DE TRABAJO</strong><br>- **Minería de Tajo Abierto**: Movimiento de tierras, limpieza de bancos y mantenimiento de vías minerales.\n- **Infraestructura Vial**: Cortes de talud, defensa ribereña y obras de saneamiento.\n- **Canteras y Agregados**: Alimentación de plantas de trituración y acopio de materiales.\n- **Demolición Urbana e Industrial**: Demolición de edificios.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'E350P-plano2-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2650,
+              y: 722,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
+              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetraci�n m�s eficiente.',
+            },
+          },
+          {
+            id: 'E350P-plano2-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1890,
+              y: 840,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'DOS BOMBAS HIDR�ULICAS INDEPENDIENTES',
+              descripcion: 'Si el sistema de traslaci�n se da�a, la m�quina puede seguir excavando con el flujo de la otra bomba.',
+            },
+          },
+        ],
       },
       {
-        "id": "E350P-plano3",
-        "medio": "/img/vistas/vista-350p-plano3.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'E350P-plano3',
+        medio: '/img/vistas/vista-350p-plano3.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "E350P-plano3-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -2.6,
-              "pitch": 0
+            id: 'E350P-plano3-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2612,
+              y: 1103,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano2',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano3-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'E350P-plano3-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 196,
+              y: 750,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-interior',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano3-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": -0.2
+            id: 'E350P-plano3-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 3818,
+              y: 500,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'MAYOR TORQUE DE GIRO',
+              descripcion: '120 kN�m; Permite romper la inercia m�s r�pido para ciclos de trabajo m�s �giles.',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-plano3-fuerzaderompimi",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.7,
-              "pitch": 0.28
+            id: 'E350P-plano3-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1932,
+              y: 718,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'MEJOR VELOCIDAD DE GIRO',
+              descripcion: 'Combinada con el torque, logra el tiempo de ciclo m�s bajo frente a competidores.',
             },
-            "tooltip": {
-              "content": "<strong>FUERZA DE ROMPIMIENTO EN EL BRAZO</strong><br>Concentra la fuerza en el brazo (no solo en la cuchara) para una penetración más eficiente.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
-          }
-        ]
+          },
+        ],
       },
       {
-        "id": "E350P-interior",
-        "medio": "/img/vistas/vista-350p-interior.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'E350P-interior',
+        medio: '/img/vistas/vista-350p-interior.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "E350P-interior-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.5,
-              "pitch": 0
+            id: 'E350P-interior-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 3048,
+              y: 1321,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-interior-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0,
-              "pitch": 0
+            id: 'E350P-interior-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2475,
+              y: 1205,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "E350P-interior-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.5,
-              "pitch": 0
+            id: 'E350P-interior-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2270,
+              y: 1640,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "E350P-plano3"
+          },
+          {
+            id: 'E350P-interior-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2100,
+              y: 740,
             },
-            "anchor": "bottom center"
-          }
-        ]
-      }
-    ]
+            datos: {
+              tipo: 'info',
+              titulo: 'MAYOR TORQUE DE GIRO',
+              descripcion: '120 kN�m; Permite romper la inercia m�s r�pido para ciclos de trabajo m�s �giles.',
+            },
+          },
+          {
+            id: 'E350P-interior-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2437,
+              y: 799,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'MEJOR VELOCIDAD DE GIRO',
+              descripcion: 'Combinada con el torque, logra el tiempo de ciclo m�s bajo frente a competidores.',
+            },
+          },
+          {
+            id: 'E350P-interior-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2107,
+              y: 1021,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
+              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetraci�n m�s eficiente.',
+            },
+          },
+          {
+            id: 'E350P-interior-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 3065,
+              y: 714,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'DOS BOMBAS HIDR�ULICAS INDEPENDIENTES',
+              descripcion: 'Si el sistema de traslaci�n se da�a, la m�quina puede seguir excavando con el flujo de la otra bomba.',
+            },
+          },
+        ],
+      },
+    ],
   },
   {
-    "id": "M620P",
-    "categoria": "MOTONIVELADORA",
-    "modelo": "620P",
-    "tarjeta": "/img/tarjetas/t-v360-620p.webp",
-    "escenas": [
+    id: 'M620P',
+    categoria: 'MOTONIVELADORA',
+    modelo: 'M620P',
+    tarjeta: '/img/tarjetas/t-v360-620p.webp',
+    escenas: [
       {
-        "id": "M620P-plano1",
-        "medio": "/img/vistas/vista-620p-plano1.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'M620P-plano1',
+        medio: '/img/vistas/vista-620p-plano1.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "M620P-plano1-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'M620P-plano1-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2419,
+              y: 1250,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano1-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": 0
+            id: 'M620P-plano1-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2338,
+              y: 1000,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano1-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": -0.2
+            id: 'M620P-plano1-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2137,
+              y: 838,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-interior',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano1-transmisinconsi",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -0.44,
-              "pitch": 0.88
+            id: 'M620P-plano1-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1992,
+              y: 893,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'TRANSMISI�N CON SISTEMA EBS',
+              descripcion: 'Permite cambios directos de marcha adelante a atr�s de forma segura y autom�tica.',
             },
-            "tooltip": {
-              "content": "<strong>TRANSMISIÓN CON SISTEMA EBS</strong><br>Permite cambios directos de marcha adelante a atrás de forma segura y automática.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano1-bajocentrodegra",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.32,
-              "pitch": -0.91
+            id: 'M620P-plano1-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1868,
+              y: 872,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA NEVER GREASE',
+              descripcion: 'El 64% de los pines est�n sellados de por vida y no requieren lubricaci�n manual.',
             },
-            "tooltip": {
-              "content": "<strong>BAJO CENTRO DE GRAVEDAD</strong><br>Proporciona mayor estabilidad para evitar que la hoja se levante.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'M620P-plano1-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2000,
+              y: 1111,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'BAJO CENTRO DE GRAVEDAD',
+              descripcion: 'Proporciona mayor estabilidad para evitar que la hoja se levante.',
+            },
+          },
+        ],
       },
       {
-        "id": "M620P-plano2",
-        "medio": "/img/vistas/vista-620p-plano2.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'M620P-plano2',
+        medio: '/img/vistas/vista-620p-plano2.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "M620P-plano2-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'M620P-plano2-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1100,
+              y: 1190,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano2-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'M620P-plano2-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2847,
+              y: 1060,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano2-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": -0.2
+            id: 'M620P-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2146,
+              y: 795,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-interior',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano2-sistemanevergre",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0.25,
-              "pitch": 0.75
+            id: 'M620P-plano2-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1876,
+              y: 880,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'TRANSMISI�N CON SISTEMA EBS',
+              descripcion: 'Permite cambios directos de marcha adelante a atr�s de forma segura y autom�tica.',
             },
-            "tooltip": {
-              "content": "<strong>SISTEMA NEVER GREASE</strong><br>El 64% de los pines están sellados de por vida y no requieren lubricación manual.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano2-aplicacionesdet",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -3.08,
-              "pitch": 0.35
+            id: 'M620P-plano2-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1757,
+              y: 867,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA NEVER GREASE',
+              descripcion: 'El 64% de los pines est�n sellados de por vida y no requieren lubricaci�n manual.',
             },
-            "tooltip": {
-              "content": "<strong>APLICACIONES DE TRABAJO</strong><br>- **Carreteras**: Perfilado, mantenimiento y corte de taludes.\n- **Minería (Tajo Abierto)**: Vías de acarreo y control de polvo/lodo.\n- **Agricultura**: Preparación de terrenos y canales secundarios.\n- **Emergencias**: Remoción de lodo y escombros.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'M620P-plano2-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2424,
+              y: 842,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA DE ARRANQUE EN FR�O',
+              descripcion: 'Desacopla la bomba hidr�ulica para un encendido suave en altura o climas fr�os.',
+            },
+          },
+          {
+            id: 'M620P-plano2-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1825,
+              y: 1120,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'BAJO CENTRO DE GRAVEDAD',
+              descripcion: 'Proporciona mayor estabilidad para evitar que la hoja se levante.',
+            },
+          },
+        ],
       },
       {
-        "id": "M620P-plano3",
-        "medio": "/img/vistas/vista-620p-plano3.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'M620P-plano3',
+        medio: '/img/vistas/vista-620p-plano3.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "M620P-plano3-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -2.6,
-              "pitch": 0
+            id: 'M620P-plano3-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1372,
+              y: 1145,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano2',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano3-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'M620P-plano3-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2343,
+              y: 714,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-interior',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano3-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": -0.2
+            id: 'M620P-plano3-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2069,
+              y: 914,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA DE ARRANQUE EN FR�O',
+              descripcion: 'Desacopla la bomba hidr�ulica para un encendido suave en altura o climas fr�os.',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-plano3-sistemadearranq",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -2.76,
-              "pitch": 0.88
+            id: 'M620P-plano3-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1928,
+              y: 1145,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'BAJO CENTRO DE GRAVEDAD',
+              descripcion: 'Proporciona mayor estabilidad para evitar que la hoja se levante.',
             },
-            "tooltip": {
-              "content": "<strong>SISTEMA DE ARRANQUE EN FRÍO</strong><br>Desacopla la bomba hidráulica para un encendido suave en altura o climas fríos.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
-          }
-        ]
+          },
+        ],
       },
       {
-        "id": "M620P-interior",
-        "medio": "/img/vistas/vista-620p-interior.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'M620P-interior',
+        medio: '/img/vistas/vista-620p-interno.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "M620P-interior-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.5,
-              "pitch": 0
+            id: 'M620P-interior-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1572,
+              y: 1137,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-interior-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0,
-              "pitch": 0
+            id: 'M620P-interior-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 896,
+              y: 1325,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "M620P-interior-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.5,
-              "pitch": 0
+            id: 'M620P-interior-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 3925,
+              y: 1128,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "M620P-plano3"
+          },
+          {
+            id: 'M620P-interior-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2115,
+              y: 1366,
             },
-            "anchor": "bottom center"
-          }
-        ]
-      }
-    ]
+            datos: {
+              tipo: 'info',
+              titulo: 'TRANSMISI�N CON SISTEMA EBS',
+              descripcion: 'Permite cambios directos de marcha adelante a atr�s de forma segura y autom�tica.',
+            },
+          },
+          {
+            id: 'M620P-interior-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2046,
+              y: 1254,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA NEVER GREASE',
+              descripcion: 'El 64% de los pines est�n sellados de por vida y no requieren lubricaci�n manual.',
+            },
+          },
+        ],
+      },
+    ],
   },
   {
-    "id": "CF644G",
-    "categoria": "CARGADOR FRONTAL",
-    "modelo": "644G-TIER",
-    "tarjeta": "/img/tarjetas/t-v360-644g.webp",
-    "escenas": [
+    id: 'CF644G',
+    categoria: 'CARGADOR FRONTAL',
+    modelo: '644G-TIER',
+    tarjeta: '/img/tarjetas/t-v360-644g.webp',
+    escenas: [
       {
-        "id": "C644G-plano1",
-        "medio": "/img/vistas/vista-644g-plano1.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'CF644G-plano1',
+        medio: '/img/vistas/vista-644g-plano1.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "C644G-plano1-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'CF644G-plano1-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2699,
+              y: 1084,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "C644G-plano1-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": 0
+            id: 'CF644G-plano1-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2031,
+              y: 831,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-interior',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "C644G-plano1-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": -0.2
+            id: 'CF644G-plano1-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2094,
+              y: 901,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTO IDLE AUTO SHUT OFF',
+              descripcion: 'Reducci�n de RPM y apagado autom�tico tras periodos de inactividad.',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CF644G-C644G-plano1-sistemaquadcool",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.14,
-              "pitch": 1.04
+            id: 'CF644G-plano1-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1614,
+              y: 1207,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTO NIVELACI�N DE CUCHARA',
+              descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
             },
-            "tooltip": {
-              "content": "<strong>SISTEMA QUADCOOL</strong><br>Caja de enfriamiento patentada con acceso total para limpieza, evitando sobrecalentamientos.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
           },
-          {
-            "id": "CF644G-C644G-plano1-autonivelacinde",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -3.02,
-              "pitch": -0.5
-            },
-            "size": {
-              "width": 64,
-              "height": 64
-            },
-            "tooltip": {
-              "content": "<strong>AUTO NIVELACIÓN DE CUCHARA</strong><br>Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
-          }
-        ]
+        ],
       },
       {
-        "id": "C644G-plano2",
-        "medio": "/img/vistas/vista-644g-plano2.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'CF644G-plano2',
+        medio: '/img/vistas/vista-644g-plano2.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "C644G-plano2-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'CF644G-plano2-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1261,
+              y: 1073,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "C644G-plano2-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'CF644G-plano2-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2796,
+              y: 1091,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "C644G-plano2-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": -0.2
+            id: 'CF644G-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2044,
+              y: 682,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-interior',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CF644G-C644G-plano2-autoidleautoshu",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0.06,
-              "pitch": 1.04
+            id: 'CF644G-plano2-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2354,
+              y: 841,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA QUADCOOL',
+              descripcion: 'Caja de enfriamiento patentada con acceso total para limpieza, evitando sobrecalentamientos.',
             },
-            "tooltip": {
-              "content": "<strong>AUTO IDLE AUTO SHUT OFF</strong><br>Reducción de RPM y apagado automático tras periodos de inactividad.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CF644G-C644G-plano2-aplicacionesdet",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -3.14,
-              "pitch": -0.31
+            id: 'CF644G-plano2-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1935,
+              y: 819,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTO IDLE AUTO SHUT OFF',
+              descripcion: 'Reducci�n de RPM y apagado autom�tico tras periodos de inactividad.',
             },
-            "tooltip": {
-              "content": "<strong>APLICACIONES DE TRABAJO</strong><br>- **Agregados y Canteras**: Carga de tolvas, apilamiento y volquetes.\n- **Vías y Pavimentación**: Mezcla de materiales, asfalto y limpieza de trazo.\n- **Logístico e Industrial**: Manejo de carga a granel y limpieza de almacenes.\n- **Minería (Mediana Escala)**: Mantenimiento, gestión de residuos y trabajos en altura.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'CF644G-plano2-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2042,
+              y: 1138,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'ENFRIADORES DE EJES DE SERIE',
+              descripcion: 'Permite operaci�n continua sin paradas forzadas para enfriar los ejes.',
+            },
+          },
+          {
+            id: 'CF644G-plano2-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1390,
+              y: 1101,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTO NIVELACI�N DE CUCHARA',
+              descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
+            },
+          },
+        ],
       },
       {
-        "id": "C644G-plano3",
-        "medio": "/img/vistas/vista-644g-plano3.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'CF644G-plano3',
+        medio: '/img/vistas/vista-644g-plano3.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "C644G-plano3-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -2.6,
-              "pitch": 0
+            id: 'CF644G-plano3-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1353,
+              y: 1250,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano2',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "C644G-plano3-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'CF644G-plano3-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1747,
+              y: 718,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-interior',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "C644G-plano3-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": -0.2
+            id: 'CF644G-plano3-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2035,
+              y: 775,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA QUADCOOL',
+              descripcion: 'Caja de enfriamiento patentada con acceso total para limpieza, evitando sobrecalentamientos.',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CF644G-C644G-plano3-enfriadoresdeej",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0.88,
-              "pitch": -0.44
+            id: 'CF644G-plano3-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1866,
+              y: 1125,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'ENFRIADORES DE EJES DE SERIE',
+              descripcion: 'Permite operaci�n continua sin paradas forzadas para enfriar los ejes.',
             },
-            "tooltip": {
-              "content": "<strong>ENFRIADORES DE EJES DE SERIE</strong><br>Permite operación continua sin paradas forzadas para enfriar los ejes.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'CF644G-plano3-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1491,
+              y: 1068,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTO NIVELACI�N DE CUCHARA',
+              descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
+            },
+          },
+        ],
       },
       {
-        "id": "C644G-interior",
-        "medio": "/img/vistas/vista-644g-interior.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'CF644G-interior',
+        medio: '/img/vistas/vista-644g-interno.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "C644G-interior-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.5,
-              "pitch": 0
+            id: 'CF644G-interior-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2226,
+              y: 1107,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "C644G-interior-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0,
-              "pitch": 0
+            id: 'CF644G-interior-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1329,
+              y: 1229,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "C644G-interior-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.5,
-              "pitch": 0
+            id: 'CF644G-interior-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 568,
+              y: 1199,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "C644G-plano3"
+          },
+          {
+            id: 'CF644G-interior-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2061,
+              y: 1446,
             },
-            "anchor": "bottom center"
-          }
-        ]
-      }
-    ]
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTO IDLE AUTO SHUT OFF',
+              descripcion: 'Reducci�n de RPM y apagado autom�tico tras periodos de inactividad.',
+            },
+          },
+          {
+            id: 'CF644G-interior-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2419,
+              y: 1255,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTO NIVELACI�N DE CUCHARA',
+              descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
+            },
+          },
+        ],
+      },
+    ],
   },
   {
-    "id": "TT850J",
-    "categoria": "TRACTOR TOPADOR",
-    "modelo": "850J-II",
-    "tarjeta": "/img/tarjetas/t-v360-850j.webp",
-    "escenas": [
+    id: 'TT850J',
+    categoria: 'TRACTOR TOPADOR',
+    modelo: '850J-II',
+    tarjeta: '/img/tarjetas/t-v360-850j.webp',
+    escenas: [
       {
-        "id": "TT850J-plano1",
-        "medio": "/img/vistas/vista-850j-plano1.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'TT850J-plano1',
+        medio: '/img/vistas/vista-850j-plano1.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "TT850J-plano1-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'TT850J-plano1-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1453,
+              y: 1150,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "TT850J-plano1-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": 0
+            id: 'TT850J-plano1-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2043,
+              y: 799,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-interior',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "TT850J-plano1-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": -0.2
+            id: 'TT850J-plano1-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2129,
+              y: 855,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'TRANSMISI�N HIDROST�TICA',
+              descripcion: 'Transmisi�n variable que ajusta autom�ticamente torque y velocidad seg�n la resistencia sin cambios de marcha.',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-interior"
-            },
-            "anchor": "bottom center"
           },
-          {
-            "id": "TT850J-plano1-transmisinhidro",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0.06,
-              "pitch": 0.88
-            },
-            "size": {
-              "width": 64,
-              "height": 64
-            },
-            "tooltip": {
-              "content": "<strong>TRANSMISIÓN HIDROSTÁTICA</strong><br>Transmisión variable que ajusta automáticamente torque y velocidad según la resistencia sin cambios de marcha.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
-          }
-        ]
+        ],
       },
       {
-        "id": "TT850J-plano2",
-        "medio": "/img/vistas/vista-850j-plano2.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'TT850J-plano2',
+        medio: '/img/vistas/vista-850j-plano2.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "TT850J-plano2-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'TT850J-plano2-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2877,
+              y: 1120,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "TT850J-plano2-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'TT850J-plano2-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1308,
+              y: 1363,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "TT850J-plano2-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": -0.2
+            id: 'TT850J-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1821,
+              y: 833,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-interior',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "TT850J-plano2-mayorergonoma",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.51,
-              "pitch": 0.91
+            id: 'TT850J-plano2-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2257,
+              y: 880,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'TRANSMISI�N HIDROST�TICA',
+              descripcion: '',
             },
-            "tooltip": {
-              "content": "<strong>MAYOR ERGONOMÍA</strong><br>Al no requerir cambios constantes, se reduce drásticamente la fatiga del operador.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'TT850J-plano2-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1958,
+              y: 983,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'MAYOR ERGONOM�A',
+              descripcion: '',
+            },
+          },
+        ],
       },
       {
-        "id": "TT850J-plano3",
-        "medio": "/img/vistas/vista-850j-plano3.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'TT850J-plano3',
+        medio: '/img/vistas/vista-850j-plano3.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "TT850J-plano3-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -2.6,
-              "pitch": 0
+            id: 'TT850J-plano3-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2550,
+              y: 1068,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "TT850J-plano3-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'TT850J-plano3-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2702,
+              y: 1205,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "TT850J-plano3-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": -0.2
+            id: 'TT850J-plano3-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2070,
+              y: 795,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-interior',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-interior"
+          },
+          {
+            id: 'TT850J-plano3-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2308,
+              y: 970,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'TRANSMISI�N HIDROST�TICA',
+              descripcion: 'Transmisi�n variable que ajusta autom�ticamente torque y velocidad seg�n la resistencia sin cambios de marcha.',
+            },
+          },
+          {
+            id: 'TT850J-plano3-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2159,
+              y: 872,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'MAYOR ERGONOM�A',
+              descripcion: 'Al no requerir cambios constantes, se reduce dr�sticamente la fatiga del operador.',
+            },
+          },
+        ],
       },
       {
-        "id": "TT850J-interior",
-        "medio": "/img/vistas/vista-850j-interior.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'TT850J-interior',
+        medio: '/img/vistas/vista-850j-interior.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "TT850J-interior-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.5,
-              "pitch": 0
+            id: 'TT850J-interior-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 132,
+              y: 1192,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "TT850J-interior-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0,
-              "pitch": 0
+            id: 'TT850J-interior-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 910,
+              y: 1286,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "TT850J-interior-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.5,
-              "pitch": 0
+            id: 'TT850J-interior-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1450,
+              y: 1230,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'TT850J-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "TT850J-plano3"
+          },
+          {
+            id: 'TT850J-interior-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1915,
+              y: 1941,
             },
-            "anchor": "bottom center"
-          }
-        ]
-      }
-    ]
+            datos: {
+              tipo: 'info',
+              titulo: 'MAYOR ERGONOM�A',
+              descripcion: 'Al no requerir cambios constantes, se reduce dr�sticamente la fatiga del operador.',
+            },
+          },
+        ],
+      },
+    ],
   },
   {
-    "id": "CHHC110",
-    "categoria": "COMPACTADORA",
-    "modelo": "HAMM HC 110",
-    "tarjeta": "/img/tarjetas/t-v360-hc110.webp",
-    "escenas": [
+    id: 'CHHC110',
+    marca: 'Hamm',
+    categoria: 'COMPACTADORA',
+    modelo: 'HAMM HC 110',
+    tarjeta: '/img/tarjetas/t-v360-hc110.webp',
+    escenas: [
       {
-        "id": "CHHC110-plano1",
-        "medio": "/img/vistas/vista-hc110-plano1.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'CHHC110-plano1',
+        medio: '/img/vistas/vista-hc110-plano1.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "CHHC110-plano1-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'CHHC110-plano1-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1390,
+              y: 1145,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-plano1-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": 0
+            id: 'CHHC110-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2081,
+              y: 775,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-interior',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-plano1-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": -0.2
+            id: 'CHHC110-plano2-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1977,
+              y: 1209,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'MANIOBRABILIDAD Y CONTROL',
+              descripcion: 'Direcci�n articulada y sistema de vibraci�n ajustable para mayor precisi�n en compactaci�n.',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-interior"
-            },
-            "anchor": "bottom center"
           },
-          {
-            "id": "CHHC110-plano1-autonomadeopera",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.58,
-              "pitch": 0.25
-            },
-            "size": {
-              "width": 64,
-              "height": 64
-            },
-            "tooltip": {
-              "content": "<strong>AUTONOMÍA DE OPERACIÓN</strong><br>Depósito de 270 L, ideal para jornadas prolongadas sin interrupciones",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
-          },
-          {
-            "id": "CHHC110-plano1-facilidaddemant",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.39,
-              "pitch": 0.57
-            },
-            "size": {
-              "width": 64,
-              "height": 64
-            },
-            "tooltip": {
-              "content": "<strong>FACILIDAD DE MANTENIMIENTO</strong><br>Acceso optimizado a componentes clave para revisiones rápidas y menor tiempo de parada.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
-          }
-        ]
+        ],
       },
       {
-        "id": "CHHC110-plano2",
-        "medio": "/img/vistas/vista-hc110-plano2.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'CHHC110-plano2',
+        medio: '/img/vistas/vista-hc110-plano2.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "CHHC110-plano2-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'CHHC110-plano2-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2760,
+              y: 1109,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-plano2-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": 0
+            id: 'CHHC110-plano2-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1088,
+              y: 1320,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-plano3"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-plano2-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.6,
-              "pitch": -0.2
+            id: 'CHHC110-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1992,
+              y: 846,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-interior',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-plano2-eficienciaopera",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.2,
-              "pitch": 0.53
+            id: 'CHHC110-plano2-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1612,
+              y: 939,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTONOM�A DE OPERACI�N',
+              descripcion: 'Dep�sito de 270 L, ideal para jornadas prolongadas sin interrupciones',
             },
-            "tooltip": {
-              "content": "<strong>EFICIENCIA OPERATIVA</strong><br>Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-plano2-aplicacionesdet",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.76,
-              "pitch": 0.09
+            id: 'CHHC110-plano3-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1791,
+              y: 841,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'EFICIENCIA OPERATIVA',
+              descripcion: 'Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.',
             },
-            "tooltip": {
-              "content": "<strong>APLICACIONES DE TRABAJO</strong><br>- **Carreteras y autopistas**: Compactación de subrasante, base y asfalto.\n- **Pavimentación urbana**: Calles, avenidas y accesos logísticos.\n- **Obras industriales**: Parques y zonas de alto tránsito.\n- **Terrenos exigentes**: Compactación uniforme en suelos difíciles gracias a su vibración ajustable.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'CHHC110-plano3-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2531,
+              y: 1120,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'MANIOBRABILIDAD Y CONTROL',
+              descripcion: 'Direcci�n articulada y sistema de vibraci�n ajustable para mayor precisi�n en compactaci�n.',
+            },
+          },
+          {
+            id: 'CHHC110-plano3-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1518,
+              y: 1119,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'FACILIDAD DE MANTENIMIENTO',
+              descripcion: 'Acceso optimizado a componentes clave para revisiones r�pidas y menor tiempo de parada.',
+            },
+          },
+        ],
       },
       {
-        "id": "CHHC110-plano3",
-        "medio": "/img/vistas/vista-hc110-plano3.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'CHHC110-plano3',
+        medio: '/img/vistas/vista-hc110-plano3.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "CHHC110-plano3-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -2.6,
-              "pitch": 0
+            id: 'CHHC110-plano3-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2603,
+              y: 1214,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-plano2',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-plano3-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.3,
-              "pitch": 0
+            id: 'CHHC110-plano3-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2101,
+              y: 839,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-interior',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-plano3-a-interior",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.3,
-              "pitch": -0.2
+            id: 'CHHC110-plano3-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1782,
+              y: 888,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTONOM�A DE OPERACI�N',
+              descripcion: 'Dep�sito de 270 L, ideal para jornadas prolongadas sin interrupciones',
             },
-            "tooltip": "Ver interior",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-interior"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-plano3-maniobrabilidad",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 2.7,
-              "pitch": 0.28
+            id: 'CHHC110-interior-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1943,
+              y: 844,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'info',
+              titulo: 'EFICIENCIA OPERATIVA',
+              descripcion: 'Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.',
             },
-            "tooltip": {
-              "content": "<strong>MANIOBRABILIDAD Y CONTROL</strong><br>Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.",
-              "className": "info-tooltip",
-              "position": "top",
-              "trigger": "click"
+          },
+          {
+            id: 'CHHC110-interior-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2235,
+              y: 989,
             },
-            "anchor": "bottom center"
-          }
-        ]
+            datos: {
+              tipo: 'info',
+              titulo: 'MANIOBRABILIDAD Y CONTROL',
+              descripcion: 'Direcci�n articulada y sistema de vibraci�n ajustable para mayor precisi�n en compactaci�n.',
+            },
+          },
+          {
+            id: 'CHHC110-plano3-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1616,
+              y: 1030,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'FACILIDAD DE MANTENIMIENTO',
+              descripcion: 'Acceso optimizado a componentes clave para revisiones r�pidas y menor tiempo de parada.',
+            },
+          },
+        ],
       },
       {
-        "id": "CHHC110-interior",
-        "medio": "/img/vistas/vista-hc110-interior.webp",
-        "tipoMedio": "imagen",
-        "posicionInicial": {
-          "yaw": 0,
-          "pitch": 0
+        id: 'CHHC110-interior',
+        medio: '/img/vistas/vista-hc110-interno.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
         },
-        "marcadores": [
+        marcadores: [
           {
-            "id": "CHHC110-interior-a-plano1",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": -1.5,
-              "pitch": 0
+            id: 'CHHC110-interior-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 4053,
+              y: 1252,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-plano1',
             },
-            "tooltip": "Ver ángulo 1",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-plano1"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-interior-a-plano2",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 0,
-              "pitch": 0
+            id: 'CHHC110-interior-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 762,
+              y: 1312,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-plano2',
             },
-            "tooltip": "Ver ángulo 2",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-plano2"
-            },
-            "anchor": "bottom center"
           },
           {
-            "id": "CHHC110-interior-a-plano3",
-            "image": "/img/pin.svg",
-            "position": {
-              "yaw": 1.5,
-              "pitch": 0
+            id: 'CHHC110-interior-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1498,
+              y: 1245,
             },
-            "size": {
-              "width": 64,
-              "height": 64
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CHHC110-plano3',
             },
-            "tooltip": "Ver ángulo 3",
-            "data": {
-              "tipo": "navegacion",
-              "escenaDestino": "CHHC110-plano3"
+          },
+          {
+            id: 'CHHC110-interior-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1983,
+              y: 1362,
             },
-            "anchor": "bottom center"
-          }
-        ]
-      }
-    ]
-  }
+            datos: {
+              tipo: 'info',
+              titulo: 'EFICIENCIA OPERATIVA',
+              descripcion: 'Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.',
+            },
+          },
+          {
+            id: 'CHHC110-interior-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 3927,
+              y: 1535,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'MANIOBRABILIDAD Y CONTROL',
+              descripcion: 'Direcci�n articulada y sistema de vibraci�n ajustable para mayor precisi�n en compactaci�n.',
+            },
+          },
+        ],
+      },
+    ],
+  },
 ]

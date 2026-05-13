@@ -2,50 +2,34 @@ import { defineStore } from 'pinia'
 import datosCrudos from '../datos/vistas360.json5'
 
 export interface IPosicion {
-  yaw: number
-  pitch: number
+  x: number
+  y: number
 }
 
-export interface ISize {
-  width: number
-  height: number
+export interface IDatosNavegacion {
+  tipo: 'navegacion'
+  destino: string
 }
 
-export interface IMarcadorNavegacion {
+export interface IDatosInfo {
+  tipo: 'info'
+  titulo: string
+  descripcion: string
+}
+
+export interface IMarcador {
   id: string
-  image: string
-  position: IPosicion
-  size: ISize
-  tooltip: string
-  data: {
-    tipo: 'navegacion'
-    escenaDestino: string
-  }
-  anchor: string
+  imagen: string
+  posicion: IPosicion
+  datos: IDatosNavegacion | IDatosInfo
 }
-
-export interface IMarcadorInformativo {
-  id: string
-  image: string
-  position: IPosicion
-  size: ISize
-  tooltip: {
-    content: string
-    className: string
-    position: string
-    trigger: string
-  }
-  anchor: string
-}
-
-export type Marcador = IMarcadorNavegacion | IMarcadorInformativo | any
 
 export interface IEscena {
   id: string
   medio: string
   tipoMedio: string
-  posicionInicial?: IPosicion
-  marcadores: Marcador[]
+  posicion?: IPosicion
+  marcadores: IMarcador[]
 }
 
 export interface IVista360 {
@@ -53,12 +37,13 @@ export interface IVista360 {
   categoria: string
   modelo: string
   tarjeta: string
+  marca?: string
   escenas: IEscena[]
 }
 
 interface Estado {
   vistas: IVista360[]
-  vistaActual: IVista360 | null
+  seleccion: IVista360 | null
 }
 
 function mapearVistas(datos: any[]): IVista360[] {
@@ -67,11 +52,12 @@ function mapearVistas(datos: any[]): IVista360[] {
     categoria: d.categoria,
     modelo: d.modelo,
     tarjeta: d.tarjeta,
+    marca: d.marca,
     escenas: (d.escenas || []).map((e: any) => ({
       id: e.id,
       medio: e.medio,
       tipoMedio: e.tipoMedio,
-      posicionInicial: e.posicionInicial || { yaw: 0, pitch: 0 },
+      posicion: e.posicion || { yaw: 0, pitch: 0 },
       marcadores: e.marcadores || [],
     })),
   }))
@@ -84,7 +70,7 @@ const vistasIniciales = mapearVistas(
 export const useAlmacenVistas360 = defineStore('vistas360', {
   state: (): Estado => ({
     vistas: vistasIniciales,
-    vistaActual: null,
+    seleccion: null,
   }),
 
   getters: {
@@ -95,6 +81,10 @@ export const useAlmacenVistas360 = defineStore('vistas360', {
         categoria: v.categoria,
         tarjeta: v.tarjeta,
       }))
+    },
+
+    vistaActual(): IVista360 | null {
+      return this.seleccion || this.vistas[0] || null
     },
 
     maquinariaPorId: (state) => (id: string): IVista360 | undefined => {
@@ -108,11 +98,11 @@ export const useAlmacenVistas360 = defineStore('vistas360', {
     },
 
     seleccionarVista(id: string) {
-      this.vistaActual = this.vistas.find((v) => v.id === id) || null
+      this.seleccion = this.vistas.find((v) => v.id === id) || null
     },
 
     limpiarSeleccion() {
-      this.vistaActual = null
+      this.seleccion = null
     },
   },
 })
