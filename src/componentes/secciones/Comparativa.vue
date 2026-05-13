@@ -277,7 +277,7 @@ onUnmounted(() => {
   .caracteristica
     display flex
     flex-direction column
-    margin-inline vw(24px) vw(16px)
+    margin-inline vw(24px) vw(20px)
     padding-block vh(16px)
 
     .etiqueta
@@ -290,6 +290,7 @@ onUnmounted(() => {
       font-weight 500
       line-height 1.2
       margin-inline 0 vw(-16px)
+      text-wrap balance
 
     &:first-of-type
       padding-block vh(16px)

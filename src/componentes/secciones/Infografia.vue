@@ -42,8 +42,7 @@ JDVista
         .especificacion(v-for="especificacion in infografiaActual.especificaciones")
           figure.icono: img(:src="especificacion.icono")
           .texto
-            span.titulo {{especificacion.titulo}}
-            | &nbsp;
+            span.titulo {{especificacion.titulo}}:&nbsp;
             span.valor {{especificacion.valor}}
 
 
@@ -257,7 +256,7 @@ onUnmounted(() => {
   flex-direction column
   align-items center
   justify-content center
-  gap 2rem
+  gap 1rem
   --color #FFFFFF
 
   .logo
@@ -313,6 +312,7 @@ onUnmounted(() => {
     position relative
     z-index 2
     padding-inline vw(64px)
+    margin-block-end 2rem
 
     img
       width 100%
@@ -414,16 +414,18 @@ onUnmounted(() => {
 
 
   .datos
-    padding vh(17px) vw(72px)
+    padding vh(5px) vw(72px) vh(17px)
 
     .descripcion
       display flex
       align-items center
+      justify-content space-between
 
       .texto
-        flex 0 0 50%
+        flex 0 0 45%
         font-weight 500
-        font-size: vh(20px)
+        font-size: vh(19px)
+        line-height 0.9
         word-break: keep-all;
 
         :deep()
@@ -433,6 +435,7 @@ onUnmounted(() => {
           p
             font-size inherit
             text-align left
+            line-height 1.1
 
           strong
             color var(--color)
@@ -441,7 +444,7 @@ onUnmounted(() => {
 
       .perfil
         padding-left 1rem
-        flex 1 1 50%
+        flex 0 0 55%
 
     .especificaciones
       margin vh(56px) 0
@@ -454,6 +457,8 @@ onUnmounted(() => {
       display flex
       align-items center
       gap vw(24px)
+      font-weight 900
+      line-height 1.25
 
       .icono
         flex: 0 0 vw(80px);
@@ -484,7 +489,17 @@ onUnmounted(() => {
     margin-top vh(-96px)
     padding-left vw(120px)
 
+  .datos .descripcion
+    .texto
+      flex-basis 37%
+    .perfil
+      flex-basis 60%
+
 .R320P
+  .visor
+    margin-top 1rem
+
+
   .detalles
     top 0
     left 0
@@ -495,6 +510,8 @@ onUnmounted(() => {
 
 .CF644G
   margin-top vh(12px)
+  .visor
+    margin-top vh(24px)
   .detalles
     top 0
     left 0
@@ -507,6 +524,13 @@ onUnmounted(() => {
   .imagen
     margin-top vh(-32px)
     padding-left vw(140px)
+
+  .datos .descripcion
+    .texto
+      flex-basis 40%
+    .perfil
+      flex-basis 50%
+      // margin-left -5%
 
 .TT850J
   .visor
@@ -540,15 +564,22 @@ onUnmounted(() => {
     padding-left vw(24px)
     padding-right vw(100px)
 
+  .datos .descripcion
+    .texto
+      flex-basis 39%
+    .perfil
+      // flex-basis 68%
+
 
 .CHHC110
   .visor
-    margin-top vh(48px)
+    margin-top vh(96px)
   .detalles
     top 0
     left 0
     padding-right vw(160px)
     padding-left vw(60px)
+    padding-bottom vh(64px)
 
   .detalle
     font-size: vh(30px);
@@ -558,8 +589,15 @@ onUnmounted(() => {
       font-size: vh(25px);
 
   .imagen
-    margin-top vh(-96px)
+    margin-top vh(-100px)
     padding-left vw(240px)
+
+  .datos .descripcion
+    .texto
+      flex-basis 37%
+    .perfil
+      flex-basis 68%
+      margin-left -5%
 
   .datos .especificacion
     .titulo
