@@ -1401,7 +1401,7 @@
             datos: {
               tipo: 'info',
               titulo: 'TRANSMISIÓN HIDROSTÁTICA',
-              descripcion: '',
+              descripcion: 'Transmisión variable que ajusta automáticamente torque y velocidad según la resistencia sin cambios de marcha.',
             },
           },
           {
@@ -1414,7 +1414,7 @@
             datos: {
               tipo: 'info',
               titulo: 'MAYOR ERGONOMÍA',
-              descripcion: '',
+              descripcion: 'Al no requerir cambios constantes, se reduce drásticamente la fatiga del operador.',
             },
           },
         ],

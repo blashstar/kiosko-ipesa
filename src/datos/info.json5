@@ -173,7 +173,7 @@
     "logo": "/img/logo-850J.png",
     "color": "#FCB515",
     "perfiles": "/img/perfiles/tt850j-perfil.png",
-	"distancia": "10",
+    "distancia": "10",
     "detalles": [
       {
         "titulo": "PESO",
