@@ -99,7 +99,7 @@ function derecha() {
 
 .qr_contenedor
   box-sizing: border-box;
-  width vw(610px)
+  width vw(320px)
 
   background: linear-gradient(134.97deg, rgba(219, 219, 219, 0.96) 4.73%, rgba(255, 255, 255, 0.96) 62.55%);
   box-shadow: 7px 7px 10.4px rgba(0, 0, 0, 0.55);
