@@ -342,11 +342,34 @@ Vue 3 + Electron + Vite + TypeScript + **Pinia** + Pug + Stylus + **GSAP** + JSO
    - ¿O prefieres **ajustar algún detalle** antes?
 
 ---
+---
+---
+
+## **🔄 9. Historial de Cambios**
+
+### **v3.1 – Mayo 2026**
+- **feat:** Soporte multi-marca (`JohnDeere` / `Hamm`) en almacenes, componentes y datos.
+- **feat:** Nuevo estado `marca` en `almacenes/interfaz.ts` con método `setMarca()`.
+- **refactor:** Vistas 360° migradas de coordenadas esféricas (`yaw`, `pitch`) a coordenadas de textura (`x`, `y`).
+- **refactor:** Simplificación de interfaces de marcadores (`IMarcador`, `IDatosNavegacion`, `IDatosInfo`).
+- **feat:** Marcadores de navegación e información completos para todas las máquinas (`E350P`, `R320P`, `TT850J`, `M620P`, `CF644G`, `CHHC110`).
+- **fix:** Corrección de IDs de escena para `TT850J` y `CHHC110` (estaban duplicados de `CF644G`).
+- **fix:** Corrección de rutas de imágenes de interior (`interior` → `interno`) para `M620P`, `CF644G` y `CHHC110`.
+- **feat:** Tooltips de marcadores con renderizado Markdown y estilos mejorados.
+- **feat:** Animación de zoom inicial en visor 360° basada en `textureX` / `textureY`.
+- **feat:** Mejoras en UI de infografías (icono de clic, paneles ajustables, renderizado Markdown en descripciones).
+- **feat:** Mejoras en UI de comparativas (soporte de marca, ajustes de layout).
+- **fix:** Ruta `/qr` corregida para apuntar a `QR.vue`.
+- **test:** Pruebas unitarias añadidas para `almacenes/interfaz` y `almacenes/infografias`.
+- **assets:** Optimización de imágenes de modelos en `public/img/modelos/`.
+- **assets:** Nuevos assets `logo-hamm.svg` e `ico-clic.png`.
+
+---
 **Observación final:**
 Con esta versión del PRD, el proyecto está **completamente definido** en términos de:
 - **Estructura de archivos y carpetas en español**.
 - **Normas de desarrollo** (SOLID, DRY, SLAP, Git).
 - **Detalles técnicos** (Pinia, GSAP, carrusel 3D ad-hoc).
 - **Flujo de trabajo** (commits en español, push controlado).
-- **Resolució** (1080 x 1920).
+- **Resolución** (1080 x 1920).
 
