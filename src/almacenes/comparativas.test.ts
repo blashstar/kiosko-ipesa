@@ -13,8 +13,8 @@ describe('useAlmacenComparativas', () => {
       expect(store.comparativas.length).toBeGreaterThan(0);
       expect(store.comparativas[0]).toHaveProperty('id');
       expect(store.comparativas[0]).toHaveProperty('tarjeta');
-      expect(store.comparativas[0]).toHaveProperty('producto1');
-      expect(store.comparativas[0]).toHaveProperty('producto2');
+      expect(store.comparativas[0]).toHaveProperty('maquinariaA');
+      expect(store.comparativas[0]).toHaveProperty('maquinariaB');
     });
 
     it('deberia inicializar comparativaActual con la primera comparativa', () => {
@@ -25,10 +25,10 @@ describe('useAlmacenComparativas', () => {
     it('deberia mapear correctamente los productos con modelo e imagen', () => {
       const store = useAlmacenComparativas();
       const primera = store.comparativas[0];
-      expect(typeof primera.producto1.modelo).toBe('string');
-      expect(typeof primera.producto1.imagen).toBe('string');
-      expect(typeof primera.producto2.modelo).toBe('string');
-      expect(typeof primera.producto2.imagen).toBe('string');
+      expect(typeof primera.maquinariaA.modelo).toBe('string');
+      expect(typeof primera.maquinariaA.imagen).toBe('string');
+      expect(typeof primera.maquinariaB.modelo).toBe('string');
+      expect(typeof primera.maquinariaB.imagen).toBe('string');
     });
 
     it('deberia tener IDs de comparativas con formato "VS-modelo-modelo"', () => {
@@ -135,6 +135,56 @@ describe('useAlmacenComparativas', () => {
     it('deberia ejecutarse sin errores', () => {
       const store = useAlmacenComparativas();
       expect(() => store.limpiarSeleccion()).not.toThrow();
+    });
+  });
+});
+
+describe('Validación de estructura de datos', () => {
+  it('debería validar la estructura de versus.json5', async () => {
+    const datos = await import('../datos/versus.json5');
+    const comparativas = datos.default;
+
+    expect(Array.isArray(comparativas)).toBe(true);
+    expect(comparativas.length).toBeGreaterThan(0);
+
+    comparativas.forEach((comparativa: any) => {
+      expect(comparativa).toHaveProperty('id');
+      expect(comparativa).toHaveProperty('categoria');
+      expect(comparativa).toHaveProperty('color');
+      expect(comparativa).toHaveProperty('maquinas');
+      expect(Array.isArray(comparativa.maquinas)).toBe(true);
+      expect(comparativa.maquinas.length).toBe(2);
+    });
+  });
+
+  it('debería validar que los IDs de comparativas son únicos', async () => {
+    const datos = await import('../datos/versus.json5');
+    const comparativas = datos.default;
+    const ids = comparativas.map((c: any) => c.id);
+    const uniqueIds = new Set(ids);
+    expect(ids.length).toBe(uniqueIds.size);
+  });
+
+  it('debería validar que cada máquina tiene caracteristicas', async () => {
+    const datos = await import('../datos/versus.json5');
+    const comparativas = datos.default;
+
+    comparativas.forEach((comparativa: any) => {
+      comparativa.maquinas.forEach((maquina: any) => {
+        expect(maquina).toHaveProperty('caracteristicas');
+        expect(Array.isArray(maquina.caracteristicas)).toBe(true);
+      });
+    });
+  });
+
+  it('debería validar que las imágenes tienen rutas válidas', async () => {
+    const datos = await import('../datos/versus.json5');
+    const comparativas = datos.default;
+
+    comparativas.forEach((comparativa: any) => {
+      comparativa.maquinas.forEach((maquina: any) => {
+        expect(maquina.imagen).toMatch(/^\/img\//);
+      });
     });
   });
 });

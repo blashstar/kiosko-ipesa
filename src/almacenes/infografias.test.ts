@@ -218,3 +218,44 @@ describe('useAlmacenInfografias', () => {
     });
   });
 });
+
+describe('Validación de estructura de datos', () => {
+  it('debería validar la estructura de info.json5', async () => {
+    const datos = await import('../datos/info.json5');
+    const infografias = datos.default;
+
+    expect(Array.isArray(infografias)).toBe(true);
+    expect(infografias.length).toBeGreaterThan(0);
+
+    infografias.forEach((infografia: any) => {
+      expect(infografia).toHaveProperty('id');
+      expect(infografia).toHaveProperty('categoria');
+      expect(infografia).toHaveProperty('modelo');
+      expect(infografia).toHaveProperty('tarjeta');
+      expect(typeof infografia.id).toBe('string');
+      expect(typeof infografia.categoria).toBe('string');
+      expect(typeof infografia.modelo).toBe('string');
+      expect(typeof infografia.tarjeta).toBe('string');
+    });
+  });
+
+  it('debería validar que los IDs de infografías son únicos', async () => {
+    const datos = await import('../datos/info.json5');
+    const infografias = datos.default;
+    const ids = infografias.map((i: any) => i.id);
+    const uniqueIds = new Set(ids);
+    expect(ids.length).toBe(uniqueIds.size);
+  });
+
+  it('debería validar que las imágenes tienen rutas válidas', async () => {
+    const datos = await import('../datos/info.json5');
+    const infografias = datos.default;
+
+    infografias.forEach((infografia: any) => {
+      expect(infografia.tarjeta).toMatch(/^\/img\//);
+      if (infografia.imagen) {
+        expect(infografia.imagen).toMatch(/^\/img\//);
+      }
+    });
+  });
+});
