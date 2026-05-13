@@ -1,4 +1,4 @@
-
+﻿
 [
   {
     "id": "VS-310P-320P",
@@ -10,7 +10,7 @@
         "id": "R310P",
         "modelo": "310P",
         "imagen": "/img/modelos/r310p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ 4,5l" },
           { "titulo": "Potencia bruta (HP)", "valor": "92 HP" },
           { "titulo": "Peso operativo (kg)", "valor": "7,357 kg" },
@@ -25,7 +25,7 @@
         "id": "R320P",
         "modelo": "320P",
         "imagen": "/img/modelos/r320p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ 4,5l" },
           { "titulo": "Potencia bruta (HP)", "valor": "100 HP" },
           { "titulo": "Peso operativo (kg)", "valor": "7,850 kg" },
@@ -49,7 +49,7 @@
         "id": "E350P",
         "modelo": "350P",
         "imagen": "/img/modelos/e350p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ Plus 9,0l" },
           { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "271 HP" },
           { "titulo": "Peso operativo (kg)", "valor": "37,452 kg" },
@@ -62,7 +62,7 @@
         "id": "E250P",
         "modelo": "250P",
         "imagen": "/img/modelos/e250p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ 6,8l" },
           { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "177 HP" },
           { "titulo": "Peso operativo (kg)", "valor": "25,900 kg" },
@@ -84,7 +84,7 @@
         "id": "E250P",
         "modelo": "250P",
         "imagen": "/img/modelos/e250p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech 6,8 lTier 3 / Etapa IIIA UE" },
           { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "177 HP" },
           { "titulo": "Peso operativo (kg)", "valor": "25,900 kg" },
@@ -98,7 +98,7 @@
         "id": "E210P",
         "modelo": "210P",
         "imagen": "/img/modelos/e210p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech Plus 6,8 lEtapa IIIA de la UE" },
           { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "159 HP" },
           { "titulo": "Peso operativo (kg)", "valor": "22,529 kg" },
@@ -121,7 +121,7 @@
         "id": "CF644G",
         "modelo": "644G",
         "imagen": "/img/modelos/cf644g-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6068H" },
           { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "248 HP" },
           { "titulo": "Peso operativo (kg)", "valor": "17,044 kg" },
@@ -137,7 +137,7 @@
         "id": "CF644P",
         "modelo": "644P",
         "imagen": "/img/modelos/cf644p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6068H" },
           { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "224 HP" },
           { "titulo": "Peso operativo (kg)", "valor": "18,283 kg" },
@@ -162,7 +162,7 @@
         "id": "CF724P",
         "modelo": "724P",
         "imagen": "/img/modelos/cf724p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech 6090H" },
           { "titulo": "Potencia máxima neta (ISO 9249)", "valor": "264 HP" },
           { "titulo": "Peso operativo base (Tier 3)", "valor": "19,123 kg" },
@@ -180,7 +180,7 @@
         "id": "CF744P",
         "modelo": "744P",
         "imagen": "/img/modelos/cf744p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD9 6090H" },
           { "titulo": "Potencia máxima neta (ISO 9249)", "valor": "316 HP" },
           { "titulo": "Peso operativo base (Tier 3)", "valor": "24,745 kg" },
@@ -207,7 +207,7 @@
         "id": "M620G",
         "modelo": "620G",
         "imagen": "/img/modelos/m620g-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6,8 l" },
           { "titulo": "Par máximo neto", "valor": "915 Nm (675 lb-ft)" },
           { "titulo": "Transmisión", "valor": "PowerShift Plus™ 8F / 8R" },
@@ -223,7 +223,7 @@
         "id": "M670G",
         "modelo": "670G",
         "imagen": "/img/modelos/m670g-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ Plus 9,0 l" },
           { "titulo": "Par máximo neto", "valor": "1 196 Nm (882 lb-ft)" },
           { "titulo": "Transmisión", "valor": "PowerShift Plus™ 8F / 8R" },
@@ -248,7 +248,7 @@
         "id": "TT750J",
         "modelo": "750J",
         "imagen": "/img/modelos/tt750j-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ E 6068" },
           { "titulo": "Potencia nominal neta SAE", "valor": "155 HP" },
           { "titulo": "Tipo de hoja", "valor": "OSD (Semi-U)" },
@@ -260,7 +260,7 @@
         "id": "TT850J",
         "modelo": "850J",
         "imagen": "/img/modelos/tt850j-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6068 c/EGR" },
           { "titulo": "Potencia nominal neta SAE", "valor": "205 HP" },
           { "titulo": "Tipo de hoja", "valor": "OSD (Semi-U)" },
@@ -281,7 +281,7 @@
         "id": "TT1050K",
         "modelo": "1050K",
         "imagen": "/img/modelos/tt1050k-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "John Deere PowerTech™ Plus 6135" },
           { "titulo": "Potencia nominal neta SAE", "valor": "350 HP" },
           { "titulo": "Tipo de hoja", "valor": "OSD con Hoja Semi-U" },
@@ -293,7 +293,7 @@
         "id": "TT850J",
         "modelo": "850J",
         "imagen": "/img/modelos/tt850j-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6068 EGR" },
           { "titulo": "Potencia nominal neta SAE", "valor": "205 HP" },
           { "titulo": "Tipo de hoja", "valor": "OSD con Hoja Semi-U" },
@@ -318,7 +318,7 @@
         "id": "RCHC110G",
         "modelo": "HC 110G",
         "imagen": "/img/modelos/rchc110g-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Potencia bruta (HP)", "valor": "135" },
           { "titulo": "Peso operativo (kg)", "valor": "11,595 kg" },
           { "titulo": "Motor", "valor": "John Deere JDPS 4045 PTE" },
@@ -331,7 +331,7 @@
         "id": "RCHC110P",
         "modelo": "HC 110P",
         "imagen": "/img/modelos/rchc110p-min.webp",
-        "carateristicas": [
+        "caracteristicas": [
           { "titulo": "Potencia bruta (HP)", "valor": "150" },
           { "titulo": "Peso operativo (kg)", "valor": "11,765 kg" },
           { "titulo": "Motor", "valor": "John Deere JDPS 4045 PTE" },
@@ -344,3 +344,4 @@
     ]
   },
 ]
+
