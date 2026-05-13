@@ -57,7 +57,7 @@ function mapearVistas(datos: any[]): IVista360[] {
       id: e.id,
       medio: e.medio,
       tipoMedio: e.tipoMedio,
-      posicion: e.posicion || { yaw: 0, pitch: 0 },
+      posicion: e.posicion || { x: 0, y: 0 },
       marcadores: e.marcadores || [],
     })),
   }))

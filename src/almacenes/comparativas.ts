@@ -3,7 +3,7 @@ import datosCrudos from '../datos/versus.json5'
 
 export interface ICaracteristicaComparativa {
   titulo: string
-  valor: string,
+  valor: string | string[],
   estiloValor?: any
 }
 
@@ -11,7 +11,7 @@ export interface IMaquinaComparativa {
   id: string
   modelo: string
   imagen: string
-  carateristicas: ICaracteristicaComparativa[]
+  caracteristicas: ICaracteristicaComparativa[]
 }
 
 export interface IComparativa {
@@ -49,13 +49,13 @@ function mapearComparativas(datos: any[]): IComparativa[] {
       id: d.maquinas?.[0]?.id || '',
       modelo: d.maquinas?.[0]?.modelo || '',
       imagen: d.maquinas?.[0]?.imagen || '',
-      carateristicas: d.maquinas?.[0]?.carateristicas || [],
+      caracteristicas: d.maquinas?.[0]?.caracteristicas || [],
     },
     maquinariaB: {
       id: d.maquinas?.[1]?.id || '',
       modelo: d.maquinas?.[1]?.modelo || '',
       imagen: d.maquinas?.[1]?.imagen || '',
-      carateristicas: d.maquinas?.[1]?.carateristicas || [],
+      caracteristicas: d.maquinas?.[1]?.caracteristicas || [],
     },
   }))
 }

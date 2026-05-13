@@ -18,12 +18,12 @@ JDVista.comparativa(:style="estiloComparativa")
           span.ultima {{modeloA.ultima}}
       .imagen
         figure: img(:src="comparativaActual.maquinariaA.imagen")
-      .caracteristica(v-for="carateristica, idc in comparativaActual.maquinariaA.carateristicas" :key="idc")
-        .etiqueta {{carateristica.titulo}}
-        .valor(:style="estiloValor(carateristica)")
-          span(v-if="typeof carateristica.valor === 'string'") {{carateristica.valor}}
+      .caracteristica(v-for="caracteristica, idc in comparativaActual.maquinariaA.caracteristicas" :key="idc")
+        .etiqueta {{caracteristica.titulo}}
+        .valor(:style="estiloValor(caracteristica)")
+          span(v-if="typeof caracteristica.valor === 'string'") {{caracteristica.valor}}
           template(v-else)
-            div(v-for="(item, idx) in carateristica.valor" :key="idx") {{item}}
+            div(v-for="(item, idx) in caracteristica.valor" :key="idx") {{item}}
     .columna.b(ref="columnaBRef")
       .encabezado
         .categoria {{comparativaActual.categoria}}
@@ -32,12 +32,12 @@ JDVista.comparativa(:style="estiloComparativa")
           span.ultima {{modeloB.ultima}}
       .imagen
         figure: img(:src="comparativaActual.maquinariaB.imagen")
-      .caracteristica(v-for="carateristica, idc in comparativaActual.maquinariaB.carateristicas" :key="idc")
-        .etiqueta {{carateristica.titulo}}
-        .valor(:style="estiloValor(carateristica)")
-          span(v-if="typeof carateristica.valor === 'string'") {{carateristica.valor}}
+      .caracteristica(v-for="caracteristica, idc in comparativaActual.maquinariaB.caracteristicas" :key="idc")
+        .etiqueta {{caracteristica.titulo}}
+        .valor(:style="estiloValor(caracteristica)")
+          span(v-if="typeof caracteristica.valor === 'string'") {{caracteristica.valor}}
           template(v-else)
-            div(v-for="(item, idx) in carateristica.valor" :key="idx") {{item}}
+            div(v-for="(item, idx) in caracteristica.valor" :key="idx") {{item}}
 
 
   //- pre {{comparativaActual}}

@@ -9,9 +9,9 @@ export interface IInfografia {
 
 export interface IContenido {
   tituloApp: string
-  fondoInicio: string
-  fondoMenu: string
-  infografias: IInfografia[]
+  fondoInicio?: string
+  fondoMenu?: string
+  infografias?: IInfografia[]
 }
 
 interface Estado {
