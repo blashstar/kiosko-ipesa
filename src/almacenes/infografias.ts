@@ -96,7 +96,7 @@ export const useAlmacenInfografias = defineStore('infografias', {
 
   getters: {
     infografiaActual(): IInfografia | null {
-      return this.seleccion || this.infografias[5] || null
+      return this.seleccion || this.infografias[0] || null
     },
 
     categorias(): string[] {
