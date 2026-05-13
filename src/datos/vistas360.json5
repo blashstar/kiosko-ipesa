@@ -9,6 +9,242 @@
 
 [
   {
+    id: 'E350P',
+    categoria: 'EXCAVADORA',
+    modelo: '350P',
+    tarjeta: '/img/tarjetas/t-v360-350p.webp',
+    escenas: [
+      {
+        id: 'E350P-plano1',
+        medio: '/img/vistas/vista-350p-plano1.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'E350P-plano1-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2650,
+              y: 1316,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano2',
+            },
+          },
+          {
+            id: 'E350P-plano1-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2240,
+              y: 1145,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano3',
+            },
+          },
+          {
+            id: 'E350P-plano1-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1829,
+              y: 829,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-interior',
+            },
+          },
+          {
+            id: 'E350P-plano1-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2526,
+              y: 692,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'MAYOR TORQUE DE GIRO',
+              descripcion: '120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'E350P-plano2',
+        medio: '/img/vistas/vista-350p-plano2.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'E350P-plano2-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1487,
+              y: 1201,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano1',
+            },
+          },
+          {
+            id: 'E350P-plano2-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2056,
+              y: 1158,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano3',
+            },
+          },
+          {
+            id: 'E350P-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2052,
+              y: 876,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-interior',
+            },
+          },
+          {
+            id: 'E350P-plano2-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1988,
+              y: 803,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'MEJOR VELOCIDAD DE GIRO',
+              descripcion: 'Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'E350P-plano3',
+        medio: '/img/vistas/vista-350p-plano3.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'E350P-plano3-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2612,
+              y: 1103,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano2',
+            },
+          },
+          {
+            id: 'E350P-plano3-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 196,
+              y: 750,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-interior',
+            },
+          },
+          {
+            id: 'E350P-plano3-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 3818,
+              y: 500,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'DOS BOMBAS HIDRÁULICAS INDEPENDIENTES',
+              descripcion: 'Si el sistema de traslación se daña, la máquina puede seguir excavando con el flujo de la otra bomba.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'E350P-interior',
+        medio: '/img/vistas/vista-350p-interior.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'E350P-interior-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 3048,
+              y: 1321,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano1',
+            },
+          },
+          {
+            id: 'E350P-interior-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2475,
+              y: 1205,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano2',
+            },
+          },
+          {
+            id: 'E350P-interior-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2270,
+              y: 1640,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'E350P-plano3',
+            },
+          },
+          {
+            id: 'E350P-interior-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2107,
+              y: 1021,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
+              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetración más eficiente.',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'R320P',
     categoria: 'RETROEXCAVADORA',
     modelo: '320P',
@@ -121,19 +357,6 @@
             },
           },
           {
-            id: 'R320P-plano2-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2411,
-              y: 649,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'CUCHARA POSTERIOR',
-              descripcion: 'La más grande del mercado (0.25 m3), aumentando la productividad por ciclo.',
-            },
-          },
-          {
             id: 'R320P-plano2-info3',
             imagen: '/img/pin.svg',
             posicion: {
@@ -144,19 +367,6 @@
               tipo: 'info',
               titulo: 'MODO PRECISIÓN',
               descripcion: 'Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie.',
-            },
-          },
-          {
-            id: 'R320P-plano2-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2325,
-              y: 752,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'POWERLIFT',
-              descripcion: 'Proporciona un 15% más de potencia hidráulica para levantar cargas pesadas en modo retroexcavadora.',
             },
           },
         ],
@@ -207,32 +417,6 @@
               descripcion: 'La más grande del mercado (0.25 m3), aumentando la productividad por ciclo.',
             },
           },
-          {
-            id: 'R320P-plano3-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2411,
-              y: 517,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MODO PRECISIÓN',
-              descripcion: 'Permite movimientos del brazo extremadamente lentos y exactos para trabajos delicados, incluido de serie.',
-            },
-          },
-          {
-            id: 'R320P-plano3-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2043,
-              y: 568,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'POWERLIFT',
-              descripcion: 'Proporciona un 15% más de potencia hidráulica para levantar cargas pesadas en modo retroexcavadora.',
-            },
-          },
         ],
       },
       {
@@ -280,1012 +464,17 @@
               destino: 'R320P-plano3',
             },
           },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'E350P',
-    categoria: 'EXCAVADORA',
-    modelo: '350P',
-    tarjeta: '/img/tarjetas/t-v360-350p.webp',
-    escenas: [
-      {
-        id: 'E350P-plano1',
-        medio: '/img/vistas/vista-350p-plano1.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
           {
-            id: 'E350P-plano1-plano2',
+            id: 'R320P-interior-info4',
             imagen: '/img/pin.svg',
             posicion: {
-              x: 2650,
-              y: 1316,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-plano2',
-            },
-          },
-          {
-            id: 'E350P-plano1-plano3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2240,
-              y: 1145,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-plano3',
-            },
-          },
-          {
-            id: 'E350P-plano1-interior',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1829,
-              y: 829,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-interior',
-            },
-          },
-          {
-            id: 'E350P-plano1-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2526,
-              y: 692,
+              x: 139,
+              y: 873,
             },
             datos: {
               tipo: 'info',
-              titulo: 'MAYOR TORQUE DE GIRO',
-              descripcion: '120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.',
-            },
-          },
-          {
-            id: 'E350P-plano1-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2035,
-              y: 885,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MEJOR VELOCIDAD DE GIRO',
-              descripcion: 'Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.',
-            },
-          },
-          {
-            id: 'E350P-plano1-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2535,
-              y: 927,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
-              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetración más eficiente.',
-            },
-          },
-          {
-            id: 'E350P-plano1-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1941,
-              y: 756,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'DOS BOMBAS HIDRÁULICAS INDEPENDIENTES',
-              descripcion: 'Si el sistema de traslación se daña, la máquina puede seguir excavando con el flujo de la otra bomba.',
-            },
-          },
-        ],
-      },
-      {
-        id: 'E350P-plano2',
-        medio: '/img/vistas/vista-350p-plano2.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'E350P-plano2-plano1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1487,
-              y: 1201,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-plano1',
-            },
-          },
-          {
-            id: 'E350P-plano2-plano3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2056,
-              y: 1158,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-plano3',
-            },
-          },
-          {
-            id: 'E350P-plano2-interior',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2052,
-              y: 876,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-interior',
-            },
-          },
-          {
-            id: 'E350P-plano2-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2642,
-              y: 513,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MAYOR TORQUE DE GIRO',
-              descripcion: '120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.',
-            },
-          },
-          {
-            id: 'E350P-plano2-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1988,
-              y: 803,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MEJOR VELOCIDAD DE GIRO',
-              descripcion: 'Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.',
-            },
-          },
-          {
-            id: 'E350P-plano2-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2650,
-              y: 722,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
-              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetración más eficiente.',
-            },
-          },
-          {
-            id: 'E350P-plano2-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1890,
-              y: 840,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'DOS BOMBAS HIDRÁULICAS INDEPENDIENTES',
-              descripcion: 'Si el sistema de traslación se daña, la máquina puede seguir excavando con el flujo de la otra bomba.',
-            },
-          },
-        ],
-      },
-      {
-        id: 'E350P-plano3',
-        medio: '/img/vistas/vista-350p-plano3.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'E350P-plano3-plano2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2612,
-              y: 1103,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-plano2',
-            },
-          },
-          {
-            id: 'E350P-plano3-interior',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 196,
-              y: 750,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-interior',
-            },
-          },
-          {
-            id: 'E350P-plano3-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 3818,
-              y: 500,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MAYOR TORQUE DE GIRO',
-              descripcion: '120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.',
-            },
-          },
-          {
-            id: 'E350P-plano3-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1932,
-              y: 718,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MEJOR VELOCIDAD DE GIRO',
-              descripcion: 'Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.',
-            },
-          },
-        ],
-      },
-      {
-        id: 'E350P-interior',
-        medio: '/img/vistas/vista-350p-interior.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'E350P-interior-plano1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 3048,
-              y: 1321,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-plano1',
-            },
-          },
-          {
-            id: 'E350P-interior-plano2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2475,
-              y: 1205,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-plano2',
-            },
-          },
-          {
-            id: 'E350P-interior-plano3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2270,
-              y: 1640,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'E350P-plano3',
-            },
-          },
-          {
-            id: 'E350P-interior-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2100,
-              y: 740,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MAYOR TORQUE DE GIRO',
-              descripcion: '120 kN·m; Permite romper la inercia más rápido para ciclos de trabajo más ágiles.',
-            },
-          },
-          {
-            id: 'E350P-interior-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2437,
-              y: 799,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MEJOR VELOCIDAD DE GIRO',
-              descripcion: 'Combinada con el torque, logra el tiempo de ciclo más bajo frente a competidores.',
-            },
-          },
-          {
-            id: 'E350P-interior-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2107,
-              y: 1021,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'FUERZA DE ROMPIMIENTO EN EL BRAZO',
-              descripcion: 'Concentra la fuerza en el brazo (no solo en la cuchara) para una penetración más eficiente.',
-            },
-          },
-          {
-            id: 'E350P-interior-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 3065,
-              y: 714,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'DOS BOMBAS HIDRÁULICAS INDEPENDIENTES',
-              descripcion: 'Si el sistema de traslación se daña, la máquina puede seguir excavando con el flujo de la otra bomba.',
-            },
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'M620P',
-    categoria: 'MOTONIVELADORA',
-    modelo: 'M620P',
-    tarjeta: '/img/tarjetas/t-v360-620p.webp',
-    escenas: [
-      {
-        id: 'M620P-plano1',
-        medio: '/img/vistas/vista-620p-plano1.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'M620P-plano1-plano2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2419,
-              y: 1250,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-plano2',
-            },
-          },
-          {
-            id: 'M620P-plano1-plano3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2338,
-              y: 1000,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-plano3',
-            },
-          },
-          {
-            id: 'M620P-plano1-interior',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2137,
-              y: 838,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-interior',
-            },
-          },
-          {
-            id: 'M620P-plano1-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1992,
-              y: 893,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'TRANSMISIÓN CON SISTEMA EBS',
-              descripcion: 'Permite cambios directos de marcha adelante a atrás de forma segura y automática.',
-            },
-          },
-          {
-            id: 'M620P-plano1-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1868,
-              y: 872,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'SISTEMA NEVER GREASE',
-              descripcion: 'El 64% de los pines están sellados de por vida y no requieren lubricación manual.',
-            },
-          },
-          {
-            id: 'M620P-plano1-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2000,
-              y: 1111,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'BAJO CENTRO DE GRAVEDAD',
-              descripcion: 'Proporciona mayor estabilidad para evitar que la hoja se levante.',
-            },
-          },
-        ],
-      },
-      {
-        id: 'M620P-plano2',
-        medio: '/img/vistas/vista-620p-plano2.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'M620P-plano2-plano1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1100,
-              y: 1190,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-plano1',
-            },
-          },
-          {
-            id: 'M620P-plano2-plano3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2847,
-              y: 1060,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-plano3',
-            },
-          },
-          {
-            id: 'M620P-plano2-interior',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2146,
-              y: 795,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-interior',
-            },
-          },
-          {
-            id: 'M620P-plano2-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1876,
-              y: 880,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'TRANSMISIÓN CON SISTEMA EBS',
-              descripcion: 'Permite cambios directos de marcha adelante a atrás de forma segura y automática.',
-            },
-          },
-          {
-            id: 'M620P-plano2-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1757,
-              y: 867,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'SISTEMA NEVER GREASE',
-              descripcion: 'El 64% de los pines están sellados de por vida y no requieren lubricación manual.',
-            },
-          },
-          {
-            id: 'M620P-plano2-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2424,
-              y: 842,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'SISTEMA DE ARRANQUE EN FRÍO',
-              descripcion: 'Desacopla la bomba hidráulica para un encendido suave en altura o climas fríos.',
-            },
-          },
-          {
-            id: 'M620P-plano2-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1825,
-              y: 1120,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'BAJO CENTRO DE GRAVEDAD',
-              descripcion: 'Proporciona mayor estabilidad para evitar que la hoja se levante.',
-            },
-          },
-        ],
-      },
-      {
-        id: 'M620P-plano3',
-        medio: '/img/vistas/vista-620p-plano3.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'M620P-plano3-plano2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1372,
-              y: 1145,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-plano2',
-            },
-          },
-          {
-            id: 'M620P-plano3-interior',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2343,
-              y: 714,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-interior',
-            },
-          },
-          {
-            id: 'M620P-plano3-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2069,
-              y: 914,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'SISTEMA DE ARRANQUE EN FRÍO',
-              descripcion: 'Desacopla la bomba hidráulica para un encendido suave en altura o climas fríos.',
-            },
-          },
-          {
-            id: 'M620P-plano3-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1928,
-              y: 1145,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'BAJO CENTRO DE GRAVEDAD',
-              descripcion: 'Proporciona mayor estabilidad para evitar que la hoja se levante.',
-            },
-          },
-        ],
-      },
-      {
-        id: 'M620P-interior',
-        medio: '/img/vistas/vista-620p-interno.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'M620P-interior-plano1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1572,
-              y: 1137,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-plano1',
-            },
-          },
-          {
-            id: 'M620P-interior-plano2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 896,
-              y: 1325,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-plano2',
-            },
-          },
-          {
-            id: 'M620P-interior-plano3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 3925,
-              y: 1128,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'M620P-plano3',
-            },
-          },
-          {
-            id: 'M620P-interior-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2115,
-              y: 1366,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'TRANSMISIÓN CON SISTEMA EBS',
-              descripcion: 'Permite cambios directos de marcha adelante a atrás de forma segura y automática.',
-            },
-          },
-          {
-            id: 'M620P-interior-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2046,
-              y: 1254,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'SISTEMA NEVER GREASE',
-              descripcion: 'El 64% de los pines están sellados de por vida y no requieren lubricación manual.',
-            },
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'CF644G',
-    categoria: 'CARGADOR FRONTAL',
-    modelo: '644G-TIER',
-    tarjeta: '/img/tarjetas/t-v360-644g.webp',
-    escenas: [
-      {
-        id: 'CF644G-plano1',
-        medio: '/img/vistas/vista-644g-plano1.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'CF644G-plano1-plano2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2699,
-              y: 1084,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-plano2',
-            },
-          },
-          {
-            id: 'CF644G-plano1-interior',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2031,
-              y: 831,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-interior',
-            },
-          },
-          {
-            id: 'CF644G-plano1-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2094,
-              y: 901,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'AUTO IDLE AUTO SHUT OFF',
-              descripcion: 'Reducción de RPM y apagado automático tras periodos de inactividad.',
-            },
-          },
-          {
-            id: 'CF644G-plano1-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1614,
-              y: 1207,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'AUTO NIVELACIÓN DE CUCHARA',
-              descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
-            },
-          },
-        ],
-      },
-      {
-        id: 'CF644G-plano2',
-        medio: '/img/vistas/vista-644g-plano2.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'CF644G-plano2-plano1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1261,
-              y: 1073,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-plano1',
-            },
-          },
-          {
-            id: 'CF644G-plano2-plano3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2796,
-              y: 1091,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-plano3',
-            },
-          },
-          {
-            id: 'CF644G-plano2-interior',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2044,
-              y: 682,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-interior',
-            },
-          },
-          {
-            id: 'CF644G-plano2-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2354,
-              y: 841,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'SISTEMA QUADCOOL',
-              descripcion: 'Caja de enfriamiento patentada con acceso total para limpieza, evitando sobrecalentamientos.',
-            },
-          },
-          {
-            id: 'CF644G-plano2-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1935,
-              y: 819,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'AUTO IDLE AUTO SHUT OFF',
-              descripcion: 'Reducción de RPM y apagado automático tras periodos de inactividad.',
-            },
-          },
-          {
-            id: 'CF644G-plano2-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2042,
-              y: 1138,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'ENFRIADORES DE EJES DE SERIE',
-              descripcion: 'Permite operación continua sin paradas forzadas para enfriar los ejes.',
-            },
-          },
-          {
-            id: 'CF644G-plano2-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1390,
-              y: 1101,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'AUTO NIVELACIÓN DE CUCHARA',
-              descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
-            },
-          },
-        ],
-      },
-      {
-        id: 'CF644G-plano3',
-        medio: '/img/vistas/vista-644g-plano3.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'CF644G-plano3-plano2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1353,
-              y: 1250,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-plano2',
-            },
-          },
-          {
-            id: 'CF644G-plano3-interior',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1747,
-              y: 718,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-interior',
-            },
-          },
-          {
-            id: 'CF644G-plano3-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2035,
-              y: 775,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'SISTEMA QUADCOOL',
-              descripcion: 'Caja de enfriamiento patentada con acceso total para limpieza, evitando sobrecalentamientos.',
-            },
-          },
-          {
-            id: 'CF644G-plano3-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1866,
-              y: 1125,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'ENFRIADORES DE EJES DE SERIE',
-              descripcion: 'Permite operación continua sin paradas forzadas para enfriar los ejes.',
-            },
-          },
-          {
-            id: 'CF644G-plano3-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1491,
-              y: 1068,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'AUTO NIVELACIÓN DE CUCHARA',
-              descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
-            },
-          },
-        ],
-      },
-      {
-        id: 'CF644G-interior',
-        medio: '/img/vistas/vista-644g-interno.webp',
-        tipoMedio: 'imagen',
-        posicion: {
-          x: 2048,
-          y: 1024,
-        },
-        marcadores: [
-          {
-            id: 'CF644G-interior-plano1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2226,
-              y: 1107,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-plano1',
-            },
-          },
-          {
-            id: 'CF644G-interior-plano2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1329,
-              y: 1229,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-plano2',
-            },
-          },
-          {
-            id: 'CF644G-interior-plano3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 568,
-              y: 1199,
-            },
-            datos: {
-              tipo: 'navegacion',
-              destino: 'CF644G-plano3',
-            },
-          },
-          {
-            id: 'CF644G-interior-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2061,
-              y: 1446,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'AUTO IDLE AUTO SHUT OFF',
-              descripcion: 'Reducción de RPM y apagado automático tras periodos de inactividad.',
-            },
-          },
-          {
-            id: 'CF644G-interior-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2419,
-              y: 1255,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'AUTO NIVELACIÓN DE CUCHARA',
-              descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
+              titulo: 'POWERLIFT',
+              descripcion: 'Proporciona un 15% más de potencia hidráulica para levantar cargas pesadas en modo retroexcavadora.',
             },
           },
         ],
@@ -1392,20 +581,7 @@
             },
           },
           {
-            id: 'TT850J-plano2-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2257,
-              y: 880,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'TRANSMISIÓN HIDROSTÁTICA',
-              descripcion: 'Transmisión variable que ajusta automáticamente torque y velocidad según la resistencia sin cambios de marcha.',
-            },
-          },
-          {
-            id: 'TT850J-plano2-info2',
+            id: 'TT850J-plano2-info3',
             imagen: '/img/pin.svg',
             posicion: {
               x: 1958,
@@ -1413,8 +589,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'MAYOR ERGONOMÍA',
-              descripcion: 'Al no requerir cambios constantes, se reduce drásticamente la fatiga del operador.',
+              titulo: 'APLICACIONES DE TRABAJO',
+              descripcion: '- **Minería y Movimiento de Tierras**: Botaderos, plataformas y corte de material.\n- **Infraestructura Vial**: Apertura de trochas y estabilización de taludes.\n- **Sector Energético**: Derecho de vía y control de erosión.\n- **Gestión de Desastres**: Encauzamiento y limpieza de cauces.',
             },
           },
         ],
@@ -1462,19 +638,6 @@
             datos: {
               tipo: 'navegacion',
               destino: 'TT850J-interior',
-            },
-          },
-          {
-            id: 'TT850J-plano3-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2308,
-              y: 970,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'TRANSMISIÓN HIDROSTÁTICA',
-              descripcion: 'Transmisión variable que ajusta automáticamente torque y velocidad según la resistencia sin cambios de marcha.',
             },
           },
           {
@@ -1537,17 +700,477 @@
               destino: 'TT850J-plano3',
             },
           },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'M620P',
+    categoria: 'MOTONIVELADORA',
+    modelo: 'M620P',
+    tarjeta: '/img/tarjetas/t-v360-620p.webp',
+    escenas: [
+      {
+        id: 'M620P-plano1',
+        medio: '/img/vistas/vista-620p-plano1.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
           {
-            id: 'TT850J-interior-info2',
+            id: 'M620P-plano1-plano2',
             imagen: '/img/pin.svg',
             posicion: {
-              x: 1915,
-              y: 1941,
+              x: 2419,
+              y: 1250,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano2',
+            },
+          },
+          {
+            id: 'M620P-plano1-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2338,
+              y: 1000,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano3',
+            },
+          },
+          {
+            id: 'M620P-plano1-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2137,
+              y: 838,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-interior',
+            },
+          },
+          {
+            id: 'M620P-plano1-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1992,
+              y: 893,
             },
             datos: {
               tipo: 'info',
-              titulo: 'MAYOR ERGONOMÍA',
-              descripcion: 'Al no requerir cambios constantes, se reduce drásticamente la fatiga del operador.',
+              titulo: 'TRANSMISIÓN CON SISTEMA EBS',
+              descripcion: 'Permite cambios directos de marcha adelante a atrás de forma segura y automática.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'M620P-plano2',
+        medio: '/img/vistas/vista-620p-plano2.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'M620P-plano2-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1100,
+              y: 1190,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano1',
+            },
+          },
+          {
+            id: 'M620P-plano2-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2847,
+              y: 1060,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano3',
+            },
+          },
+          {
+            id: 'M620P-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2146,
+              y: 795,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-interior',
+            },
+          },
+          {
+            id: 'M620P-plano2-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2424,
+              y: 842,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA DE ARRANQUE EN FRÍO',
+              descripcion: 'Desacopla la bomba hidráulica para un encendido suave en altura o climas fríos.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'M620P-plano3',
+        medio: '/img/vistas/vista-620p-plano3.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'M620P-plano3-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1372,
+              y: 1145,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano2',
+            },
+          },
+          {
+            id: 'M620P-plano3-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2343,
+              y: 714,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-interior',
+            },
+          },
+          {
+            id: 'M620P-plano3-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2069,
+              y: 914,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA NEVER GREASE',
+              descripcion: 'El 64% de los pines están sellados de por vida y no requieren lubricación manual.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'M620P-interior',
+        medio: '/img/vistas/vista-620p-interno.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'M620P-interior-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1572,
+              y: 1137,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano1',
+            },
+          },
+          {
+            id: 'M620P-interior-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 896,
+              y: 1325,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano2',
+            },
+          },
+          {
+            id: 'M620P-interior-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 3925,
+              y: 1128,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'M620P-plano3',
+            },
+          },
+          {
+            id: 'M620P-interior-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2115,
+              y: 1366,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'BAJO CENTRO DE GRAVEDAD',
+              descripcion: 'Proporciona mayor estabilidad para evitar que la hoja se levante.',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'CF644G',
+    categoria: 'CARGADOR FRONTAL',
+    modelo: '644G-TIER',
+    tarjeta: '/img/tarjetas/t-v360-644g.webp',
+    escenas: [
+      {
+        id: 'CF644G-plano1',
+        medio: '/img/vistas/vista-644g-plano1.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'CF644G-plano1-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2699,
+              y: 1084,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano2',
+            },
+          },
+          {
+            id: 'CF644G-plano1-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2031,
+              y: 831,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-interior',
+            },
+          },
+          {
+            id: 'CF644G-plano1-info2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2094,
+              y: 901,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTO IDLE AUTO SHUT OFF',
+              descripcion: 'Reducción de RPM y apagado automático tras periodos de inactividad.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'CF644G-plano2',
+        medio: '/img/vistas/vista-644g-plano2.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'CF644G-plano2-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1261,
+              y: 1073,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano1',
+            },
+          },
+          {
+            id: 'CF644G-plano2-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2796,
+              y: 1091,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano3',
+            },
+          },
+          {
+            id: 'CF644G-plano2-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2044,
+              y: 682,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-interior',
+            },
+          },
+          {
+            id: 'CF644G-plano2-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2354,
+              y: 841,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA QUADCOOL',
+              descripcion: 'Caja de enfriamiento patentada con acceso total para limpieza, evitando sobrecalentamientos.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'CF644G-plano3',
+        medio: '/img/vistas/vista-644g-plano3.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'CF644G-plano3-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1353,
+              y: 1250,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano2',
+            },
+          },
+          {
+            id: 'CF644G-plano3-interior',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1747,
+              y: 718,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-interior',
+            },
+          },
+          {
+            id: 'CF644G-plano3-info1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2035,
+              y: 775,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'SISTEMA QUADCOOL',
+              descripcion: 'Caja de enfriamiento patentada con acceso total para limpieza, evitando sobrecalentamientos.',
+            },
+          },
+          {
+            id: 'CF644G-plano3-info3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1866,
+              y: 1125,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'ENFRIADORES DE EJES DE SERIE',
+              descripcion: 'Permite operación continua sin paradas forzadas para enfriar los ejes.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'CF644G-interior',
+        medio: '/img/vistas/vista-644g-interno.webp',
+        tipoMedio: 'imagen',
+        posicion: {
+          x: 2048,
+          y: 1024,
+        },
+        marcadores: [
+          {
+            id: 'CF644G-interior-plano1',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2226,
+              y: 1107,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano1',
+            },
+          },
+          {
+            id: 'CF644G-interior-plano2',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 1329,
+              y: 1229,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano2',
+            },
+          },
+          {
+            id: 'CF644G-interior-plano3',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 568,
+              y: 1199,
+            },
+            datos: {
+              tipo: 'navegacion',
+              destino: 'CF644G-plano3',
+            },
+          },
+          {
+            id: 'CF644G-interior-info4',
+            imagen: '/img/pin.svg',
+            posicion: {
+              x: 2419,
+              y: 1255,
+            },
+            datos: {
+              tipo: 'info',
+              titulo: 'AUTO NIVELACIÓN DE CUCHARA',
+              descripcion: 'Automatiza el posicionamiento de la cuchara a alturas de carga y descarga preestablecidas.',
             },
           },
         ],
@@ -1602,8 +1225,8 @@
             },
             datos: {
               tipo: 'info',
-              titulo: 'MANIOBRABILIDAD Y CONTROL',
-              descripcion: 'Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.',
+              titulo: 'AUTONOMÍA DE OPERACIÓN',
+              descripcion: 'Depósito de 270 L, ideal para jornadas prolongadas sin interrupciones.',
             },
           },
         ],
@@ -1654,19 +1277,6 @@
             },
           },
           {
-            id: 'CHHC110-plano2-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1612,
-              y: 939,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'AUTONOMÍA DE OPERACIÓN',
-              descripcion: 'Depósito de 270 L, ideal para jornadas prolongadas sin interrupciones',
-            },
-          },
-          {
             id: 'CHHC110-plano3-info2',
             imagen: '/img/pin.svg',
             posicion: {
@@ -1677,32 +1287,6 @@
               tipo: 'info',
               titulo: 'EFICIENCIA OPERATIVA',
               descripcion: 'Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.',
-            },
-          },
-          {
-            id: 'CHHC110-plano3-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2531,
-              y: 1120,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MANIOBRABILIDAD Y CONTROL',
-              descripcion: 'Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.',
-            },
-          },
-          {
-            id: 'CHHC110-plano3-info4',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1518,
-              y: 1119,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'FACILIDAD DE MANTENIMIENTO',
-              descripcion: 'Acceso optimizado a componentes clave para revisiones rápidas y menor tiempo de parada.',
             },
           },
         ],
@@ -1738,45 +1322,6 @@
             datos: {
               tipo: 'navegacion',
               destino: 'CHHC110-interior',
-            },
-          },
-          {
-            id: 'CHHC110-plano3-info1',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1782,
-              y: 888,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'AUTONOMÍA DE OPERACIÓN',
-              descripcion: 'Depósito de 270 L, ideal para jornadas prolongadas sin interrupciones',
-            },
-          },
-          {
-            id: 'CHHC110-interior-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1943,
-              y: 844,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'EFICIENCIA OPERATIVA',
-              descripcion: 'Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.',
-            },
-          },
-          {
-            id: 'CHHC110-interior-info3',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 2235,
-              y: 989,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'MANIOBRABILIDAD Y CONTROL',
-              descripcion: 'Dirección articulada y sistema de vibración ajustable para mayor precisión en compactación.',
             },
           },
           {
@@ -1837,19 +1382,6 @@
             datos: {
               tipo: 'navegacion',
               destino: 'CHHC110-plano3',
-            },
-          },
-          {
-            id: 'CHHC110-interior-info2',
-            imagen: '/img/pin.svg',
-            posicion: {
-              x: 1983,
-              y: 1362,
-            },
-            datos: {
-              tipo: 'info',
-              titulo: 'EFICIENCIA OPERATIVA',
-              descripcion: 'Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.',
             },
           },
           {

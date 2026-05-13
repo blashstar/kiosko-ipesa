@@ -105,7 +105,7 @@
           { "titulo": "Capacidad cucharón estándar (m³)", "valor": "1,4 m³" },
           { "titulo": "Par de giro", "valor": "68 000 Nm 50 000 lb-ft" },
           { "titulo": "Fuerza excavación brazo ISO", "valor": "114 kN" },
-          { "titulo": "Fuerza de excavación cucharón ISO", "valor": "158 kN" },
+          { "titulo": "Motor", "valor": "158 kN" },
 
         ]
       }
@@ -182,8 +182,8 @@
         "imagen": "/img/modelos/cf744p-min.webp",
         "caracteristicas": [
           { "titulo": "Motor", "valor": "JD9 6090H" },
-          { "titulo": "Potencia máxima neta (ISO 9249)", "valor": "316 HP" },
-          { "titulo": "Peso operativo base (Tier 3)", "valor": "24,745 kg" },
+          { "titulo": "Potencia neta ISO 9249 (HP)", "valor": "316 HP" },
+          { "titulo": "Peso operativo (kg)", "valor": "24,745 kg" },
           { "titulo": "Cucharón (m³)", "valor": "4,2 m³ con uñas y cuchillas segmentadas reforzadas" },
           { "titulo": "Fuerza de dislocación", "valor": "16,057 kg" },
           { "titulo": "Transmisión", "valor": "PowerShift tipo contraeje con convertidor de par con bloqueo", estiloValor: {"font-size": ".9vh"} },
@@ -344,4 +344,3 @@
     ]
   },
 ]
-

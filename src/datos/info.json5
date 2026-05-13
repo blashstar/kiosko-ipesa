@@ -12,7 +12,6 @@
 
 [
   {
-    // ID único — coincide con vistas360.json5 y versus.json5
     "id": "E350P",
     // Categoría de maquinaria (filtro y agrupación)
     "categoria": "EXCAVADORA",
@@ -21,7 +20,7 @@
     "tarjeta": "/img/tarjetas/t-info-350p.webp",
     // Descripción comercial con formato Markdown
     // Se renderiza con un parser (soporta **negrita**, \n saltos, listas -)
-    "descripcion": "La **350 P-Tier** contiene potencia pura de 271 hp diseñada para dominar los entornos más exigentes. Su robustez en el frente de batalla y tecnología hidráulica maximizan la carga de materiales de alta densidad. Un equipo de alta disponibilidad que garantiza productividad continua con costos operativos reducidos.",
+    "descripcion": "La **350 P-Tier** ofrece 271 hp de potencia, ideal para entornos exigentes. Su robustez y tecnología hidráulica optimizan la carga de materiales densos, garantizando alta disponibilidad, productividad continua y costos operativos bajos.",
     // Imagen principal de la máquina (sin prefijo de ruta, se resuelve en el componente)
     "imagen": "/img/modelos/e350p.webp",
     "logo": "/img/logo-350P.png",
@@ -30,7 +29,7 @@
     // SVG decorativo con la silueta de la máquina (fondo transparente)
     "perfiles": "/img/perfiles/e350p-perfil.png",
     // Datos rápidos que se muestran destacados (peso, potencia)
-	"distancia": "12.5",
+    "distancia": "12.5",
     "detalles": [
       {
         "titulo": "PESO",
@@ -290,12 +289,12 @@
     "categoria": "CARGADOR FRONTAL",
     "modelo": "644G-TIER",
     "tarjeta": "/img/tarjetas/t-info-644g.webp",
-  "descripcion": "El **644 G-Tier** redefine la fiabilidad en el acarreo con un potente motor de 235 hp. Es la solución más rentable por excelencia, ofreciendo facilidad de manejo y bajos costos de mantenimiento. Una máquina \"bien hecha\" que equilibra durabilidad legendaria con un desempeño sobresaliente.",
-    "imagen": "/img/modelos/cf644g.webp",
-    "logo": "/img/logo-644G.png",
-    "color": "#FCB515",
-    "perfiles": "/img/perfiles/cf644g-perfil.png",
-	"distancia": "17",
+    "descripcion": "El **644 G-Tier** redefine la fiabilidad en el acarreo con un potente motor de 235 hp. Es la solución más rentable por excelencia, ofreciendo facilidad de manejo y bajos costos de mantenimiento. Una máquina \"bien hecha\" que equilibra durabilidad legendaria con un desempeño sobresaliente.",
+      "imagen": "/img/modelos/cf644g.webp",
+      "logo": "/img/logo-644G.png",
+      "color": "#FCB515",
+      "perfiles": "/img/perfiles/cf644g-perfil.png",
+    "distancia": "17",
     "detalles": [
       {
         "titulo": "PESO",
@@ -308,8 +307,8 @@
     ],
     "especificaciones": [
       {
-        "icono": "/img/ico-tractor.svg",
-        "titulo": "CAPACIDAD DE CUCHARÓN",
+        "icono": "/img/ico-cargador.svg",
+        "titulo": "CAPACIDAD DEL CUCHARÓN",
         "valor": "3.25 m³"
       },
       {
@@ -369,7 +368,7 @@
     "color": "#EB6608",
     "plantilla": "a",
     "perfiles": "/img/perfiles/chhc110-perfil.png",
-	"distancia": "17",
+    "distancia": "17",
     "detalles": [
       {
         "titulo": "PESO OPERATIVO",
@@ -382,9 +381,9 @@
     ],
     "especificaciones": [
       {
-        "icono": "/img/ico-autonomia.svg",
+        "icono": "/img/ico-compactadora.svg",
         "titulo": "FUERZA DE COMPACTACIÓN",
-        "valor": "250 kN, con carga lineal de 29,81 kg/cm para una compactación eficiente."
+        "valor": "250 KN, CON CARGA LINEAL DE 29,81 KG/CM PARA UNA COMPACTACIÓN EFICIENTE."
       },
       {
         "icono": "/img/ico-potencia.svg",
@@ -398,20 +397,20 @@
         "icono": "/img/ico-autonomia.svg",
         "titulo": "AUTONOMÍA DE OPERACIÓN",
         "descripcion": "Depósito de 270 L, ideal para jornadas prolongadas sin interrupciones",
-		"panel": {
-			"left": "0%",
-			"bottom": "40%"
-		}
+        "panel": {
+          "left": "0%",
+          "bottom": "40%"
+        }
       },
       {
-        "marcador": { "x": 0.85, "y": 0.33, "d": "S" },
-        "icono": "/img/ico-eco.svg",
-        "titulo": "EFICIENCIA OPERATIVA",
-        "descripcion": "Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.",
-		"panel": {
-			"left": "0%",
-			"bottom": "17%"
-		}
+          "marcador": { "x": 0.85, "y": 0.33, "d": "S" },
+          "icono": "/img/ico-eco.svg",
+          "titulo": "EFICIENCIA OPERATIVA",
+          "descripcion": "Modo ECO que reduce el consumo de combustible sin afectar el rendimiento.",
+        "panel": {
+          "left": "0%",
+          "bottom": "17%"
+        }
       },
       {
         "marcador": { "x": 0.13, "y": 0.71, "d": "E" },
@@ -429,22 +428,22 @@
         "icono": "/img/ico-herramientas.svg",
         "titulo": "FACILIDAD DE MANTENIMIENTO",
         "descripcion": "Acceso optimizado a componentes clave para revisiones rápidas y menor tiempo de parada.",
-		"panel":{
-			"left": "0%",
-			"right": "10%",
-			"bottom": "2%",
-		}
+    "panel":{
+      "left": "0%",
+      "right": "10%",
+      "bottom": "2%",
+    }
       },
       {
         "marcador": { "x": 0.94, "y": 0.47, "d": "O" },
         "icono": "/img/ico-pendiente.svg",
         "titulo": "APLICACIONES DE TRABAJO",
         "descripcion": "- **Carreteras y autopistas**: Compactación de subrasante, base y asfalto.\n- **Pavimentación urbana**: Calles, avenidas y accesos logísticos.\n- **Obras industriales**: Parques y zonas de alto tránsito.\n- **Terrenos exigentes**: Compactación uniforme en suelos difíciles gracias a su vibración ajustable.",
-		"panel":{
-			"left": "-10%",
-			"right": "12%",
-			"bottom": "5%",
-		}
+    "panel":{
+      "left": "-10%",
+      "right": "12%",
+      "bottom": "5%",
+    }
       }
     ]
   }
