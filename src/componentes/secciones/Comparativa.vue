@@ -6,11 +6,11 @@ JDVista.comparativa(:style="estiloComparativa")
     JDLogoSeccion(seccion="versus")
 
 
-  JDTitulo.titular.l1 !Compra y decide
+  JDTitulo.titular.l1 ¡Compra y decide
   JDTitulo.titular.l2 TU PRÓXIMO EQUIPO!
 
-  .tabla(v-if="comparativaActual")
-    .columna.a(ref="columnaARef")
+  .tabla(v-if="comparativaActual", :class="comparativaActual.id.toLowerCase()")
+    .columna.a(ref="columnaARef", :class="comparativaActual.maquinariaA.id.toLowerCase()")
       .encabezado
         .categoria {{comparativaActual.categoria}}
         .producto(:style="estiloModelo")
@@ -18,13 +18,13 @@ JDVista.comparativa(:style="estiloComparativa")
           span.ultima {{modeloA.ultima}}
       .imagen
         figure: img(:src="comparativaActual.maquinariaA.imagen")
-      .caracteristica(v-for="caracteristica, idc in comparativaActual.maquinariaA.caracteristicas" :key="idc")
+      .caracteristica(v-for="caracteristica, idc in comparativaActual.maquinariaA.caracteristicas" :key="idc", :class="`c-${idc}`")
         .etiqueta {{caracteristica.titulo}}
         .valor(:style="estiloValor(caracteristica)")
-          span(v-if="typeof caracteristica.valor === 'string'") {{caracteristica.valor}}
+          span(v-if="typeof caracteristica.valor === 'string'" v-html="formatearValor(caracteristica.valor)")
           template(v-else)
-            div(v-for="(item, idx) in caracteristica.valor" :key="idx") {{item}}
-    .columna.b(ref="columnaBRef")
+            div(v-for="(item, idx) in caracteristica.valor" :key="idx" v-html="formatearValor(item)")
+    .columna.b(ref="columnaBRef", :class="comparativaActual.maquinariaB.id.toLowerCase()")
       .encabezado
         .categoria {{comparativaActual.categoria}}
         .producto(:style="estiloModelo")
@@ -32,12 +32,12 @@ JDVista.comparativa(:style="estiloComparativa")
           span.ultima {{modeloB.ultima}}
       .imagen
         figure: img(:src="comparativaActual.maquinariaB.imagen")
-      .caracteristica(v-for="caracteristica, idc in comparativaActual.maquinariaB.caracteristicas" :key="idc")
+      .caracteristica(v-for="caracteristica, idc in comparativaActual.maquinariaB.caracteristicas" :key="idc", :class="`c-${idc}`")
         .etiqueta {{caracteristica.titulo}}
         .valor(:style="estiloValor(caracteristica)")
-          span(v-if="typeof caracteristica.valor === 'string'") {{caracteristica.valor}}
+          span(v-if="typeof caracteristica.valor === 'string'" v-html="formatearValor(caracteristica.valor)")
           template(v-else)
-            div(v-for="(item, idx) in caracteristica.valor" :key="idx") {{item}}
+            div(v-for="(item, idx) in caracteristica.valor" :key="idx" v-html="formatearValor(item)")
 
 
   //- pre {{comparativaActual}}
@@ -53,7 +53,17 @@ JDVista.comparativa(:style="estiloComparativa")
 </template>
 
 <script setup lang="ts">
-import { ref, computed, shallowRef, onMounted, watch, nextTick, onActivated, onDeactivated, onUnmounted } from 'vue';
+import {
+  ref,
+  computed,
+  shallowRef,
+  onMounted,
+  watch,
+  nextTick,
+  onActivated,
+  onDeactivated,
+  onUnmounted,
+} from 'vue';
 import _ from 'lodash';
 import { storeToRefs } from 'pinia';
 import { gsap } from 'gsap';
@@ -77,21 +87,21 @@ const { comparativaActual } = storeToRefs(almacenComparativas);
 const almacenInterfaz = useAlmacenInterfaz();
 
 const estiloComparativa = computed(() => ({
-  "--color": comparativaActual?.value?.color ?? "#666666"
-}))
+  '--color': comparativaActual?.value?.color ?? '#666666',
+}));
 
-const modeloA = computed(()=> ({
-  ...dividirPalabra(comparativaActual?.value.maquinariaA?.modelo ?? "")
-}) )
+const modeloA = computed(() => ({
+  ...dividirPalabra(comparativaActual?.value.maquinariaA?.modelo ?? ''),
+}));
 
-const modeloB = computed(()=> ({
-  ...dividirPalabra(comparativaActual?.value.maquinariaB?.modelo ?? "")
-}) )
+const modeloB = computed(() => ({
+  ...dividirPalabra(comparativaActual?.value.maquinariaB?.modelo ?? ''),
+}));
 
 function dividirPalabra(palabra) {
   return {
-    letras: _.slice(palabra, 0, -1).join(""),
-    ultima: _.last(palabra)
+    letras: _.slice(palabra, 0, -1).join(''),
+    ultima: _.last(palabra),
   };
 }
 
@@ -105,12 +115,14 @@ function animarEntrada() {
     const tl = gsap.timeline({ delay: 0.15 });
 
     // Columnas entran desde lados opuestos al mismo tiempo
-    tl.fromTo(columnaARef.value,
+    tl.fromTo(
+      columnaARef.value,
       { opacity: 0, x: -80, scale: 0.95 },
       { opacity: 1, x: 0, scale: 1, duration: 0.6, ease: 'power3.out' },
       0
     );
-    tl.fromTo(columnaBRef.value,
+    tl.fromTo(
+      columnaBRef.value,
       { opacity: 0, x: 80, scale: 0.95 },
       { opacity: 1, x: 0, scale: 1, duration: 0.6, ease: 'power3.out' },
       0
@@ -121,7 +133,8 @@ function animarEntrada() {
       columnaARef.value.querySelector('.encabezado'),
       columnaBRef.value.querySelector('.encabezado'),
     ];
-    tl.fromTo(encabezados,
+    tl.fromTo(
+      encabezados,
       { opacity: 0, y: -20 },
       { opacity: 1, y: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out' },
       0.25
@@ -131,7 +144,8 @@ function animarEntrada() {
       columnaARef.value.querySelector('.imagen'),
       columnaBRef.value.querySelector('.imagen'),
     ];
-    tl.fromTo(imagenes,
+    tl.fromTo(
+      imagenes,
       { opacity: 0, scale: 0.9 },
       { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' },
       0.35
@@ -141,12 +155,14 @@ function animarEntrada() {
     const carA = columnaARef.value.querySelectorAll('.caracteristica');
     const carB = columnaBRef.value.querySelectorAll('.caracteristica');
 
-    tl.fromTo(carA,
+    tl.fromTo(
+      carA,
       { opacity: 0, y: 25 },
       { opacity: 1, y: 0, duration: 0.35, stagger: 0.07, ease: 'power2.out' },
       0.45
     );
-    tl.fromTo(carB,
+    tl.fromTo(
+      carB,
       { opacity: 0, y: 25 },
       { opacity: 1, y: 0, duration: 0.35, stagger: 0.07, ease: 'power2.out' },
       0.45
@@ -155,15 +171,19 @@ function animarEntrada() {
 }
 
 const estiloModelo = computed(() => {
-  const estilo = {}
-  if(comparativaActual?.value?.estiloModelo?.altura){
-    estilo["fontSize"] = comparativaActual.value.estiloModelo.altura + "vh"
+  const estilo = {};
+  if (comparativaActual?.value?.estiloModelo?.altura) {
+    estilo['fontSize'] = comparativaActual.value.estiloModelo.altura + 'vh';
   }
-  return estilo
-})
+  return estilo;
+});
 
-function estiloValor(caracteristica){
-  return caracteristica?.estiloValor ?? {}
+function estiloValor(caracteristica) {
+  return caracteristica?.estiloValor ?? {};
+}
+
+function formatearValor(valor){
+  return valor.replace("\n", "<br>")
 }
 
 // onMounted(animarEntrada);
@@ -183,8 +203,6 @@ onDeactivated(() => {
 onUnmounted(() => {
   almacenInterfaz.setMarca('JohnDeere');
 });
-
-
 </script>
 
 <style lang="stylus" scoped>
@@ -211,7 +229,7 @@ onUnmounted(() => {
   grid-template-columns 1fr 1fr
   grid-template-rows auto 1fr repeat(9, auto)
   grid-auto-rows auto
-  gap 0 vw(64)
+  gap 0 vw(64px)
   // background #000
   margin-inline vw(64px)
 
@@ -269,6 +287,9 @@ onUnmounted(() => {
       flex-direction column
       justify-content center
 
+      img
+        margin-inline auto
+
     &::after
       content ""
       background: linear-gradient(to right, var(--color), transparent);
@@ -322,4 +343,16 @@ onUnmounted(() => {
 :deep()
   .jd_vista__contenido
     justify-content: start;
+
+
+.vs-tt1050k-tt850j
+  .tt1050k
+    .producto
+      font-size 110px
+
+    .imagen img
+      width 95%
+
+.vs-e250p-e210p .e210p .imagen img
+      width 90%
 </style>

@@ -24,7 +24,8 @@
  * @return Valor convertido con unidad
  */
 vh(valor, unidad = 'vh')
-  return unit(round((valor / $kioskoAlto) * 100, 3), unidad)
+  return valor
+  // return unit(round((valor / $kioskoAlto) * 100, 3), unidad)
 
 /**
  * Convierte píxeles horizontales a vw basado en el ancho del kiosko (1080px)
@@ -33,7 +34,8 @@ vh(valor, unidad = 'vh')
  * @return Valor convertido con unidad
  */
 vw(valor, unidad = 'vw')
-  return unit(round((valor / $kioskoAncho) * 100, 3), unidad)
+  return valor
+  // return unit(round((valor / $kioskoAncho) * 100, 3), unidad)
 
 // ----- Funciones de viewport mínimo/máximo -----
 

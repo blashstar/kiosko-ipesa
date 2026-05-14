@@ -90,6 +90,15 @@ function alNavegar(destino: string) {
 .grupo
   margin-left auto
 
+  :deep()
+    .boton-tactil
+    // .jd_boton_brillo__contenido
+      filter: none
+      // background-color rgba(black, .8)
+      // background-image radial-gradient(black, rgba(black, .5))
+      border-radius 100%
+      box-shadow inset 0 0 20px 20px rgba(black, .5), 0 0 10px #FCB515
+
 .nav-escenas
   display: flex
   align-items: center

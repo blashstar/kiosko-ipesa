@@ -165,6 +165,7 @@ function derecha() {
 
   .modelo
     font-size vh(65px)
+    line-height 1
 
   .boton
     flex 0 0 auto

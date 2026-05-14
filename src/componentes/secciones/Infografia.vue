@@ -484,6 +484,7 @@ onUnmounted(() => {
     top 0
     left 0
     // padding-right vw(1px)
+    border-radius: 0 0 10% 0 / 0 0 50% 0;
 
   .imagen
     margin-top vh(-96px)
@@ -508,10 +509,14 @@ onUnmounted(() => {
     margin-top vh(-96px)
     padding-left vw(96px)
 
+  .caracteristicas .terminal::after
+    height vh(400px)
+
 .CF644G
   margin-top vh(12px)
   .visor
     margin-top vh(24px)
+
   .detalles
     top 0
     left 0
@@ -524,6 +529,9 @@ onUnmounted(() => {
   .imagen
     margin-top vh(-32px)
     padding-left vw(140px)
+
+  .caracteristicas .terminal::after
+    height vh(340px)
 
   .datos .descripcion
     .texto
@@ -542,7 +550,7 @@ onUnmounted(() => {
     padding-left vw(160px)
 
   .imagen
-    margin-top vh(0)
+    margin-top vh(-12px)
     padding-left vw(48px)
 
 .M620G

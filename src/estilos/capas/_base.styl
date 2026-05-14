@@ -3,12 +3,18 @@
 // ============================================
 
 @layer base
+  body
+    background #000
   .kiosko
-    width 100vw
+    margin: 0 auto
+    width 1080px
+    // width 100vw
     height 100vh
     max-width 100dvw
     max-height 100dvh
-    overflow hidden
+    overflow-y: auto
+    overflow-x: hidden
+    // overflow hidden
     background-color var(--kiosko-color-fondo)
     color var(--kiosko-color-texto)
     display grid
@@ -36,14 +42,16 @@
       aspect-ratio var(--kiosko-relacion-aspecto)
       margin auto
       transform scale(var(--kiosko-escala))
-      width 100vw
-      height 100vh
-      max-height 100dvh
-      max-width: 100dvw
+      // width 100vw
+      width 100%
+      height: 1920px
+      // height 100vh
+      // max-height 100dvh
+      max-width: 1080px
       display grid
       place-content: stretch
       place-items: center
-      overflow-y auto
+      overflow hidden
 
       > *
         grid-area 1 / 1
@@ -71,15 +79,16 @@
       //   --vBarras -> contenedor mas estrecho que el ideal (ratio < ideal)
       //   --hBarras -> contenedor mas ancho que el ideal   (ratio > ideal)
       &--vBarras
-        height 100vh
-        max-height 100dvh
-        width auto
+        // height 100vh
+        // max-height 100dvh
+        // height: auto
+        // width 100%
 
       &--hBarras
-        width 100vw
-        max-width 100dvw
-        height auto
-        max-height none
+        // width 100vw
+        // max-width 100dvw
+        // height auto
+        // max-height none
 
       // Modo scroll ad-hoc: cuando el viewport es menor al 50% del ideal
       // se anula el aspect-ratio y se habilita scroll vertical en la app.

@@ -72,7 +72,7 @@ export const useAlmacenComparativas = defineStore('comparativas', {
 
   getters: {
     comparativaActual(): IComparativa | null {
-      return this.seleccion || this.comparativas[2] || null
+      return this.seleccion || this.comparativas[4] || null
     },
 
     listaComparativas(): IResumenComparativa[] {
