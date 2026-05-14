@@ -127,10 +127,10 @@
           { "titulo": "Peso operativo (kg)", "valor": "17,044 kg" },
           { "titulo": "Capacidad cucharón estándar (m³)", "valor": "3,25 m³" },
           { "titulo": "Fuerza de dislocación", "valor": "14,462 kg" },
-          { "titulo": "Transmisión", "valor": "PowerShift Contraeje — 4 velocidades", estiloValor: {"font-size": "0.9vh"} },
-          { "titulo": "Sistema hidráulico — bomba", "valor": "Pistones Axiales y Desplazamiento Variable", estiloValor: {"font-size": "0.9vh"} },
+          { "titulo": "Transmisión", "valor": "PowerShift Contraeje — 4 velocidades", estiloValor: {"font-size": "19px"} },
+          { "titulo": "Sistema hidráulico — bomba", "valor": "Pistones Axiales y Desplazamiento Variable", estiloValor: {"font-size": "19px"} },
           { "titulo": "Flujo hidráulico", "valor": "87 gpm" },
-          { "titulo": "Diferencial delantero", "valor": "Abierto estándar; bloqueo delantero opcional", estiloValor: {"font-size": "0.9vh"} }
+          { "titulo": "Diferencial delantero", "valor": "Abierto estándar; bloqueo delantero opcional", estiloValor: {"font-size": "19px"} }
         ]
       },
       {
@@ -143,10 +143,10 @@
           { "titulo": "Peso operativo (kg)", "valor": "18,283 kg" },
           { "titulo": "Capacidad cucharón estándar (m³)", "valor": "3,30 m³" },
           { "titulo": "Fuerza de dislocación", "valor": "15,474 kg" },
-          { "titulo": "Transmisión", "valor": "PowerShift contraeje — 5 velocidades", estiloValor: {"font-size": "0.9vh"} },
-          { "titulo": "Sistema hidráulico — bomba", "valor": "Pistones Axiales y Desplazamiento Variable", estiloValor: {"font-size": "0.9vh"} },
+          { "titulo": "Transmisión", "valor": "PowerShift contraeje — 5 velocidades", estiloValor: {"font-size": "19px"} },
+          { "titulo": "Sistema hidráulico — bomba", "valor": "Pistones Axiales y Desplazamiento Variable", estiloValor: {"font-size": "19px"} },
           { "titulo": "Flujo hidráulico", "valor": "83 gpm" },
-          { "titulo": "Diferencial delantero", "valor": "Bloqueo hidráulico delantero estándar; doble bloqueo opcional", estiloValor: {"font-size": "0.9vh"} }
+          { "titulo": "Diferencial delantero", "valor": "Bloqueo hidráulico delantero estándar; doble bloqueo opcional", estiloValor: {"font-size": "19px"} }
 
         ]
       }
@@ -168,11 +168,11 @@
           { "titulo": "Peso operativo base (Tier 3)", "valor": "19,123 kg" },
           { "titulo": "Cucharón (m³)", "valor": "3,6 m³ con uñas y cuchillas segmentadas reforzadas" },
           { "titulo": "Fuerza de dislocación", "valor": "14,300 kg" },
-          { "titulo": "Transmisión", "valor": "PowerShift tipo contraeje" },
+          { "titulo": "Transmisión", "valor": "PowerShift \ntipo contraeje", estiloValor: {"font-size": "19px"} },
           { "titulo": "Sistema hidráulico — bomba", "valor": [
-			"Bomba de pistón axial",
-			"Desplazamiento variable · compensación de presión · centro cerrado"
-      ], estiloValor: {"font-size": "0.9vh"}},
+            "Bomba de pistón axial",
+            "Desplazamiento variable · compensación de presión · centro cerrado"
+          ], estiloValor: {"font-size": "19px"}},
           { "titulo": "Flujo hidráulico", "valor": "83 gpm" },
         ]
       },
@@ -186,11 +186,11 @@
           { "titulo": "Peso operativo (kg)", "valor": "24,745 kg" },
           { "titulo": "Cucharón (m³)", "valor": "4,2 m³ con uñas y cuchillas segmentadas reforzadas" },
           { "titulo": "Fuerza de dislocación", "valor": "16,057 kg" },
-          { "titulo": "Transmisión", "valor": "PowerShift tipo contraeje con convertidor de par con bloqueo", estiloValor: {"font-size": ".9vh"} },
+          { "titulo": "Transmisión", "valor": "PowerShift tipo contraeje con convertidor de par con bloqueo", estiloValor: {"font-size": "19px"} },
           { "titulo": "Sistema hidráulico — bomba", "valor": [
             "2 bombas de pistón axial",
             "Detección de carga · desplazamiento variable · centro cerrado",
-			    ], estiloValor: {"font-size": ".9vh"}},
+          ], estiloValor: {"font-size": "19px"}},
           { "titulo": "Flujo hidráulico", "valor": "128 gpm" },
 
         ]
@@ -212,10 +212,10 @@
           { "titulo": "Par máximo neto", "valor": "915 Nm (675 lb-ft)" },
           { "titulo": "Transmisión", "valor": "PowerShift Plus™ 8F / 8R" },
           { "titulo": "Peso operativo base (Tier 3)", "valor": [
-			"Delanteros 5122 kg (11 292 lb)",
-			"Traseros 12 531 kg (27 626 lb)",
-			"Total 17 653 kg (38 918 lb) ",
-		  ] },
+            "Delanteros 5122 kg (11 292 lb)",
+            "Traseros 12 531 kg (27 626 lb)",
+            "Total 17 653 kg (38 918 lb) ",
+          ], estiloValor: {"font-size": "18px"} },
           { "titulo": "Sistema de tracción", "valor": "Tracción en las 4 ruedas (4WD)" },
         ]
       },
@@ -231,7 +231,7 @@
             "Parte Delantera 5488 kg (12 100 lb)",
             "Parte Trasera 13 093 kg (28 864 lb)",
             "Total 18 581 kg (40 965 lb)",
-          ], estiloValor: {"font-size": "1.1vh"} },
+          ], estiloValor: {"font-size": "18px"} },
           { "titulo": "Sistema de tracción", "valor": "Tracción en las 4 ruedas (4WD)" },
 
         ]
@@ -249,7 +249,7 @@
         "modelo": "750J",
         "imagen": "/img/modelos/tt750j-min.webp",
         "caracteristicas": [
-          { "titulo": "Motor", "valor": "JD PowerTech™ E 6068" },
+          { "titulo": "Motor", "valor": "JD PowerTech™ \nE 6068" },
           { "titulo": "Potencia nominal neta SAE", "valor": "155 HP" },
           { "titulo": "Tipo de hoja", "valor": "OSD (Semi-U)" },
           { "titulo": "Capacidad de hoja", "valor": "4,30 m³" },
@@ -261,7 +261,7 @@
         "modelo": "850J",
         "imagen": "/img/modelos/tt850j-min.webp",
         "caracteristicas": [
-          { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6068 c/EGR" },
+          { "titulo": "Motor", "valor": "JD PowerTech™ \nPlus 6068 c/EGR" },
           { "titulo": "Potencia nominal neta SAE", "valor": "205 HP" },
           { "titulo": "Tipo de hoja", "valor": "OSD (Semi-U)" },
           { "titulo": "Capacidad de hoja", "valor": "5,57 m³" },
@@ -282,7 +282,7 @@
         "modelo": "1050K",
         "imagen": "/img/modelos/tt1050k-min.webp",
         "caracteristicas": [
-          { "titulo": "Motor", "valor": "John Deere PowerTech™ Plus 6135" },
+          { "titulo": "Motor", "valor": "John Deere PowerTech™ \nPlus 6135"},
           { "titulo": "Potencia nominal neta SAE", "valor": "350 HP" },
           { "titulo": "Tipo de hoja", "valor": "OSD con Hoja Semi-U" },
           { "titulo": "Capacidad de hoja", "valor": "10,7 m³" },
@@ -294,7 +294,7 @@
         "modelo": "850J",
         "imagen": "/img/modelos/tt850j-min.webp",
         "caracteristicas": [
-          { "titulo": "Motor", "valor": "JD PowerTech™ Plus 6068 EGR" },
+          { "titulo": "Motor", "valor": "JD PowerTech™ \nPlus 6068 EGR"},
           { "titulo": "Potencia nominal neta SAE", "valor": "205 HP" },
           { "titulo": "Tipo de hoja", "valor": "OSD con Hoja Semi-U" },
           { "titulo": "Capacidad de hoja", "valor": "5,57 m³" },
